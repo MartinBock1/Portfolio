@@ -1,1 +1,26 @@
 /* You can add global styles to this file, and also import other style files */
+* {
+    margin: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    font-family: 'Josefin Sans', Arial, Helvetica, sans-serif;
+}
+
+.fontAnta {
+    font-family: 'Anta';
+    font-weight: 400;
+}
+
+$dark_grey: rgba(38, 46, 52, 1);
+$light_grey: rgba(38, 46, 52, 0.12);
+$blue: rgba(137, 188, 217, 1);
+$creme_white: rgba(248, 245, 236, 1);
+$red: rgba(228, 76, 54, 1);
+$green: rgba(151, 225, 99, 1);
+
+@mixin dFlex($jc: center, $ai: center, $g: 0px) {
+    display: flex;
+    justify-content: $jc;
+    align-items: $ai;
+    gap: $g;
+}
