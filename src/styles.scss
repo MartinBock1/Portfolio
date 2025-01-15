@@ -20,7 +20,7 @@ $green: rgba(151, 225, 99, 1);
     max-width: 1440px;
     margin-left: auto;
     margin-right: auto;
-    border: 1px solid $red;
+    border: 1px solid $creme_white;
 }
 
 .fontAnta {
@@ -33,6 +33,20 @@ $green: rgba(151, 225, 99, 1);
     justify-content: $jc;
     align-items: $ai;
     gap: $g;
+}
+
+h1 {
+    font-size: 88px;
+}
+
+h2 {
+    font-size: 48px;
+    font-weight: 400;
+}
+
+p {
+    font-size: 16px;
+    // border: 1px solid white;
 }
 
 a {

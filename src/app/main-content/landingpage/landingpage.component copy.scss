@@ -1,0 +1,113 @@
+@import './../../../styles.scss';
+
+.content {
+    width: 100%;
+    height: 100vh;
+    @include dFlex($jc: space-between);
+    flex-wrap: wrap;
+    // border: 1px solid;
+}
+
+.profil {
+    position: relative;
+    // width: 100%;
+    height: 100%;
+    border: 1px solid green;
+
+    .profil_img {
+        position: absolute;
+        top: 100px;
+        left: 100px;
+        z-index: 2;
+        height: 700px;
+        background-color: transparent;
+    }
+
+    .bg_img,
+    .bg_img_hover {
+        position: absolute;
+        bottom: 90px;
+        z-index: 1;
+        transform: rotate(30deg);
+        opacity: 0;
+        transition: opacity 0.12s ease-in;
+    }
+
+    .bg_img {
+        left: 160px;
+        width: 570px;
+        height: 700px;
+        opacity: 1;
+
+        // &:hover {
+        //     opacity: 0;
+        // }
+    }
+
+    .bg_img_hover {
+        left: 140px;
+        bottom: 80px;
+        width: 620px;
+        height: 740px;
+        // opacity: 0;
+        transition: opacity 0.12s ease-in;
+
+        // &:hover {
+        //     opacity: 1;
+        // }
+    }
+
+    &:hover {
+        .bg_img {
+            opacity: 0;
+        }
+
+        .bg_img_hover {
+            opacity: 1;
+        }
+    }
+}
+
+.logo {
+    @include dFlex();
+    flex-direction: column;
+}
+
+// .logo_img {
+//     opacity: 1;
+//         transition: opacity 1s ease 0s;
+// }
+
+// .logo_img_hover {
+//     opacity: 0;
+// }
+
+.logo {
+    position: relative;
+    display: inline-block; // Damit das Logo und Text nebeneinander angezeigt werden, falls gewünscht
+    text-align: center; // Optional, um Text im Logo zu zentrieren
+
+    .logo_img,
+    .logo_img_hover {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: auto;
+        transition: opacity 300ms ease-out; // Übergang für das Bild
+    }
+
+    .logo_img_hover {
+        opacity: 0; // Standardmäßig unsichtbar
+    }
+
+    &:hover {
+        .logo_img {
+            opacity: 0; // Bei Hover das Standardbild ausblenden
+        }
+
+        .logo_img_hover {
+            opacity: 1; // Bei Hover das Hover-Bild anzeigen
+        }
+    }
+}
