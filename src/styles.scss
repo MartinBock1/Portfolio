@@ -1,11 +1,6 @@
 /* You can add global styles to this file, and also import other style files */
-/* colors  */
-$dark_grey: rgba(38, 46, 52, 1);
-$light_grey: rgba(38, 46, 52, 0.12);
-$blue: rgba(137, 188, 217, 1);
-$creme_white: rgba(248, 245, 236, 1);
-$red: rgba(228, 76, 54, 1);
-$green: rgba(151, 225, 99, 1);
+@import './styles/colors.scss';
+@import './styles/mixins.scss';
 
 * {
     margin: 0;
@@ -28,13 +23,6 @@ $green: rgba(151, 225, 99, 1);
     font-weight: 400;
 }
 
-@mixin dFlex($jc: center, $ai: center, $g: 0px) {
-    display: flex;
-    justify-content: $jc;
-    align-items: $ai;
-    gap: $g;
-}
-
 h1 {
     font-size: 88px;
 }
@@ -46,7 +34,6 @@ h2 {
 
 p {
     font-size: 16px;
-    // border: 1px solid white;
 }
 
 a {

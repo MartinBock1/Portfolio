@@ -1,99 +1,191 @@
 @import './../../../styles.scss';
 
-.content {
+.hero {
     width: 100%;
     height: 100vh;
     @include dFlex();
     flex-direction: column;
-    // border: 1px solid white;
 }
 
-.box1 {
+.profil_section {
     @include dFlex();
     width: 100%;
     flex: 1;
     // border: 1px solid red;
+
 }
 
 .profil_image {
-    width: 50%;
-    height: 100%;
-    border: 1px solid green;
-}
-
-.logo_section {
+    position: relative;
     @include dFlex();
-    flex-direction: column;
-    width: 50%;
     height: 100%;
-    // border: 1px solid white;
-}
+    width: 50%;
+    border: 1px solid red;
 
-.social_media {
-    width: 100%;
-    @include dFlex($ai: flex-end);
-    flex-direction: column;
-    padding-right: 50px;
-
-    >img {
-        margin-top: 10px;
-    }
-}
-
-.mail:hover {
-    background-image: url('./../../../assets/img/icons/mail_icon_hover.png');
-}
-
-.github:hover {
-    background-image: url('./../../../assets/img/icons/github_icon_hover.png');
-}
-
-.linkedin:hover {
-    background-image: url('./../../../assets/img/icons/linkedin_icon_hover.png');
-}
-
-.logo {
-    @include dFlex();
-    flex-direction: column;
-
-    .logo_icon {
-        position: relative;
-
-        .logo_img {
-            transition: opacity 300ms ease-out;
-            position: absolute;
-            top: 0;
-            left: 2px;
-        }
-
-        .logo_img_hover {
-            opacity: 0;
-        }
+    .profil_img {
+        position: absolute;
+        bottom: 20px;
+        height: 90%;
+        width: 500px;
+        z-index: 2;
+        background-color: transparent;
+        border: 1px solid green;
+        transition: opacity 0.12s ease-in;
     }
 
-    &:hover {
-        .logo_icon {
-            .logo_img_hover {
-                opacity: 1;
-            }
+    .bg_img_box {
+        position: absolute;
+        bottom: 15px;
+        height: 680px;
+        border: 1px solid yellow;
 
-            .logo_img {
+        .bg_img {
+            position: relative;
+            bottom: -10px;
+            left: 6px;
+            width: 100%;
+            height: 100%;
+            background-color: transparent;
+            opacity: 1;
+            z-index: 1;
+            transform: rotate(7deg);
+            transition: opacity 0.12s ease-in;
+
+            &:hover {
                 opacity: 0;
             }
         }
+
+        .bg_img_hover {
+            position: absolute;
+            bottom: -25px;
+            left: 10px;
+            width: 100%;
+            height: 720px;
+            background-color: transparent;
+            opacity: 0;
+            z-index: 1;
+            transform: rotate(10deg);
+            transition: opacity 0.12s ease-in;
+
+        }
+
+        &:hover {
+                .bg_img_hover {
+                    opacity: 1;
+                }
+        
+                .bg_img {
+                    opacity: 0;
+                }
+            }
     }
 }
 
-.name_section {
-    @include dFlex();
+
+
+
+
+
+
+
+
+
+.logo_section {
+    @include dFlex($jc: space-between);
     flex-direction: column;
-    margin-top: 50px;
+    width: 50%;
+    height: 100%;
+    padding-top: 50px;
+    padding-bottom: 50px;
+
+    .social_media {
+        width: 100%;
+        @include dFlex($ai: flex-end);
+        flex-direction: column;
+        padding-right: 100px;
+
+
+        img {
+            margin-top: 10px;
+        }
+
+        .mail:hover {
+            background-image: url('./../../../assets/img/icons/mail_icon_hover.png');
+        }
+
+        .github:hover {
+            background-image: url('./../../../assets/img/icons/github_icon_hover.png');
+        }
+
+        .linkedin:hover {
+            background-image: url('./../../../assets/img/icons/linkedin_icon_hover.png');
+        }
+    }
+
+    .logo {
+        @include dFlex();
+        flex-direction: column;
+        padding-right: 100px;
+
+        .logo_icon {
+            position: relative;
+
+            .logo_img {
+                transition: opacity 300ms ease-in-out;
+                position: absolute;
+                top: 0;
+                left: 2px;
+            }
+
+            .logo_img_hover {
+                transition: opacity 300ms ease-in-out;
+                opacity: 0;
+            }
+        }
+
+        &:hover {
+            .logo_icon {
+                .logo_img_hover {
+                    opacity: 1;
+                }
+
+                .logo_img {
+                    opacity: 0;
+                }
+            }
+        }
+
+        .dev {
+            color: $blue;
+            font-weight: 300;
+        }
+    }
+
+    .name_section {
+        @include dFlex();
+        flex-direction: column;
+        margin-top: 50px;
+        padding-right: 100px;
+
+        h1,
+        h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+    }
+
+    .arrow_down {
+        padding-right: 100px;
+
+        img:hover {
+            background-image: url('./../../../assets/img/icons/arrow_down_hover_icon.png');
+        }
+    }
 }
 
-
-
-.box2 {
+.nav_section {
     height: 100px;
     width: 100%;
-    border: 1px solid yellow;
+    background-color: $blue;
 }
