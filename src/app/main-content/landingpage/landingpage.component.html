@@ -1,10 +1,12 @@
 <section class="hero">
     <div class="profil_section">
         <div class="profil_image">
-            <img class="profil_img" src="./../../../assets/img/profil_img.png" alt="Profil Image">
+            <div class="profil_img_box">
+                <img class="profil_img" src="./../../../assets/img/profil_img.png" alt="Profil Image">
+            </div>
             <div class="bg_img_box">
-                <img class="bg_img" src="./../../../assets/img/aot_bg.png" alt="Background Image">
-                <img class="bg_img_hover" src="./../../../assets/img/aot_bg_hover.png" alt="Background Image">
+                <img class="bg_img" src="./../../../assets/img/svg/aot_bg.svg" alt="Background Image">
+                <img class="bg_img_hover" src="./../../../assets/img/svg/aot_bg_hover.svg" alt="Background Image">
             </div>
         </div>
         <div class="logo_section">
@@ -18,12 +20,17 @@
                 </a>
             </div>
             <div class="logo">
-                <div class="logo_icon">
-                    <img class="logo_img" src="./../../../assets/img/icons/logo_icon.png" alt="">
-                    <img class="logo_img_hover" src="./../../../assets/img/icons/logo_icon_hover.png" alt="">
+                <div>
+                    <div class="logo_icon">
+                        <img class="logo_img" src="./../../../assets/img/icons/logo_icon.png" alt="">
+                        <img class="logo_img_hover" src="./../../../assets/img/icons/logo_icon_hover.png" alt="">
+                    </div>
+                    <p class="fontAnta">M.Bock</p>
+                    <p class="dev">developer</p>
                 </div>
-                <p class="fontAnta">M.Bock</p>
-                <p class="dev">developer</p>
+                <div class="burger_menu">
+                    <img [class.resp_menu_closed]="respMenuClosed" (click)="toggleRespMenu()" src="./../../../assets/img/svg/burger_menu.svg" alt="">
+                </div>
             </div>
             <div class="name_section">
                 <h1 class="fontAnta">Martin Bock</h1>
@@ -35,6 +42,26 @@
         </div>
     </div>
     <div class="nav_section">
-        Nav
+        <div class="nav_logo">
+            <a routerLink="/">
+                <img class="logo_img" src="./../../../assets/img/icons/nav_logo_icon.png" alt="">
+                <p class="fontAnta">M.Bock</p>
+                <p class="dev">developer</p>
+            </a>
+        </div>
+        <div class="nav_links">
+            <p [class.active]="activeSection === 'Warum ich'" (click)="setActiveSection('Warum ich')">Warum ich</p>
+            <p [class.active]="activeSection === 'Fähigkeiten'" (click)="setActiveSection('Fähigkeiten')">Fähigkeiten</p>
+            <p [class.active]="activeSection === 'Projekte'" (click)="setActiveSection('Projekte')">Projekte</p>
+            <p [class.active]="activeSection === 'Kontakt'" (click)="setActiveSection('Kontakt')">Kontakt</p>
+        </div>
+        <div class="nav_lang">
+            <p [class.active]="activeLang === 'DE'" (click)="setActive('DE')">
+                DE
+            </p>
+            <p [class.active]="activeLang === 'EN'" (click)="setActive('EN')">
+                EN
+            </p>
+        </div>
     </div>
 </section>

@@ -11,7 +11,6 @@
     @include dFlex();
     width: 100%;
     flex: 1;
-
 }
 
 .profil_image {
@@ -22,19 +21,29 @@
 
     border: 1px solid red;
 
-    .profil_img {
+    .profil_img_box {
+        @include dFlex();
         position: absolute;
         bottom: 20px;
-        height: 90%;
-        width: 500px;
-        z-index: 2;
-        background-color: transparent;
-        border: 1px solid green;
-        transition: opacity 0.12s ease-in;
-        pointer-events: none; // Klicks und Hovers gehen "durch" das Bild
+        left: 0;
+        height: 750px;
+        width: 100%;
+
+        border: 1px solid aqua;
+
+        .profil_img {
+            position: relative;
+            top: 0px;
+            width: 65%;
+            z-index: 2;
+            background-color: transparent;
+            border: 1px solid green;
+            pointer-events: none; // Klicks und Hovers gehen "durch" das Bild
+        }
     }
 
     .bg_img_box {
+        @include dFlex();
         position: absolute;
         bottom: 15px;
         height: 680px;
@@ -54,7 +63,7 @@
 
         .bg_img {
             position: relative;
-            bottom: -10px;
+            top: 0px;
             left: 6px;
             width: 100%;
             height: 100%;
@@ -67,16 +76,16 @@
 
         .bg_img_hover {
             position: absolute;
-            bottom: -25px;
-            left: -20px;
-            width: 110%;
-            height: 730px;
+            top: -10px;
+            left: 6px;
+            width: 97%;
+            height: 100%;
             background-color: transparent;
             opacity: 0;
             z-index: 1;
             transform: rotate(15deg);
             transition: opacity 0.5s ease-in-out;
-
+            pointer-events: none; // Klicks und Hovers gehen "durch" das Bild
         }
     }
 }
@@ -150,6 +159,10 @@
             color: $blue;
             font-weight: 300;
         }
+
+        .burger_menu {
+            display: none
+        }
     }
 
     .name_section {
@@ -175,7 +188,158 @@
 }
 
 .nav_section {
-    height: 100px;
+    @include dFlex($jc: space-around);
+    height: 80px;
     width: 100%;
     background-color: $blue;
+
+    .nav_logo {
+        @include dFlex();
+        flex-direction: column;
+        background-color: transparent;
+
+        a {
+            background-color: transparent;
+            text-decoration: none;
+
+            >img,
+            .fontAnta,
+            .dev {
+                background-color: transparent;
+                font-size: 14px;
+            }
+
+            >.fontAnta {
+                font-weight: 400;
+            }
+
+            >.dev {
+                color: $dark_grey;
+                font-weight: 300;
+            }
+        }
+    }
+
+    .nav_links {
+        @include dFlex($g: 80px);
+        background-color: transparent;
+
+        p {
+            background-color: transparent;
+            color: $dark_grey;
+            font-size: 26px;
+            font-weight: 500;
+
+            &:hover {
+                cursor: pointer;
+                color: $creme_white;
+            }
+
+            &:active,
+            &.active {
+                @include dFlex();
+                cursor: pointer;
+                background-image: url('./../../../assets/img/icons/nav_ellipse_link_activateted.svg');
+                background-repeat: no-repeat;
+                background-position: center;
+                height: 56px;
+                text-align: center;
+                color: $creme_white;
+            }
+        }
+    }
+
+    .nav_lang {
+        @include dFlex($g: 16px);
+        background-color: transparent;
+
+        p {
+            @include dFlex();
+            background-color: transparent;
+            color: $dark_grey;
+            font-size: 18px;
+            font-weight: 400;
+
+            &:hover {
+                cursor: pointer;
+                color: $creme_white;
+            }
+
+            &:active,
+            &.active {
+                @include dFlex();
+                cursor: pointer;
+                background-image: url('./../../../assets/img/icons/nav_ellipse_lang_activateted.svg');
+                background-position: center;
+                width: 36px;
+                height: 24px;
+                color: $creme_white;
+            }
+        }
+    }
+}
+
+/* --------------------------------------------------   Mobil   --------------------------------------------------*/
+@media (max-width: 900px) {
+
+
+    .logo_section {
+        @include dFlex($jc: space-between, $ai: flex-start);
+        width: 100%;
+        padding: 50px;
+
+        .social_media,
+        .arrow_down {
+            display: none;
+        }
+
+        .logo {
+            @include dFlex($jc: space-between, $ai: center);
+            flex-direction: row;
+            width: 100%;
+            padding: 0px;
+
+            .burger_menu {
+                display: block;
+                width: 30px;
+                height: 32px;
+            }
+        }
+    }
+
+    .logo_img_hover {
+                opacity: 0;
+            }
+
+    .profil_section {
+        flex-direction: column;
+    }
+
+    .profil_image {
+        position: absolute;
+        top: 150px;
+        height: 80%;
+        width: 75%;
+    }
+
+    .profil_img_box {
+        // position: relative;
+
+        background-image: url('./../../../assets/img/svg/profil_img_bg.svg');
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 90%;
+    }
+
+    .bg_img_box {
+        display: none;
+
+        img {
+            display: none;
+        }
+    }
+
+    .nav_section {
+        display: none;
+    }
 }
