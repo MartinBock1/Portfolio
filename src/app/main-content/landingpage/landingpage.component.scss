@@ -11,7 +11,6 @@
     @include dFlex();
     width: 100%;
     flex: 1;
-    // border: 1px solid red;
 
 }
 
@@ -20,6 +19,7 @@
     @include dFlex();
     height: 100%;
     width: 50%;
+
     border: 1px solid red;
 
     .profil_img {
@@ -31,13 +31,26 @@
         background-color: transparent;
         border: 1px solid green;
         transition: opacity 0.12s ease-in;
+        pointer-events: none; // Klicks und Hovers gehen "durch" das Bild
     }
 
     .bg_img_box {
         position: absolute;
         bottom: 15px;
         height: 680px;
+        pointer-events: auto; // Hovers werden nur innerhalb der Box erfasst
+
         border: 1px solid yellow;
+
+        &:hover {
+            .bg_img {
+                opacity: 0;
+            }
+
+            .bg_img_hover {
+                opacity: 1;
+            }
+        }
 
         .bg_img {
             position: relative;
@@ -48,48 +61,25 @@
             background-color: transparent;
             opacity: 1;
             z-index: 1;
-            transform: rotate(7deg);
-            transition: opacity 0.12s ease-in;
-
-            &:hover {
-                opacity: 0;
-            }
+            transform: rotate(10deg);
+            transition: opacity 0.5s ease-in-out;
         }
 
         .bg_img_hover {
             position: absolute;
             bottom: -25px;
-            left: 10px;
-            width: 100%;
-            height: 720px;
+            left: -20px;
+            width: 110%;
+            height: 730px;
             background-color: transparent;
             opacity: 0;
             z-index: 1;
-            transform: rotate(10deg);
-            transition: opacity 0.12s ease-in;
+            transform: rotate(15deg);
+            transition: opacity 0.5s ease-in-out;
 
         }
-
-        &:hover {
-                .bg_img_hover {
-                    opacity: 1;
-                }
-        
-                .bg_img {
-                    opacity: 0;
-                }
-            }
     }
 }
-
-
-
-
-
-
-
-
-
 
 .logo_section {
     @include dFlex($jc: space-between);
