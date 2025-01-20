@@ -1,0 +1,23 @@
+<div class="nav_section">
+    <div class="nav_logo">
+        <a routerLink="/">
+            <img class="logo_img" src="./../../../assets/img/icons/nav_logo_icon.png" alt="">
+            <p class="fontAnta">M.Bock</p>
+            <p class="dev">developer</p>
+        </a>
+    </div>
+    <div class="nav_links">
+        <p [class.active]="activeSection === 'Warum ich'" (click)="setActiveSection('Warum ich')">Warum ich</p>
+        <p [class.active]="activeSection === 'Fähigkeiten'" (click)="setActiveSection('Fähigkeiten')">Fähigkeiten</p>
+        <p [class.active]="activeSection === 'Projekte'" (click)="setActiveSection('Projekte')">Projekte</p>
+        <p [class.active]="activeSection === 'Kontakt'" (click)="setActiveSection('Kontakt')">Kontakt</p>
+    </div>
+    <div class="nav_lang">
+        <p [class.active]="activeLang === 'DE'" (click)="setActive('DE')">
+            DE
+        </p>
+        <p [class.active]="activeLang === 'EN'" (click)="setActive('EN')">
+            EN
+        </p>
+    </div>
+</div>

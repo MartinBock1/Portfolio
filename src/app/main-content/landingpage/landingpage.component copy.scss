@@ -1,113 +1,362 @@
 @import './../../../styles.scss';
 
-.content {
+.hero {
     width: 100%;
     height: 100vh;
-    @include dFlex($jc: space-between);
-    flex-wrap: wrap;
-    // border: 1px solid;
-}
-
-.profil {
-    position: relative;
-    // width: 100%;
-    height: 100%;
-    border: 1px solid green;
-
-    .profil_img {
-        position: absolute;
-        top: 100px;
-        left: 100px;
-        z-index: 2;
-        height: 700px;
-        background-color: transparent;
-    }
-
-    .bg_img,
-    .bg_img_hover {
-        position: absolute;
-        bottom: 90px;
-        z-index: 1;
-        transform: rotate(30deg);
-        opacity: 0;
-        transition: opacity 0.12s ease-in;
-    }
-
-    .bg_img {
-        left: 160px;
-        width: 570px;
-        height: 700px;
-        opacity: 1;
-
-        // &:hover {
-        //     opacity: 0;
-        // }
-    }
-
-    .bg_img_hover {
-        left: 140px;
-        bottom: 80px;
-        width: 620px;
-        height: 740px;
-        // opacity: 0;
-        transition: opacity 0.12s ease-in;
-
-        // &:hover {
-        //     opacity: 1;
-        // }
-    }
-
-    &:hover {
-        .bg_img {
-            opacity: 0;
-        }
-
-        .bg_img_hover {
-            opacity: 1;
-        }
-    }
-}
-
-.logo {
     @include dFlex();
     flex-direction: column;
 }
 
-// .logo_img {
-//     opacity: 1;
-//         transition: opacity 1s ease 0s;
-// }
+.profil_section {
+    @include dFlex();
+    width: 100%;
+    flex: 1;
+    padding-left: 50px;
+    padding-right: 50px;
+}
 
-// .logo_img_hover {
-//     opacity: 0;
-// }
+.profil_image {
+    @include dFlex();
+    @include posi($p: relative);
+    height: 100%;
+    width: 40%;
 
-.logo {
-    position: relative;
-    display: inline-block; // Damit das Logo und Text nebeneinander angezeigt werden, falls gewünscht
-    text-align: center; // Optional, um Text im Logo zu zentrieren
+    border: 1px solid red;
 
-    .logo_img,
-    .logo_img_hover {
-        position: absolute;
-        top: 0;
-        left: 0;
+    .profil_img_box {
+        @include dFlex();
+        @include posi($p: absolute);
+        // bottom: 20px;
+        // left: 0;
+        height: 80%;
         width: 100%;
-        height: auto;
-        transition: opacity 300ms ease-out; // Übergang für das Bild
+
+        border: 1px solid aqua;
+
+        .profil_img {
+            @include posi($b: 0, $l: 50%);
+            transform: translate(-50%, 0%);
+            bottom: 0px;
+            width: 100%;
+            z-index: 2;
+            background-color: transparent;
+            pointer-events: none;
+
+            border: 1px solid green;
+        }
+
+        .bg_img {
+            @include dFlex($ai: flex-end, $g: 0);
+            @include posi($p: relative);
+            // bottom: 0px;
+            // left: 6px;
+            max-height: 100%;
+            max-width: 100%;
+            background-color: transparent;
+            opacity: 1;
+            z-index: 1;
+            // transform: rotate(10deg);
+            transition: opacity 0.5s ease-in-out;
+
+            border: 1px solid blue;
+        }
+    }
+
+    // .bg_img_box {
+    //     @include dFlex();
+    //     position: absolute;
+    //     bottom: 15px;
+    //     height: 680px;
+    //     pointer-events: auto; // Hovers werden nur innerhalb der Box erfasst
+
+    //     border: 1px solid yellow;
+
+    //     &:hover {
+    //         .bg_img {
+    //             opacity: 0;
+    //         }
+
+    //         .bg_img_hover {
+    //             opacity: 1;
+    //         }
+    //     }
+
+    //     .bg_img {
+    //         position: relative;
+    //         top: 0px;
+    //         left: 6px;
+    //         width: 100%;
+    //         height: 100%;
+    //         background-color: transparent;
+    //         opacity: 1;
+    //         z-index: 1;
+    //         transform: rotate(10deg);
+    //         transition: opacity 0.5s ease-in-out;
+    //     }
+
+    //     .bg_img_hover {
+    //         position: absolute;
+    //         top: -10px;
+    //         left: 6px;
+    //         width: 97%;
+    //         height: 100%;
+    //         background-color: transparent;
+    //         opacity: 0;
+    //         z-index: 1;
+    //         transform: rotate(15deg);
+    //         transition: opacity 0.5s ease-in-out;
+    //         pointer-events: none; // Klicks und Hovers gehen "durch" das Bild
+    //     }
+    // }
+}
+
+.logo_section {
+    @include dFlex($jc: space-between);
+    flex-direction: column;
+    width: 50%;
+    height: 100%;
+    padding-top: 50px;
+    padding-bottom: 50px;
+
+    .social_media {
+        width: 100%;
+        @include dFlex($ai: flex-end);
+        flex-direction: column;
+
+
+        img {
+            margin-top: 10px;
+        }
+
+        .mail:hover {
+            background-image: url('./../../../assets/img/icons/mail_icon_hover.png');
+        }
+
+        .github:hover {
+            background-image: url('./../../../assets/img/icons/github_icon_hover.png');
+        }
+
+        .linkedin:hover {
+            background-image: url('./../../../assets/img/icons/linkedin_icon_hover.png');
+        }
+    }
+
+    .logo {
+        @include dFlex();
+        flex-direction: column;
+
+        .logo_icon {
+            position: relative;
+
+            .logo_img {
+                transition: opacity 300ms ease-in-out;
+                position: absolute;
+                top: 0;
+                left: 2px;
+            }
+
+            .logo_img_hover {
+                transition: opacity 300ms ease-in-out;
+                opacity: 0;
+            }
+        }
+
+        &:hover {
+            .logo_icon {
+                .logo_img_hover {
+                    opacity: 1;
+                }
+
+                .logo_img {
+                    opacity: 0;
+                }
+            }
+        }
+
+        .dev {
+            color: $blue;
+            font-weight: 300;
+        }
+
+        .burger_menu {
+            display: none
+        }
+    }
+
+    .name_section {
+        @include dFlex();
+        flex-direction: column;
+        margin-top: 50px;
+
+        h1,
+        h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+    }
+
+    .arrow_down {
+        padding-right: 100px;
+
+        img:hover {
+            background-image: url('./../../../assets/img/icons/arrow_down_hover_icon.png');
+        }
+    }
+}
+
+.nav_section {
+    @include dFlex($jc: space-around);
+    height: 80px;
+    width: 100%;
+    background-color: $blue;
+
+    .nav_logo {
+        @include dFlex();
+        flex-direction: column;
+        background-color: transparent;
+
+        a {
+            background-color: transparent;
+            text-decoration: none;
+
+            >img,
+            .fontAnta,
+            .dev {
+                background-color: transparent;
+                font-size: 14px;
+            }
+
+            >.fontAnta {
+                font-weight: 400;
+            }
+
+            >.dev {
+                color: $dark_grey;
+                font-weight: 300;
+            }
+        }
+    }
+
+    .nav_links {
+        @include dFlex($g: 80px);
+        background-color: transparent;
+
+        p {
+            background-color: transparent;
+            color: $dark_grey;
+            font-size: 26px;
+            font-weight: 500;
+
+            &:hover {
+                cursor: pointer;
+                color: $creme_white;
+            }
+
+            &:active,
+            &.active {
+                @include dFlex();
+                cursor: pointer;
+                background-image: url('./../../../assets/img/icons/nav_ellipse_link_activateted.svg');
+                background-repeat: no-repeat;
+                background-position: center;
+                height: 56px;
+                text-align: center;
+                color: $creme_white;
+            }
+        }
+    }
+
+    .nav_lang {
+        @include dFlex($g: 16px);
+        background-color: transparent;
+
+        p {
+            @include dFlex();
+            background-color: transparent;
+            color: $dark_grey;
+            font-size: 18px;
+            font-weight: 400;
+
+            &:hover {
+                cursor: pointer;
+                color: $creme_white;
+            }
+
+            &:active,
+            &.active {
+                @include dFlex();
+                cursor: pointer;
+                background-image: url('./../../../assets/img/icons/nav_ellipse_lang_activateted.svg');
+                background-position: center;
+                width: 36px;
+                height: 24px;
+                color: $creme_white;
+            }
+        }
+    }
+}
+
+/* --------------------------------------------------   Mobil   --------------------------------------------------*/
+@media (max-width: 200px) {
+
+
+    .logo_section {
+        @include dFlex($jc: space-between, $ai: flex-start);
+        width: 100%;
+        padding: 50px;
+
+        .social_media,
+        .arrow_down {
+            display: none;
+        }
+
+        .logo {
+            @include dFlex($jc: space-between, $ai: center);
+            flex-direction: row;
+            width: 100%;
+            padding: 0px;
+
+            .burger_menu {
+                display: block;
+                width: 30px;
+                height: 32px;
+            }
+        }
     }
 
     .logo_img_hover {
-        opacity: 0; // Standardmäßig unsichtbar
+        opacity: 0;
     }
 
-    &:hover {
-        .logo_img {
-            opacity: 0; // Bei Hover das Standardbild ausblenden
-        }
+    .profil_section {
+        flex-direction: column;
+    }
 
-        .logo_img_hover {
-            opacity: 1; // Bei Hover das Hover-Bild anzeigen
+    .profil_image {
+        position: absolute;
+        top: 150px;
+        height: 80%;
+        width: 75%;
+    }
+
+    .profil_img_box {
+        // position: relative;
+
+        background-image: url('./../../../assets/img/svg/profil_img_bg.svg');
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 90%;
+    }
+
+    .bg_img_box {
+        display: none;
+
+        img {
+            display: none;
         }
+    }
+
+    .nav_section {
+        display: none;
     }
 }

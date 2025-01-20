@@ -2,7 +2,7 @@
 
 .hero {
     width: 100%;
-    height: 100vh;
+    height: 85vh;
     @include dFlex();
     flex-direction: column;
 }
@@ -11,45 +11,59 @@
     @include dFlex();
     width: 100%;
     flex: 1;
+    padding-left: 50px;
+    padding-right: 50px;
 }
 
 .profil_image {
-    position: relative;
     @include dFlex();
     height: 100%;
     width: 50%;
 
-    border: 1px solid red;
-
     .profil_img_box {
-        @include dFlex();
-        position: absolute;
-        bottom: 20px;
-        left: 0;
-        height: 750px;
+        @include dFlex($ai: flex-end, $g: 0);
+        @include posi($p: relative);
+        height: 70%;
         width: 100%;
 
-        border: 1px solid aqua;
+        img {
+            background: none;
+            object-fit: cover;
+        }
 
         .profil_img {
-            position: relative;
-            top: 0px;
-            width: 65%;
+            @include posi($b: 0, $l: 50%);
+            transform: translate(-50%, -1%);
+            max-height: 100%;
+            max-width: 100%;
             z-index: 2;
-            background-color: transparent;
-            border: 1px solid green;
+            pointer-events: none;
+        }
+
+        .bg_img {
+            @include posi($b: 0, $l: 50%);
+            transform: translate(-50%, 0%) rotate(7deg);
+            max-height: 85%;
+            max-width: 110%;
+            opacity: 1;
+            transition: opacity 0.75s ease-in-out;
+            z-index: 1;
+        }
+
+        .bg_img_hover {
+            @include posi($b: 0, $l: 50%);
+            transform: translate(-50%, 0%) rotate(7deg);
+            max-height: 85%;
+            max-width: 110%;
+            opacity: 0;
+            transition: opacity 0.75s ease-in-out;
+            z-index: 1;
             pointer-events: none; // Klicks und Hovers gehen "durch" das Bild
         }
-    }
 
-    .bg_img_box {
-        @include dFlex();
-        position: absolute;
-        bottom: 15px;
-        height: 680px;
-        pointer-events: auto; // Hovers werden nur innerhalb der Box erfasst
-
-        border: 1px solid yellow;
+        .profil_img_bg {
+            display: none;
+        }
 
         &:hover {
             .bg_img {
@@ -59,33 +73,6 @@
             .bg_img_hover {
                 opacity: 1;
             }
-        }
-
-        .bg_img {
-            position: relative;
-            top: 0px;
-            left: 6px;
-            width: 100%;
-            height: 100%;
-            background-color: transparent;
-            opacity: 1;
-            z-index: 1;
-            transform: rotate(10deg);
-            transition: opacity 0.5s ease-in-out;
-        }
-
-        .bg_img_hover {
-            position: absolute;
-            top: -10px;
-            left: 6px;
-            width: 97%;
-            height: 100%;
-            background-color: transparent;
-            opacity: 0;
-            z-index: 1;
-            transform: rotate(15deg);
-            transition: opacity 0.5s ease-in-out;
-            pointer-events: none; // Klicks und Hovers gehen "durch" das Bild
         }
     }
 }
@@ -102,7 +89,6 @@
         width: 100%;
         @include dFlex($ai: flex-end);
         flex-direction: column;
-        padding-right: 100px;
 
 
         img {
@@ -125,20 +111,24 @@
     .logo {
         @include dFlex();
         flex-direction: column;
-        padding-right: 100px;
+
+        div {
+            @include dFlex();
+            flex-direction: column;
+        }
 
         .logo_icon {
             position: relative;
 
             .logo_img {
-                transition: opacity 300ms ease-in-out;
+                transition: opacity 0.7s ease-in-out;
                 position: absolute;
                 top: 0;
                 left: 2px;
             }
 
             .logo_img_hover {
-                transition: opacity 300ms ease-in-out;
+                transition: opacity 0.7s ease-in-out;
                 opacity: 0;
             }
         }
@@ -169,7 +159,6 @@
         @include dFlex();
         flex-direction: column;
         margin-top: 50px;
-        padding-right: 100px;
 
         h1,
         h2 {
@@ -179,125 +168,74 @@
     }
 
     .arrow_down {
-        padding-right: 100px;
 
         img:hover {
             background-image: url('./../../../assets/img/icons/arrow_down_hover_icon.png');
-        }
-    }
-}
-
-.nav_section {
-    @include dFlex($jc: space-around);
-    height: 80px;
-    width: 100%;
-    background-color: $blue;
-
-    .nav_logo {
-        @include dFlex();
-        flex-direction: column;
-        background-color: transparent;
-
-        a {
-            background-color: transparent;
-            text-decoration: none;
-
-            >img,
-            .fontAnta,
-            .dev {
-                background-color: transparent;
-                font-size: 14px;
-            }
-
-            >.fontAnta {
-                font-weight: 400;
-            }
-
-            >.dev {
-                color: $dark_grey;
-                font-weight: 300;
-            }
-        }
-    }
-
-    .nav_links {
-        @include dFlex($g: 80px);
-        background-color: transparent;
-
-        p {
-            background-color: transparent;
-            color: $dark_grey;
-            font-size: 26px;
-            font-weight: 500;
-
-            &:hover {
-                cursor: pointer;
-                color: $creme_white;
-            }
-
-            &:active,
-            &.active {
-                @include dFlex();
-                cursor: pointer;
-                background-image: url('./../../../assets/img/icons/nav_ellipse_link_activateted.svg');
-                background-repeat: no-repeat;
-                background-position: center;
-                height: 56px;
-                text-align: center;
-                color: $creme_white;
-            }
-        }
-    }
-
-    .nav_lang {
-        @include dFlex($g: 16px);
-        background-color: transparent;
-
-        p {
-            @include dFlex();
-            background-color: transparent;
-            color: $dark_grey;
-            font-size: 18px;
-            font-weight: 400;
-
-            &:hover {
-                cursor: pointer;
-                color: $creme_white;
-            }
-
-            &:active,
-            &.active {
-                @include dFlex();
-                cursor: pointer;
-                background-image: url('./../../../assets/img/icons/nav_ellipse_lang_activateted.svg');
-                background-position: center;
-                width: 36px;
-                height: 24px;
-                color: $creme_white;
-            }
+            cursor: pointer;
         }
     }
 }
 
 /* --------------------------------------------------   Mobil   --------------------------------------------------*/
-@media (max-width: 900px) {
+@media (max-width: 1000px) {
+    .profil_section {
+        flex-direction: column;
+        padding-left: 20px;
+        padding-right: 20px;
 
+        .profil_image {
+            position: absolute;
+            top: 50px;
+            height: 60%;
+            width: 75%;
+            background-color: transparent;
+
+            .profil_img_box {
+                background-color: transparent;
+
+                .bg_img,
+                .bg_img_hover {
+                    display: none;
+                    opacity: 0;
+                }
+
+                .profil_img {
+                    max-height: 100%;
+                }
+
+                .profil_img_bg {
+                    display: block;
+                    transform: rotate(7deg);
+                }
+            }
+        }
+    }
 
     .logo_section {
-        @include dFlex($jc: space-between, $ai: flex-start);
+        @include dFlex($jc: space-between, $ai: center);
         width: 100%;
         padding: 50px;
 
-        .social_media,
-        .arrow_down {
+        .social_media {
             display: none;
         }
 
         .logo {
-            @include dFlex($jc: space-between, $ai: center);
+            @include dFlex($jc: space-between, $ai: flex-start);
             flex-direction: row;
             width: 100%;
-            padding: 0px;
+
+            &:hover {
+                .logo_icon {
+                    .logo_img_hover {
+                        opacity: 0;
+                    }
+
+                    .logo_img {
+                        opacity: 1;
+                    }
+                }
+            }
 
             .burger_menu {
                 display: block;
@@ -305,41 +243,40 @@
                 height: 32px;
             }
         }
-    }
 
-    .logo_img_hover {
-                opacity: 0;
+        .name_section {
+            @include posi($t: 450px, $l: 50%);
+            transform: translate(-50%);
+            width: 100%;
+            height: 150px;
+
+            h1 {
+                font-size: 48px;
             }
 
-    .profil_section {
-        flex-direction: column;
-    }
+            h2 {
+                font-size: 24px;
+            }
+        }
 
-    .profil_image {
-        position: absolute;
-        top: 150px;
-        height: 80%;
-        width: 75%;
-    }
-
-    .profil_img_box {
-        // position: relative;
-
-        background-image: url('./../../../assets/img/svg/profil_img_bg.svg');
-        background-repeat: no-repeat;
-        background-position: center;
-        background-size: 90%;
-    }
-
-    .bg_img_box {
-        display: none;
-
-        img {
-            display: none;
+        .arrow_down {
+            @include posi($t: 650px, $l: 50%);
+            transform: translate(-50%);
         }
     }
+}
 
-    .nav_section {
-        display: none;
+@media (max-width: 400px) {
+    .profil_section {
+        padding-left: 5px;
+        padding-right: 5px;
+    }
+
+    .profil_img {
+        height: 90%;
+    }
+
+    .profil_img_bg {
+        height: 75%;
     }
 }

@@ -1,0 +1,100 @@
+@import './../../../../styles.scss';
+
+.nav_section {
+    @include dFlex($jc: space-around);
+    height: 80px;
+    width: 100%;
+    background-color: $blue;
+
+    .nav_logo {
+        @include dFlex();
+        flex-direction: column;
+        background-color: transparent;
+
+        a {
+            background-color: transparent;
+            text-decoration: none;
+
+            >img,
+            .fontAnta,
+            .dev {
+                background-color: transparent;
+                font-size: 14px;
+            }
+
+            >.fontAnta {
+                font-weight: 400;
+            }
+
+            >.dev {
+                color: $dark_grey;
+                font-weight: 300;
+            }
+        }
+    }
+
+    .nav_links {
+        @include dFlex($g: 80px);
+        background-color: transparent;
+
+        p {
+            background-color: transparent;
+            color: $dark_grey;
+            font-size: 26px;
+            font-weight: 500;
+
+            &:hover {
+                cursor: pointer;
+                color: $creme_white;
+            }
+
+            &:active,
+            &.active {
+                @include dFlex();
+                cursor: pointer;
+                background-image: url('./../../../../assets/img/icons/nav_ellipse_link_activateted.svg');
+                background-repeat: no-repeat;
+                background-position: center;
+                height: 56px;
+                text-align: center;
+                color: $creme_white;
+            }
+        }
+    }
+
+    .nav_lang {
+        @include dFlex($g: 16px);
+        background-color: transparent;
+
+        p {
+            @include dFlex();
+            background-color: transparent;
+            color: $dark_grey;
+            font-size: 18px;
+            font-weight: 400;
+
+            &:hover {
+                cursor: pointer;
+                color: $creme_white;
+            }
+
+            &:active,
+            &.active {
+                @include dFlex();
+                cursor: pointer;
+                background-image: url('./../../../../assets/img/icons/nav_ellipse_lang_activateted.svg');
+                background-position: center;
+                width: 36px;
+                height: 24px;
+                color: $creme_white;
+            }
+        }
+    }
+}
+
+/* --------------------------------------------------   Mobil   --------------------------------------------------*/
+@media (max-width: 1000px) {
+    .nav_section {
+        display: none;
+    }
+}
