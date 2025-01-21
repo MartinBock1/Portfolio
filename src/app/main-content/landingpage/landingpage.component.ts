@@ -8,9 +8,14 @@ import { Component } from '@angular/core';
   styleUrl: './landingpage.component.scss',
 })
 export class LandingpageComponent {
-  respMenuClosed: boolean = true;
+  isMenuVisible = false;
+  activeLang: string = 'DE'; // Standardmäßig DE aktiv
 
-  toggleRespMenu(): void {
-    this.respMenuClosed = !this.respMenuClosed;
+  setActive(lang: string): void {
+    this.activeLang = lang;
+  }
+
+  toggleMenu(): void {
+    this.isMenuVisible = !this.isMenuVisible; // Toggle der Menü-Sichtbarkeit
   }
 }

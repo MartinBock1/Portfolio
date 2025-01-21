@@ -6,7 +6,7 @@
                 <img class="bg_img" src="./../../../assets/img/svg/aot_bg.svg" alt="Background Image">
                 <img class="profil_img_bg" src="./../../../assets/img/svg/profil_img_bg.svg" alt="Background Image">
                 <img class="bg_img_hover" src="./../../../assets/img/svg/aot_bg_hover.svg" alt="Background Image">
-            </div>            
+            </div>
         </div>
         <div class="logo_section">
             <div class="social_media">
@@ -28,7 +28,28 @@
                     <p class="dev">developer</p>
                 </div>
                 <div class="burger_menu">
-                    <img [class.resp_menu_closed]="respMenuClosed" (click)="toggleRespMenu()" src="./../../../assets/img/svg/burger_menu.svg" alt="">
+                    <!-- Burger Menü Symbol, das das Menü anzeigt -->
+                    <img [class.resp_menu_closed]="!isMenuVisible" (click)="toggleMenu()"
+                        src="./../../../assets/img/icons/burger_menu.svg" alt="Responsive Menu" />
+                </div>
+                <div id="resp_menu" class="resp_menu_box" [class.resp_menu_closed]="!isMenuVisible" [class.show]="isMenuVisible">
+                    <!-- Schließen-Symbol, das das Menü schließt -->
+                    <div>
+                        <img (click)="toggleMenu()" src="./../../../assets/img/icons/burger_close.png" alt="Close Menu" />
+                        <a href="">Warum ich</a>
+                        <a href="">Fähigkeiten</a>
+                        <a href="">Projekte</a>
+                        <a href="">Kontakt</a>
+
+                        <div class="nav_lang">
+                            <p [class.active]="activeLang === 'DE'" (click)="setActive('DE')">
+                                DE
+                            </p>
+                            <p [class.active]="activeLang === 'EN'" (click)="setActive('EN')">
+                                EN
+                            </p>
+                        </div>
+                    </div>
                 </div>
             </div>
             <div class="name_section">
