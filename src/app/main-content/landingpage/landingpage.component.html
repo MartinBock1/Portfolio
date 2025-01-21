@@ -1,4 +1,4 @@
-<section class="hero">
+<section class="hero content_max">
     <div class="profil_section">
         <div class="profil_image">
             <div class="profil_img_box">
@@ -28,24 +28,21 @@
                     <p class="dev">developer</p>
                 </div>
                 <div class="burger_menu">
-                    <!-- Burger Menü Symbol, das das Menü anzeigt -->
                     <img [class.resp_menu_closed]="!isMenuVisible" (click)="toggleMenu()"
                         src="./../../../assets/img/icons/burger_menu.svg" alt="Responsive Menu" />
                 </div>
                 <div id="resp_menu" class="resp_menu_box" [class.resp_menu_closed]="!isMenuVisible" [class.show]="isMenuVisible">
-                    <!-- Schließen-Symbol, das das Menü schließt -->
                     <div>
                         <img (click)="toggleMenu()" src="./../../../assets/img/icons/burger_close.png" alt="Close Menu" />
-                        <a href="">Warum ich</a>
-                        <a href="">Fähigkeiten</a>
-                        <a href="">Projekte</a>
-                        <a href="">Kontakt</a>
-
+                        <a href="">{{ 'landingpage.whyme' | translate }}</a>
+                        <a href="">{{ 'landingpage.skills' | translate }}</a>
+                        <a href="">{{ 'landingpage.projects' | translate }}</a>
+                        <a href="">{{ 'landingpage.contact' | translate }}</a>
                         <div class="nav_lang">
-                            <p [class.active]="activeLang === 'DE'" (click)="setActive('DE')">
+                            <p [class.active]="activeLang === 'DE'" (click)="setActive('DE'); changeLanguage('de')">
                                 DE
                             </p>
-                            <p [class.active]="activeLang === 'EN'" (click)="setActive('EN')">
+                            <p [class.active]="activeLang === 'EN'" (click)="setActive('EN'); changeLanguage('en')">
                                 EN
                             </p>
                         </div>

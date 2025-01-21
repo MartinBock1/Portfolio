@@ -7,16 +7,16 @@
         </a>
     </div>
     <div class="nav_links">
-        <p [class.active]="activeSection === 'Warum ich'" (click)="setActiveSection('Warum ich')">Warum ich</p>
-        <p [class.active]="activeSection === 'Fähigkeiten'" (click)="setActiveSection('Fähigkeiten')">Fähigkeiten</p>
-        <p [class.active]="activeSection === 'Projekte'" (click)="setActiveSection('Projekte')">Projekte</p>
-        <p [class.active]="activeSection === 'Kontakt'" (click)="setActiveSection('Kontakt')">Kontakt</p>
+        <p [class.active]="activeSection === 'Warum ich'" (click)="setActiveSection('Warum ich')">{{ 'landingpage.whyme' | translate }}</p>
+        <p [class.active]="activeSection === 'Fähigkeiten'" (click)="setActiveSection('Fähigkeiten')">{{ 'landingpage.skills' | translate }}</p>
+        <p [class.active]="activeSection === 'Projekte'" (click)="setActiveSection('Projekte')">{{ 'landingpage.projects' | translate }}</p>
+        <p [class.active]="activeSection === 'Kontakt'" (click)="setActiveSection('Kontakt')">{{ 'landingpage.contact' | translate }}</p>
     </div>
     <div class="nav_lang">
-        <p [class.active]="activeLang === 'DE'" (click)="setActive('DE')">
+        <p [class.active]="activeLang === 'DE'" (click)="setActive('DE'); changeLanguage('de')">
             DE
         </p>
-        <p [class.active]="activeLang === 'EN'" (click)="setActive('EN')">
+        <p [class.active]="activeLang === 'EN'" (click)="setActive('EN'); changeLanguage('en')">
             EN
         </p>
     </div>

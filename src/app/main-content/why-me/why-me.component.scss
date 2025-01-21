@@ -1,0 +1,22 @@
+@import './../../../styles.scss';
+
+.why_me {
+    @include dFlex();
+    flex-direction: column;
+    width: 860px;
+    height: 307px;
+    gap: 80px;
+    margin-top: 100px;
+    margin-bottom: 100px;
+
+    h2 {
+        font-family: 'Anta';
+        font-size: 60px;
+        font-weight: 400;
+
+    }
+
+
+
+
+}

@@ -1,0 +1,14 @@
+{
+  "landingpage": {
+    "whyme": "Why me",
+    "skills": "Skills",
+    "projects": "Projects",
+    "contact": "Contact"
+  },
+
+  "why_me": {
+    "whyme": "Why me",
+    "location": "I am located in Munich..|",
+    "text": "I am motivated to continuously learn new technologies and develop myself. My ability to solve complex problems and my passion for programming make me a valuable member for your team."
+  }
+}
