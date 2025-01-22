@@ -26,7 +26,7 @@
             @include dFlex($jc: flex-start);
             width: 450px;
             font-size: 30px;
-            font-weight: 700;
+            // font-weight: 700;
 
             // border: 1px solid;
 
@@ -34,6 +34,16 @@
                 width: 73px;
                 height: 63px;
             }
+
+            div {
+                span {
+                    .bg_blue {
+                        color: $blue;
+                    }
+
+                }
+            }
+
         }
 
         .text {
@@ -60,6 +70,8 @@
     }
 
 
-
+.bg_blue {
+    color: $blue;
+}
 
 }

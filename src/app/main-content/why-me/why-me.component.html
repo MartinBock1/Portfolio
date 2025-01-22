@@ -3,7 +3,8 @@
     <div class="content">
         <div class="locate">
             <img src="./../../../assets/img/icons/locate_icon.svg" alt="Locate Icon">
-            {{ 'why_me.location' | translate }}
+            <!-- {{ 'why_me.location' | translate }} -->
+            <div [innerHTML]="'why_me.location' | translate"></div>
         </div>
         <div class="text">
             {{ 'why_me.text' | translate }}
