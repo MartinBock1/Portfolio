@@ -10,5 +10,9 @@
     "whyme": "Why me",
     "location": "<span class='bg_blue'>I am</span> located in Berlin..|",
     "text": "I am motivated to continuously learn new technologies and develop myself. My ability to solve complex problems and my passion for programming make me a valuable member for your team."
+  },
+
+  "my_skills": {
+    "myskills": "My Skills"
   }
 }

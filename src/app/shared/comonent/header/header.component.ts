@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ElementRef, HostListener, OnInit } from '@angular/core';
 import { TranslateDirective, TranslatePipe, TranslateService } from '@ngx-translate/core';
 
 @Component({
@@ -8,11 +8,29 @@ import { TranslateDirective, TranslatePipe, TranslateService } from '@ngx-transl
   templateUrl: './header.component.html',
   styleUrl: './header.component.scss',
 })
-export class HeaderComponent {
+export class HeaderComponent implements OnInit {
   activeLang: string = 'DE'; // Standardmäßig DE aktiv
   activeSection: string = ''; // Standardmäßig keins aktiv
+  isSticky: boolean = false; // Flag für den Sticky-Zustand
 
-  constructor(private translate: TranslateService) {}
+  private headerOffsetTop!: number;
+
+  constructor(private translate: TranslateService, private el: ElementRef) {}
+
+  ngOnInit() {
+    // Setze den Offset des Headers
+    this.headerOffsetTop = this.el.nativeElement.offsetTop;
+  }
+
+  @HostListener('window:scroll', ['$event'])
+  onScroll() {
+    if (window.pageYOffset > this.headerOffsetTop) {
+      this.isSticky = true;
+    } else {
+      this.isSticky = false;
+    }
+  }
+
   changeLanguage(language: string) {
     this.translate.use(language);
   }

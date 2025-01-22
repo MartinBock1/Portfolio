@@ -1,0 +1,44 @@
+@import './../../../styles.scss';
+
+.my_skills {
+    @include dFlex($jc: flex-start, $g: 80px);
+    flex-direction: column;
+    width: 869px;
+    height: 556px;
+
+    border: 1px solid;
+
+    h2 {
+        font-family: 'Anta';
+        color: $blue;
+        font-size: 60px;
+        font-weight: 400;
+    }
+
+        .content {
+            @include dFlex($jc: space-between, $ai: flex-start);
+
+            .icon_container {
+                @include dFlex($jc: flex-start, $g: 40px);
+                flex-wrap: wrap;
+                width: 409px;
+                height: 404px;
+
+                border: 1px solid;
+
+                div {
+                    @include dFlex($g:10px);
+                    flex-direction: column;
+                    width: 66px;
+                    height: 100px;
+
+                    p {
+                        font-size: 18px;
+                        font-weight: 400;
+                        color: $blue;
+                    }
+                }
+
+            }
+        }
+}
