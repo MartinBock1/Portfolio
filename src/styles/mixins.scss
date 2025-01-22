@@ -5,9 +5,8 @@
     gap: $g;
 }
 
-@mixin posi($p: absolute, $t: 0, $b: 0, $l: 0) {
+@mixin posi($p: absolute, $b: 0, $l: 0) {
     position: $p;
-    top: $t;
     bottom: $b;
     left: $l;
 }

@@ -1,3 +1,4 @@
+import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import {
   TranslateDirective,
@@ -8,7 +9,7 @@ import {
 @Component({
   selector: 'app-landingpage',
   standalone: true,
-  imports: [TranslatePipe, TranslateDirective],
+  imports: [CommonModule, TranslatePipe, TranslateDirective],
   templateUrl: './landingpage.component.html',
   styleUrl: './landingpage.component.scss',
 })

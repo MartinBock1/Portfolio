@@ -2,7 +2,7 @@
     <div class="profil_section">
         <div class="profil_image">
             <div class="profil_img_box">
-                <img class="profil_img" src="./../../../assets/img/profil_1.png" alt="Profil Image">
+                <img class="profil_img" src="./../../../assets/img/profil_1 - Kopie.png" alt="Profil Image">
                 <img class="bg_img" src="./../../../assets/img/svg/aot_bg.svg" alt="Background Image">
                 <img class="profil_img_bg" src="./../../../assets/img/svg/profil_img_bg.svg" alt="Background Image">
                 <img class="bg_img_hover" src="./../../../assets/img/svg/aot_bg_hover.svg" alt="Background Image">
@@ -27,13 +27,12 @@
                     <p class="fontAnta">M.Bock</p>
                     <p class="dev">developer</p>
                 </div>
-                <div class="burger_menu">
-                    <img [class.resp_menu_closed]="!isMenuVisible" (click)="toggleMenu()"
-                        src="./../../../assets/img/icons/burger_menu.svg" alt="Responsive Menu" />
+                <div class="burger_menu" (click)="toggleMenu()" [ngClass]="{'toggle': isMenuVisible}">
+                    <!-- <img [class.resp_menu_closed]="!isMenuVisible" (click)="toggleMenu()"
+                        src="./../../../assets/img/icons/burger_menu.svg" alt="Responsive Menu" /> -->
                 </div>
                 <div id="resp_menu" class="resp_menu_box" [class.resp_menu_closed]="!isMenuVisible" [class.show]="isMenuVisible">
                     <div>
-                        <img (click)="toggleMenu()" src="./../../../assets/img/icons/burger_close.png" alt="Close Menu" />
                         <a href="">{{ 'landingpage.whyme' | translate }}</a>
                         <a href="">{{ 'landingpage.skills' | translate }}</a>
                         <a href="">{{ 'landingpage.projects' | translate }}</a>
