@@ -20,11 +20,15 @@
     height: 100%;
     width: 50%;
 
+    border: 1px solid aqua;
+
     .profil_img_box {
         @include dFlex($ai: flex-end, $g: 0);
         @include posi($p: relative);
-        height: 70%;
+        height: 80%;
         width: 80%;
+
+        border: 1px solid white;
 
         img {
             background: none;
@@ -38,6 +42,8 @@
             max-width: 100%;
             z-index: 2;
             pointer-events: none;
+
+            border: 1px solid red;
         }
 
         .bg_img {
@@ -48,6 +54,8 @@
             opacity: 1;
             transition: opacity 0.75s ease-in-out;
             z-index: 1;
+
+            border: 1px solid yellow;
         }
 
         .bg_img_hover {
@@ -81,9 +89,8 @@
     @include dFlex($jc: space-between);
     flex-direction: column;
     width: 50%;
-    height: 100%;
+    height: 85%;
     padding-top: 50px;
-    padding-bottom: 50px;
 
     .social_media {
         width: 100%;
@@ -185,14 +192,15 @@
 @media (max-width: 1100px) {
 
     .profil_section {
+        @include dFlex($jc: flex-start);
         flex-direction: column;
         padding-left: 20px;
         padding-right: 20px;
 
         .profil_image {
             position: absolute;
-            top: 50px;
-            height: 60%;
+            top: 90px;
+            height: 50%;
             width: 75%;
             background-color: transparent;
 
@@ -220,7 +228,8 @@
     .logo_section {
         @include dFlex($jc: space-between, $ai: center);
         width: 100%;
-        padding: 50px;
+        padding-left: 50px;
+        padding-right: 50px;
 
         .social_media {
             display: none;
@@ -286,7 +295,6 @@
                 left: 50%;
                 transform: translate(-50%, -50%);
                 z-index: 2;
-
                 background-image: url('./../../../assets/img/svg/resp_menu_overlay.svg');
                 background-size: cover;
                 background-repeat: no-repeat;
@@ -378,13 +386,19 @@
 
         .arrow_down {
             position: absolute;
-            top: 650px;
+            top: 700px;
             left: 50%;
             transform: translate(-50%);
 
             img {
                 width: 30px;
                 height: 60px;
+
+                &:hover {
+                    background-image: url('./../../../assets/img/icons/arrow_down_icon_mobile_hover.svg');
+                    width: 30px;
+                    height: 60px;
+                }
             }
         }
     }
@@ -405,9 +419,15 @@
     }
 
     .logo_section {
-        .resp_menu_box {
-            width: 300px;
-            height: 300px;
+
+        .logo {
+            .resp_menu_box {
+                top: 37%;
+                left: 50%;
+                width: 300px;
+                height: 340px;
+                background-size:300px;
+            }
         }
     }
 }

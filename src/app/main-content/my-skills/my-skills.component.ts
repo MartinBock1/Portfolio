@@ -6,14 +6,13 @@ import {
 } from '@ngx-translate/core';
 
 @Component({
-  selector: 'app-why-me',
+  selector: 'app-my-skills',
   standalone: true,
   imports: [TranslatePipe, TranslateDirective],
-
-  templateUrl: './why-me.component.html',
-  styleUrl: './why-me.component.scss',
+  templateUrl: './my-skills.component.html',
+  styleUrl: './my-skills.component.scss',
 })
-export class WhyMeComponent {
+export class MySkillsComponent {
   constructor(private translate: TranslateService) {}
   changeLanguage(language: string) {
     this.translate.use(language);
