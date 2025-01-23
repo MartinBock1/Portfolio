@@ -3,10 +3,7 @@
 .my_skills {
     @include dFlex($jc: flex-start, $g: 80px);
     flex-direction: column;
-    width: 869px;
-    height: 556px;
-
-    border: 1px solid;
+    width: 50%;
 
     h2 {
         font-family: 'Anta';
@@ -15,30 +12,126 @@
         font-weight: 400;
     }
 
-        .content {
-            @include dFlex($jc: space-between, $ai: flex-start);
+    .content {
+        @include dFlex($jc: space-between, $g: 50px);
+        width: 100%;
 
-            .icon_container {
-                @include dFlex($jc: flex-start, $g: 40px);
-                flex-wrap: wrap;
-                width: 409px;
-                height: 404px;
+        .icon_container {
+            @include dFlex($jc: flex-start, $g: 40px);
+            flex-wrap: wrap;
+            width: 50%;
+            height: 404px;
 
-                border: 1px solid;
+            div {
+                @include dFlex($g: 10px);
+                flex-direction: column;
+                width: 66px;
+                height: 100px;
 
-                div {
-                    @include dFlex($g:10px);
-                    flex-direction: column;
-                    width: 66px;
-                    height: 100px;
-
-                    p {
-                        font-size: 18px;
-                        font-weight: 400;
-                        color: $blue;
-                    }
+                p {
+                    font-size: 18px;
+                    font-weight: 400;
+                    color: $blue;
                 }
-
             }
         }
+
+        .learnimg_container {
+            position: relative;
+            @include dFlex();
+            width: 50%;
+            height: 391px;
+
+            .learning_bg {
+                position: absolute;
+                width: 368.59px;
+                height: 380px;
+                transform: rotate(243deg);
+                background-color: transparent;
+                opacity: 1;
+            }
+
+            .learning_bg_hover {
+                position: absolute;
+                left: -5px;
+                width: 380px;
+                height: 400px;
+                transform: rotate(270deg);
+                background-color: transparent;
+                opacity: 0;
+            }
+
+            &:hover {
+                .learning_bg {
+                    opacity: 0;
+                }
+
+                .learning_bg_hover {
+                    opacity: 1;
+                }
+            }
+
+            .text {
+                @include dFlex($jc: space-evenly);
+                flex-direction: column;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                width: 70%;
+                height: 80%;
+                text-align: center;
+                background-color: transparent;
+                pointer-events: none;
+
+                p {
+                    background-color: transparent;
+                    font-size: 18px;
+                    font-weight: 400;
+                }
+
+                .learning_icons {
+                    background-color: transparent;
+                    @include dFlex($g: 24px);
+
+                    div {
+                        background-color: transparent;
+
+                        img {
+                            width: 28.56px;
+                            height: 32px;
+                            background-color: transparent;
+                        }
+
+                        p {
+                            font-size: 14px;
+                            font-weight: 400;
+                            background-color: transparent;
+                        }
+                    }
+                }
+            }
+
+
+        }
+    }
+}
+
+/* --------------------------------------------------   Mobil   --------------------------------------------------*/
+@media (max-width: 1100px) {
+    .my_skills {
+
+        .content {
+            @include dFlex($jc: space-between, $g: 50px);
+            flex-direction: column;
+
+            .icon_container {
+                display: none;
+            }
+
+            .learnimg_container {
+                display: none;                
+            }
+        }
+    }
 }

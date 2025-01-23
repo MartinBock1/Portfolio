@@ -7,7 +7,7 @@ import { HttpClient } from '@angular/common/http';
 
 const httpLoaderFactory: (http: HttpClient) => TranslateHttpLoader = (
   http: HttpClient
-) => new TranslateHttpLoader(http, '../assets/i18n/', '.json');
+) => new TranslateHttpLoader(http, 'assets/i18n/', '.json');
 
 import { routes } from './app.routes';
 
