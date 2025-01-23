@@ -92,7 +92,12 @@
             }
 
             .text {
+                height: auto;
                 text-align: center;
+
+                p {
+                    width: 450px;
+                }
 
                 img {
                     display: none;
@@ -126,6 +131,10 @@
                 font-size: 16px;
                 width: 100%;
                 padding: 10px;
+
+                p {
+                        width: 100%;
+                    }
             }
         }
     }
