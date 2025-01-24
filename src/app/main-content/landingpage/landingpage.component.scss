@@ -230,8 +230,6 @@
     .logo_section {
         @include dFlex($jc: space-between, $ai: center);
         width: 100%;
-        padding-left: 50px;
-        padding-right: 50px;
 
         .social_media {
             display: none;
@@ -406,10 +404,10 @@
     }
 }
 
-@media (max-width: 400px) {
+@media (max-width: 500px) {
     .profil_section {
-        padding-left: 5px;
-        padding-right: 5px;
+        padding-left: 10px;
+        padding-right: 10px;
     }
 
     .profil_img {

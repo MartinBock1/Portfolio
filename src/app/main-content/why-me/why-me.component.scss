@@ -3,7 +3,7 @@
 .why_me {
     @include dFlex($g: 80px);
     flex-direction: column;
-    width: 50%;
+    width: 1000px;
     margin-top: 100px;
     margin-bottom: 100px;
 
@@ -73,17 +73,11 @@
         .content {
             @include dFlex($ai: center, $g: 50px);
             flex-direction: column;
-            padding-left: 50px;
-            padding-right: 50px; 
 
             .locate {
                 @include dFlex();
                 width: 100%;
                 font-size: 24px;
-
-                // div {
-                //     @include dFlex($ai: center, $g: 50px);
-                // }
 
                 img {
                     width: 60px;
@@ -109,6 +103,9 @@
 
 @media (max-width: 500px) {
     .why_me {
+        width: 100%;
+        padding-left: 10px;
+        padding-right: 10px;
 
         h2 {
             font-size: 32px;
@@ -133,8 +130,8 @@
                 padding: 10px;
 
                 p {
-                        width: 100%;
-                    }
+                    width: 100%;
+                }
             }
         }
     }
