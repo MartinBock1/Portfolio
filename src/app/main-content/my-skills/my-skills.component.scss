@@ -45,19 +45,16 @@
 
             .learning_bg {
                 position: absolute;
-                width: 368.59px;
-                height: 380px;
-                transform: rotate(243deg);
+                left: 10%;
+                bottom: 0;
                 background-color: transparent;
                 opacity: 1;
             }
 
             .learning_bg_hover {
                 position: absolute;
-                left: -5px;
-                width: 380px;
-                height: 400px;
-                transform: rotate(270deg);
+                left: 10%;
+                bottom: -5%;
                 background-color: transparent;
                 opacity: 0;
             }

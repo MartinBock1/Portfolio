@@ -1,4 +1,5 @@
 @import './../../../../styles.scss';
+
 .sticky {
     position: fixed;
     top: 0;
@@ -49,29 +50,34 @@
             @include dFlex($g: 100px);
             background-color: transparent;
 
-            p {
+            a {
                 background-color: transparent;
-                color: $dark_grey;
-                font-size: 26px;
-                font-weight: 500;
+                text-decoration: none;
 
-                &:hover {
-                    cursor: pointer;
-                    color: $creme_white;
-
-                }
-
-                &:active,
-                &.active {
-                    @include dFlex();
-                    cursor: pointer;
-                    background-image: url('./../../../../assets/img/icons/nav_ellipse_link_activateted.svg');
-                    background-repeat: no-repeat;
-                    background-position: center;
-                    height: 56px;
-                    min-width: 100px;
-                    text-align: center;
-                    color: $creme_white;
+                p {
+                    background-color: transparent;
+                    color: $dark_grey;
+                    font-size: 26px;
+                    font-weight: 500;
+    
+                    &:hover {
+                        cursor: pointer;
+                        color: $creme_white;
+    
+                    }
+    
+                    &:active,
+                    &.active {
+                        @include dFlex();
+                        cursor: pointer;
+                        background-image: url('./../../../../assets/img/icons/nav_ellipse_link_activateted.svg');
+                        background-repeat: no-repeat;
+                        background-position: center;
+                        height: 56px;
+                        min-width: 100px;
+                        text-align: center;
+                        color: $creme_white;
+                    }
                 }
             }
         }

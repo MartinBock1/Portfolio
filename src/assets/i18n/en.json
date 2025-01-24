@@ -8,8 +8,8 @@
 
   "why_me": {
     "whyme": "Why me",
-    "location": "<span class='bg_blue'>I am</span> located in Berlin <span class='bg_blue'>...|</span>",
-    "remote": "<span class='bg_blue'>I am</span> open to work remote <span class='bg_blue'>...|</span>",
+    "location": "<span class='bg_blue'>I am</span> located in Berlin <span class='bg_blue'>...</span>",
+    "remote": "<span class='bg_blue'>I am</span> open to work remote <span class='bg_blue'>...</span>",
     "text": "I am motivated to continuously learn new technologies and develop myself. My ability to solve complex problems and my passion for programming make me a valuable member for your team."
   },
 

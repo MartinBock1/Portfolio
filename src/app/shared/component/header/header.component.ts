@@ -4,7 +4,7 @@ import { TranslateDirective, TranslatePipe, TranslateService } from '@ngx-transl
 @Component({
   selector: 'app-header',
   standalone: true,
-  imports: [TranslatePipe, TranslateDirective],
+  imports: [TranslatePipe],
   templateUrl: './header.component.html',
   styleUrl: './header.component.scss',
 })

@@ -8,10 +8,18 @@
             </a>
         </div>
         <div class="nav_links">
-            <p [class.active]="activeSection === 'Warum ich'" (click)="setActiveSection('Warum ich')">{{ 'landingpage.whyme' | translate }}</p>
-            <p [class.active]="activeSection === 'Fähigkeiten'" (click)="setActiveSection('Fähigkeiten')">{{ 'landingpage.skills' | translate }}</p>
-            <p [class.active]="activeSection === 'Projekte'" (click)="setActiveSection('Projekte')">{{ 'landingpage.projects' | translate }}</p>
-            <p [class.active]="activeSection === 'Kontakt'" (click)="setActiveSection('Kontakt')">{{ 'landingpage.contact' | translate }}</p>
+            <a href="#why_me">
+                <p [class.active]="activeSection === 'Warum ich'" (click)="setActiveSection('Warum ich')">{{ 'landingpage.whyme' | translate }}</p>
+            </a>
+            <a href="#skills">
+                <p [class.active]="activeSection === 'Fähigkeiten'" (click)="setActiveSection('Fähigkeiten')">{{ 'landingpage.skills' | translate }}</p>
+            </a>
+            <a href="">
+                <p [class.active]="activeSection === 'Projekte'" (click)="setActiveSection('Projekte')">{{ 'landingpage.projects' | translate }}</p>
+            </a>
+            <a href="">
+                <p [class.active]="activeSection === 'Kontakt'" (click)="setActiveSection('Kontakt')">{{ 'landingpage.contact' | translate }}</p>
+            </a>
         </div>
         <div class="nav_lang">
             <p [class.active]="activeLang === 'DE'" (click)="setActive('DE'); changeLanguage('de')">

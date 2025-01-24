@@ -4,7 +4,7 @@
     @include dFlex($g: 80px);
     flex-direction: column;
     width: 1000px;
-    margin-top: 100px;
+    padding-top: 100px;
     margin-bottom: 100px;
 
     h2 {
@@ -12,6 +12,7 @@
         color: $blue;
         font-size: 60px;
         font-weight: 400;
+        padding-top: 100px;
     }
 
     .content {
@@ -20,7 +21,7 @@
         font-weight: 700;
 
         .locate {
-            @include dFlex($jc: flex-start, $g: 30px);
+            @include dFlex($jc: flex-start, $ai: flex-start, $g: 20px);
             flex-direction: column;
             width: 50%;
             font-size: 30px;
@@ -33,30 +34,82 @@
 
             >div {
                 @include dFlex($g: 10px);
+
+                .typewriter {
+                    overflow: hidden;
+                    border-right: .15em solid $blue;
+                    white-space: nowrap;
+                    margin: 0 auto;
+                    /* Gives that scrolling effect as the typing happens */
+                    // letter-spacing: .15em;
+                    /* Adjust as needed */
+                    animation:
+                        typing 3.5s steps(40, end) forwards,
+                        blink-caret .75s step-end infinite,
+                        deleting 3.5s steps(40, end) 3.5s forwards;
+                }
             }
-        }
 
-        .text {
-            position: relative;
-            @include dFlex($jc: flex-start);
-            flex-direction: column;
-            width: 50%;
-            height: 176px;
-            font-size: 18px;
-            font-weight: 400;
+            /* The typing effect */
+            @keyframes typing {
+                from {
+                    width: 0
+                }
 
-            img {
-                position: absolute;
-                bottom: 0;
-                right: 0;
+                to {
+                    width: 100%
+                }
+            }
 
-                &:hover {
-                    background-image: url('./../../../assets/img/icons/btn_lets_talk_hover.svg');
+            /* The deleting effect (backward) */
+            @keyframes deleting {
+                from {
+                    width: 100%;
+                    border-color: $blue;
+                }
+
+                to {
+                    width: 0;
+                    border-color: transparent
+                }
+            }
+
+            /* The typewriter cursor effect */
+            @keyframes blink-caret {
+
+                from,
+                to {
+                    border-color: transparent
+                }
+
+                50% {
+                    border-color: $blue;
                 }
             }
         }
     }
+
+    .text {
+        position: relative;
+        @include dFlex($jc: flex-start);
+        flex-direction: column;
+        width: 50%;
+        height: 176px;
+        font-size: 18px;
+        font-weight: 400;
+
+        img {
+            position: absolute;
+            bottom: 0;
+            right: 0;
+
+            &:hover {
+                background-image: url('./../../../assets/img/icons/btn_lets_talk_hover.svg');
+            }
+        }
+    }
 }
+
 
 /* --------------------------------------------------   Mobil   --------------------------------------------------*/
 @media (max-width: 1100px) {
