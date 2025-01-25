@@ -13,7 +13,7 @@
     width: 100%;
     flex: 1;
     padding-left: 50px;
-    padding-right: 50px;    
+    padding-right: 50px;
 }
 
 .profil_image {
@@ -21,16 +21,12 @@
     height: 100%;
     width: 50%;
 
-    border: 1px solid;
-
     .profil_img_box {
         @include dFlex($ai: flex-end, $g: 0);
         // @include posi($p: relative);
         position: relative;
         height: 80%;
         width: 80%;
-
-        border: 1px solid red;
 
         img {
             background: none;
@@ -44,8 +40,6 @@
             max-width: 100%;
             z-index: 2;
             pointer-events: none;
-
-            border: 1px solid yellow;
         }
 
         .bg_img {
@@ -56,14 +50,12 @@
             opacity: 1;
             transition: opacity 0.75s ease-in-out;
             z-index: 1;
-
-            border: 1px solid aqua;
         }
 
         .bg_img_hover {
             @include posi($b: 0, $l: 49%);
             transform: translate(-51%, -1.5%) rotate(10deg);
-            max-height: 90%;
+            max-height: 85%;
             max-width: 105%;
             opacity: 0;
             transition: opacity 0.75s ease-in-out;
@@ -212,8 +204,6 @@
                 @include dFlex();
                 background-color: transparent;
                 position: relative;
-
-                border: 1px solid;
 
                 .bg_img,
                 .bg_img_hover {
@@ -436,6 +426,36 @@
                 width: 300px;
                 height: 340px;
                 background-size: 300px;
+            }
+        }
+    }
+}
+
+@media (max-width: 370px) {
+    .profil_section {
+
+        .profil_image {
+
+            .profil_img_box {
+
+                .profil_img_bg {
+                    max-height: 70%;
+                }
+            }
+        }
+    }
+
+
+    .logo_section {
+
+        .name_section {
+
+            h1 {
+                font-size: 32px;
+            }
+
+            h2 {
+                font-size: 16px;
             }
         }
     }
