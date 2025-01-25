@@ -1,0 +1,123 @@
+@import './../../../../styles.scss';
+
+section {
+    @include dFlex();
+    height: 214px;
+    width: 100%;
+    background-color: $blue;
+
+    .footer {
+        width: 100%;
+        @include dFlex($jc: space-around, $g: 20px);
+        background-color: transparent;
+
+        .legal_notice {
+            @include dFlex($jc: space-around);
+            flex-direction: column;
+            height: 72px;
+            background-color: transparent;
+
+            a,
+            p {
+                color: $dark_grey;
+                font-size: 18px;
+                font-weight: 400;                
+            }
+
+            a {
+                background-color: transparent;
+                text-decoration: none;
+                cursor: pointer;
+
+                &:hover {
+                    color: $creme_white;
+                }
+            }
+
+            p {
+                background-color: transparent;
+                font-size: 14px;
+
+            }
+        }
+
+        .logo {
+            @include dFlex();
+            flex-direction: column;
+            background-color: transparent;
+
+            div {
+                @include dFlex();
+                flex-direction: column;
+                background-color: transparent;
+
+                img,
+                p {
+                    background-color: transparent;
+                    font-size: 14px;
+                }
+            }
+
+            .fontAnta {
+                font-weight: 400;
+                background-color: transparent;
+            }
+
+            .dev {
+                background-color: transparent;
+                color: $dark_grey;
+                font-weight: 300;
+            }
+        }
+
+        .social_media {
+            @include dFlex($g: 16px);
+            background-color: transparent;
+
+            a {
+                @include dFlex($g: 16px);
+                background-color: transparent;
+
+                .github,
+                .mail,
+                .linkedin {
+                    background-color: transparent;
+                }
+
+                .github_hover,
+                .mail_hover,
+                .linkedin_hover {
+                    background-color: transparent;
+                    display: none;
+                }
+
+                &:hover {
+
+                    .github,
+                    .mail,
+                    .linkedin {
+                        display: none;
+                    }
+
+                    .github_hover,
+                    .mail_hover,
+                    .linkedin_hover {
+                        display: block;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+/* --------------------------------------------------   Mobil   --------------------------------------------------*/
+@media (max-width: 500px) {
+    .footer {
+        @include dFlex($jc: space-around, $g: 30px);
+        flex-direction: column;
+        height: 214px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+}

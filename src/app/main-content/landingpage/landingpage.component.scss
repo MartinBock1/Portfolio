@@ -5,7 +5,7 @@
     height: calc(100vh - 80px);
     @include dFlex();
     flex-direction: column;
-    scroll-margin-top: 100px;
+    
 }
 
 .profil_section {
@@ -178,7 +178,7 @@
         background-color: transparent;
 
         img:hover {
-            background-image: url('./../../../assets/img/icons/arrow_down_hover_icon.png');
+            background-image: url('./../../../assets/img/icons/arrow_down_hover_icon.svg');
             cursor: pointer;
         }
     }
@@ -271,15 +271,15 @@
                 }
 
                 33% {
-                    background-image: url('./../../../assets/img/icons/burger_hover.png');
+                    background-image: url('./../../../assets/img/icons/burger_hover.svg');
                 }
 
                 66% {
-                    background-image: url('./../../../assets/img/icons/burger_close.png');
+                    background-image: url('./../../../assets/img/icons/burger_close.svg');
                 }
 
                 100% {
-                    background-image: url('./../../../assets/img/icons/burger_close_bold.png');
+                    background-image: url('./../../../assets/img/icons/burger_close_bold.svg');
                 }
             }
 

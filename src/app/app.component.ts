@@ -7,16 +7,18 @@ import {
   TranslatePipe,
   TranslateService,
 } from '@ngx-translate/core';
+import { FooterComponent } from './shared/component/footer/footer.component';
+import { ImprintComponent } from './imprint/imprint.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
   imports: [
     CommonModule,
-    TranslatePipe,
-    TranslateDirective,
     RouterOutlet,
-    MainContentComponent,
+    FooterComponent,
+    // MainContentComponent,
+    // ImprintComponent,
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',

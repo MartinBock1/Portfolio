@@ -9,7 +9,7 @@ import {
 @Component({
   selector: 'app-landingpage',
   standalone: true,
-  imports: [CommonModule, TranslatePipe, TranslateDirective],
+  imports: [CommonModule, TranslatePipe],
   templateUrl: './landingpage.component.html',
   styleUrl: './landingpage.component.scss',
 })

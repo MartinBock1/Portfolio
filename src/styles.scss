@@ -11,6 +11,10 @@
     background-color: $dark_grey;
 }
 
+html {
+    scroll-margin-top: -80px;
+}
+
 .content_max {
     max-width: 1440px;
     max-height: 900px;
