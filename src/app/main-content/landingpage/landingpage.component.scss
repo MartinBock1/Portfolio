@@ -5,6 +5,7 @@
     height: calc(100vh - 80px);
     @include dFlex();
     flex-direction: column;
+    scroll-margin-top: 100px;
 }
 
 .profil_section {
@@ -12,7 +13,7 @@
     width: 100%;
     flex: 1;
     padding-left: 50px;
-    padding-right: 50px;
+    padding-right: 50px;    
 }
 
 .profil_image {
@@ -20,15 +21,16 @@
     height: 100%;
     width: 50%;
 
-    border: 1px solid aqua;
+    border: 1px solid;
 
     .profil_img_box {
         @include dFlex($ai: flex-end, $g: 0);
-        @include posi($p: relative);
+        // @include posi($p: relative);
+        position: relative;
         height: 80%;
         width: 80%;
 
-        border: 1px solid white;
+        border: 1px solid red;
 
         img {
             background: none;
@@ -43,26 +45,26 @@
             z-index: 2;
             pointer-events: none;
 
-            border: 1px solid red;
+            border: 1px solid yellow;
         }
 
         .bg_img {
-            @include posi($b: 0, $l: 50%);
-            transform: translate(-50%, 0%);
-            max-height: 85%;
-            max-width: 110%;
+            @include posi($b: 0, $l: 51%);
+            transform: translate(-49%, -0%);
+            max-height: 90%;
+            max-width: 100%;
             opacity: 1;
             transition: opacity 0.75s ease-in-out;
             z-index: 1;
 
-            border: 1px solid yellow;
+            border: 1px solid aqua;
         }
 
         .bg_img_hover {
-            @include posi($b: 0, $l: 50%);
-            transform: translate(-50%, 0%) rotate(7deg);
-            max-height: 85%;
-            max-width: 110%;
+            @include posi($b: 0, $l: 49%);
+            transform: translate(-51%, -1.5%) rotate(10deg);
+            max-height: 90%;
+            max-width: 105%;
             opacity: 0;
             transition: opacity 0.75s ease-in-out;
             z-index: 1;
@@ -203,11 +205,15 @@
             position: absolute;
             top: 90px;
             height: 50%;
-            width: 75%;
+            width: 100%;
             background-color: transparent;
 
             .profil_img_box {
+                @include dFlex();
                 background-color: transparent;
+                position: relative;
+
+                border: 1px solid;
 
                 .bg_img,
                 .bg_img_hover {
@@ -221,7 +227,10 @@
 
                 .profil_img_bg {
                     display: block;
-                    transform: rotate(7deg);
+                    max-height: 90%;
+                    position: absolute;
+                    bottom: 5px;
+                    transform: rotate(10deg);
                 }
             }
         }
