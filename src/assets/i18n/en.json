@@ -19,6 +19,13 @@
     "learningContent": "Staying motivated to expand my IT skills requires a strategic approach, a curious mindset, and a commitment to lifelong learning."
   },
 
+  "reviews": {
+    "headline": "Need a teamplayer? Here what my colleagues said about me"
+  },
+
+
+
+
   "footer": {
     "legal_notice": "Legal Notice",
     "privacy_policy": "Privacy Policy"
@@ -26,7 +33,7 @@
 
   "legalnotices": {
     "headline": "Legal Notice",
-    "name": "Martin Bock<br>Becherweg 30<br>13407 Berlin",
+    "name": "Martin Bock<br>Becherweg 30<br>13407 Berlin<br>Germany",
     "contact_headline": "Contact",
     "contact_mail_phone": "phone: +49 30 81473698<br>email-Adress: kontakt&#64;martin-bock.info",
     "picture_headline": "Image credits",

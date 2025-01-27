@@ -1,0 +1,86 @@
+@import './../../../styles.scss';
+
+
+section {
+    margin-top: 50px;
+    height: 480px;
+    overflow-y: auto; // Aktiviert den vertikalen Scrollbalken bei Bedarf
+
+    // border: 1px solid;
+
+    .reviews {
+        @include dFlex($jc: space-between);
+        flex-direction: column;
+        height: 100%;
+        overflow-y: auto; // Verhindert, dass der Inhalt überläuft
+
+        h1 {
+            font-size: 32px;
+            font-weight: 400;
+            color: $blue;
+            text-align: center;
+        }
+
+        .content_container {
+            @include dFlex($jc: space-between);
+            width: 100%;
+            overflow-y: auto; // sorgt dafür, dass hier auch der Scrollbalken kommt
+
+
+            div {
+                @include dFlex();
+                flex-direction: column;
+                position: relative;
+
+                // border: 1px solid;
+
+                .reviews_content {
+                    @include dFlex($jc: space-around);
+                    flex-direction: column;
+                    @include posi($b: 50%, $l: 45%);
+                    transform: translate(-50%, 55%);
+                    background-color: transparent;
+                    width: 60%;
+                    height: 80%;
+                    overflow-y: auto; // Scrollbalken im Reviews-Bereich
+
+                    // border: 1px solid yellow;
+
+                    div {
+                        background-color: transparent;
+
+                        h2 {
+                            background-color: transparent;
+                            font-size: 26px;
+                            font-weight: 600;
+                        }
+
+                        p {
+                            background-color: transparent;
+                            font-size: 18px;
+                            font-weight: 400;
+                        }
+                    }
+                }
+
+                // .bg_img {
+                //     padding-left: 30px;
+                // }
+
+                .bg_img_hover {
+                    display: none;
+                }
+
+                &:hover {
+                    .bg_img {
+                        display: none;
+                    }
+
+                    .bg_img_hover {
+                        display: block;
+                    }
+                }
+            }
+        }
+    }
+}

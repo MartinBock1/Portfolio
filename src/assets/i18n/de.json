@@ -19,6 +19,16 @@
     "learningContent": "Um motiviert zu bleiben und meine IT-Kenntnisse zu erweitern, sind eine strategische Herangehensweise, eine neugierige Denkweise und die Bereitschaft zum lebenslangen Lernen erforderlich."
   },
 
+  "reviews": {
+    "headline": "Brauchen Sie einen Teamplayer? Hören Sie, was meine Kollegen über mich sagen"
+  },
+
+
+
+
+
+  
+
   "footer": {
     "legal_notice": "Impressum",
     "privacy_policy": "Datenschutzerklärung"
@@ -26,7 +36,7 @@
 
   "legalnotices": {
     "headline": "Impressum",
-    "name": "Martin Bock<br>Becherweg 30<br>13407 Berlin",
+    "name": "Martin Bock<br>Becherweg 30<br>13407 Berlin<br>Deutschland",
     "contact_headline": "Kontaktmöglichkeiten",
     "contact_mail_phone": "Telefon: +49 30 81473698<br>E-Mail-Adresse: kontakt&#64;martin-bock.info",
     "picture_headline": "Bildernachweis",

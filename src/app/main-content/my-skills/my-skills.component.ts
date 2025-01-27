@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
 import {
-  TranslateDirective,
   TranslatePipe,
   TranslateService,
 } from '@ngx-translate/core';
@@ -8,7 +7,7 @@ import {
 @Component({
   selector: 'app-my-skills',
   standalone: true,
-  imports: [TranslatePipe, TranslateDirective],
+  imports: [TranslatePipe],
   templateUrl: './my-skills.component.html',
   styleUrl: './my-skills.component.scss',
 })
