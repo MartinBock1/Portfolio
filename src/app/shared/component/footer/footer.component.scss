@@ -21,7 +21,7 @@ section {
             p {
                 color: $dark_grey;
                 font-size: 18px;
-                font-weight: 400;                
+                font-weight: 400;
             }
 
             a {
@@ -51,7 +51,14 @@ section {
                 flex-direction: column;
                 background-color: transparent;
 
-                img,
+                a {
+                    background-color: transparent;
+
+                    img {
+                        background-color: transparent;
+                    }
+                }
+
                 p {
                     background-color: transparent;
                     font-size: 14px;

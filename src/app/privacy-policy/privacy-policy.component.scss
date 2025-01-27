@@ -1,0 +1,101 @@
+@import './../../styles.scss';
+
+
+section {    
+
+    div {
+        @include dFlex($jc: space-evenly, $ai: flex-start, $g: 20px);
+        flex-direction: column;
+        width: 100%;
+        padding-left: 10px;
+        padding-right: 10px;
+        padding-top: 50px;
+        padding-bottom: 50px;
+
+        h1 {
+            text-align: center;
+            font-size: 48px;
+            width: 100%;
+        }
+
+        h2 {
+            font-size: 32px;
+        }
+
+        h3 {
+            font-size: 24px;
+        }
+
+        p {
+            font-size: 18px;
+        }
+
+        a {
+            font-size: 18px;
+            text-decoration: none;
+
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+
+        ul {
+
+            li {
+                font-size: 18px;
+            }
+        }
+    }
+}
+
+/* --------------------------------------------------   Mobil   --------------------------------------------------*/
+@media (max-width: 600px) {
+    section {
+        div {
+
+            h1 {
+                font-size: 40px;
+            }
+
+            h2 {
+                font-size: 24px;
+            }
+
+            h3 {
+                font-size: 18px;
+            }
+
+            p {
+                font-size: 16px;
+            }
+
+            a {
+                font-size: 16px;
+            }
+        }
+    }
+}
+
+@media (max-width: 500px) {
+    section {
+
+        div {
+
+            h1 {
+                font-size: 32px;
+            }
+        }
+    }
+}
+
+@media (max-width: 400px) {
+    section {
+
+        div {
+
+            h1 {
+                font-size: 24px;
+            }
+        }
+    }
+}
