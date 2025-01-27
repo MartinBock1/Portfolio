@@ -1,16 +1,15 @@
 @import './../../styles.scss';
 
 .legalnotices {
-    @include dFlex($jc: space-evenly);
+    @include dFlex($jc: center, $g: 60px);
     height: calc(100vh - 214px);
     // padding-top: 20px;
-    display: flex;
     flex-direction: column;
     align-items: center;
     flex-wrap: wrap;
 
     div {
-        @include dFlex($jc: space-evenly);
+        @include dFlex($jc: space-evenly, $g: 10px);
         flex-direction: column;
         h1,
         h2,
@@ -49,22 +48,22 @@
 
 /* --------------------------------------------------   Mobil   --------------------------------------------------*/
 @media (max-width: 500px) {
-    .imprint {
+    .legalnotices {
         padding-left: 10px;
         padding-right: 10px;
         div {
             width: 100%;
 
             h1 {
-                font-size: 48px;
-            }
-
-            h2 {
                 font-size: 32px;
             }
 
-            h3 {
+            h2 {
                 font-size: 24px;
+            }
+
+            h3 {
+                font-size: 18px;
             }
 
             p {

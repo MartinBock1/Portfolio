@@ -14,12 +14,7 @@
             <p>Developer Academie</p>
         </div>
         <div>
-            <!-- <p>Quelle: Erstellt mit dem <a href="https://www.adsimple.de/impressum-generator/"
-                title="Impressum Generator Deutschland von AdSimple">Impressum Generator Deutschland</a> von AdSimple</p> -->
-            <p> {{ 'legalnotices.legal_source_one' | translate }} 
-                <a href="https://www.adsimple.de/impressum-generator/" title="Impressum Generator Deutschland von AdSimple">{{ 'legalnotices.legal_source_two' | translate }}                    
-                </a> {{ 'legalnotices.legal_source_three' | translate }}
-            </p>
+            <p [innerHTML]="'legalnotices.legal_source' | translate"></p>            
         </div>
     </div>
 </section>

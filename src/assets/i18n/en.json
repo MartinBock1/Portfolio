@@ -31,9 +31,7 @@
     "contact_mail_phone": "phone: +49 30 81473698<br>email-Adress: kontakt&#64;martin-bock.info",
     "picture_headline": "Image credits",
     "picture_text": "<strong>The image rights are held by: </strong>",
-    "legal_source_one": "Source: Created with the ",
-    "legal_source_two": "Legal Notice Generator Germany ",
-    "legal_source_three": "from AdSimple"
+    "legal_source": "Source: Created with the <a href='https://www.adsimple.de/impressum-generator/' title='Impressum Generator Deutschland von AdSimple'>Legal Notice Generator Germany</a> from AdSimple"
   },
 
   "privacypolicy": {

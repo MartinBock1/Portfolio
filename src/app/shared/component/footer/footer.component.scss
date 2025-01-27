@@ -8,11 +8,13 @@ section {
 
     .footer {
         width: 100%;
-        @include dFlex($jc: space-around, $g: 20px);
+        @include dFlex($jc: space-between, $g: 20px);
         background-color: transparent;
+        padding-left: 50px;
+        padding-right: 50px;
 
         .legal_notice {
-            @include dFlex($jc: space-around);
+            @include dFlex($jc: space-around, $ai: flex-start);
             flex-direction: column;
             height: 72px;
             background-color: transparent;
