@@ -31,14 +31,15 @@ section {
                 @include dFlex();
                 flex-direction: column;
                 position: relative;
+                padding-left: 50px;
 
                 // border: 1px solid;
 
                 .reviews_content {
                     @include dFlex($jc: space-around);
                     flex-direction: column;
-                    @include posi($b: 50%, $l: 45%);
-                    transform: translate(-50%, 55%);
+                    @include posi($b: 60%, $l: 33%);
+                    transform: translate(-40%, 67%);
                     background-color: transparent;
                     width: 60%;
                     height: 80%;
