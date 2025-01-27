@@ -1,0 +1,79 @@
+@import './../../styles.scss';
+
+.legalnotices {
+    @include dFlex($jc: space-evenly);
+    height: calc(100vh - 214px);
+    // padding-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: wrap;
+
+    div {
+        @include dFlex($jc: space-evenly);
+        flex-direction: column;
+        h1,
+        h2,
+        h3,
+        p,
+        a {
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 60px;
+        }
+
+        h2 {
+            font-size: 48px;
+        }
+
+        h3 {
+            font-size: 32px;
+        }
+
+        p {
+            font-size: 24px;
+        }
+
+        a {
+            font-size: 24px;
+            text-decoration: none;
+
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+}
+
+/* --------------------------------------------------   Mobil   --------------------------------------------------*/
+@media (max-width: 500px) {
+    .imprint {
+        padding-left: 10px;
+        padding-right: 10px;
+        div {
+            width: 100%;
+
+            h1 {
+                font-size: 48px;
+            }
+
+            h2 {
+                font-size: 32px;
+            }
+
+            h3 {
+                font-size: 24px;
+            }
+
+            p {
+                font-size: 16px;
+            }
+
+            a {
+                font-size: 16px;
+            }
+        }
+    }
+}

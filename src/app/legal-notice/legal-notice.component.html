@@ -1,0 +1,28 @@
+<section>
+    <div class="legalnotices">
+        <div>
+            <h1>{{ 'legalnotices.headline' | translate }}</h1>
+            <p [innerHTML]="'legalnotices.name' | translate"></p>
+        </div>
+        <div>
+            <h3>{{ 'legalnotices.contact_headline' | translate }}</h3>
+            <p [innerHTML]="'legalnotices.contact_mail_phone' | translate"></p>
+        </div>
+        <div>
+            <h3>{{ 'legalnotices.picture_headline' | translate }}</h3>
+            <p [innerHTML]="'legalnotices.picture_text' | translate"></p>
+            <p>Developer Academie</p>
+        </div>
+        <div>
+            <!-- <p>Quelle: Erstellt mit dem <a href="https://www.adsimple.de/impressum-generator/"
+                title="Impressum Generator Deutschland von AdSimple">Impressum Generator Deutschland</a> von AdSimple</p> -->
+            <p> {{ 'legalnotices.legal_source_one' | translate }} 
+                <a href="https://www.adsimple.de/impressum-generator/" title="Impressum Generator Deutschland von AdSimple">{{ 'legalnotices.legal_source_two' | translate }}                    
+                </a> {{ 'legalnotices.legal_source_three' | translate }}
+            </p>
+        </div>
+    </div>
+
+    <a routerLink="/">Startseite</a>
+
+</section>

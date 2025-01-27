@@ -146,15 +146,18 @@
                 flex-wrap: wrap;
                 width: 450px;
                 height: 199px;
+                background-color: transparent;
             }
 
             .learnimg_container_mobile {
                 @include dFlex($jc: space-between, $g: 50px);
                 position: relative;
+                background-color: transparent;
 
                 .text {
                     @include dFlex($jc: space-around);
                     width: 450px;
+                    background-color: transparent;
 
                     p {
                         width: 60%;
@@ -191,6 +194,7 @@
                         position: absolute;
                         right: 25px;
                         transform: rotate(90deg);
+                        background-color: transparent;
                     }
                 }
             }
