@@ -1,0 +1,183 @@
+@import './../../../styles.scss';
+
+section {
+    @include dFlex();
+
+
+    .contact_me {
+        @include dFlex($g: 50px);
+        flex-direction: column;
+        width: 1100px;
+        height: 100%;
+
+        // border: 1px solid;
+
+        h2 {
+            font-family: 'Anta';
+            font-size: 54px;
+            font-weight: 400;
+        }
+
+        .content {
+            @include dFlex();
+            width: 100%;
+
+            p {
+                width: 50%;
+                font-size: 18px;
+                font-weight: 400;
+            }
+
+            .contact {
+                width: 50%;
+
+                div {
+                    @include dFlex();
+                    flex-direction: column;
+                }
+
+            }
+        }
+
+        .input {
+            width: 100%;
+
+            // border: 1px solid yellow;
+
+            .label-text {
+                display: inline;
+            }
+
+            form {
+                @include dFlex($g: 50px);
+                flex-direction: column;
+
+                div {
+                    width: 100%;
+                    @include dFlex($jc: flex-end, $g: 30px);
+
+                    // border: 1px solid;
+
+                    .name,
+                    .email {
+                        @include dFlex($ai: flex-start);
+                        flex-direction: column;
+                        width: 50%;
+                        height: 60px;
+
+                        label {
+                            @include dFlex();
+                            flex-direction: column;
+                            padding-left: 26px;
+                            font-size: 14px;
+                            font-weight: 400;
+                            color: $blue;
+
+                            .label-text {
+                                display: block;
+                            }
+
+                            .error-message {
+                                display: none;
+                            }
+
+                            &:has(.error-message) .label-text {
+                                display: none;
+                            }
+
+                            &:has(.error-message) .error-message {
+                                display: block;
+                            }
+                        }
+
+                        #name,
+                        #email {
+                            @include dFlex();
+                            width: 100%;
+                            height: 60px;
+                            border: 1px solid;
+                            border-color: $blue;
+                            border-radius: 30px;
+                            padding-left: 26px;
+                            font-size: 16px;
+                            font-weight: 400;
+
+                            &:focus {
+                                background: rgba(137, 188, 217, 0.12);
+                                outline: none;
+                            }
+
+                            &.invalid {
+                                border-color: red;
+                            }
+                        }
+                    }
+                }
+
+                .message {
+                    @include dFlex($ai: flex-start);
+                    flex-direction: column;
+                    width: 100%;
+                    height: 164px;
+
+                    label {
+                        padding-left: 10px;
+                        font-size: 14px;
+                        font-weight: 400;
+                        color: $blue;
+                        padding-left: 26px;
+
+                        .label-text {
+                            display: block;
+                        }
+
+                        .error-message {
+                            display: none;
+                        }
+
+                        &:has(.error-message) .label-text {
+                            display: none;
+                        }
+
+                        &:has(.error-message) .error-message {
+                            display: block;
+                        }
+                    }
+
+                    .textarea {
+                        height: 146px;
+
+                        // border: 1px solid;
+
+                        #message {
+                            width: 100%;
+                            height: 100%;
+                            border: 1px solid;
+                            border-color: $blue;
+                            border-radius: 30px;
+                            padding-left: 26px;
+                            font-size: 16px;
+                            font-weight: 400;
+
+                            &:focus {
+                                background: rgba(137, 188, 217, 0.12);
+                                outline: none;
+                            }
+
+                            &.invalid {
+                                border-color: red;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.error-message {
+    color: red;
+    font-size: 14px;
+    font-weight: 400;
+    margin-left: 10px;
+}

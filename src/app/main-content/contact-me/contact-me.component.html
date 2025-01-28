@@ -1,1 +1,76 @@
-<p>contact-me works!</p>
+<section class="content_max">
+    <div class="contact_me">
+        <h2>Contact me</h2>
+        <div class="content">
+            <p>
+                Still not sure if I am the right person for your project? Lorem ipsum dolor sit amet consectetur. Nat
+                oqueg diam prjfgh
+                etium arcu sed senectus felis acm uris. Dui eget dict um.osuere pretium arcu sed senec tusfelis ac.
+            </p>
+            <div class="contact">
+                <div>
+                    <img src="" alt="">
+                    <p>
+                        E-mail: kontakt&#64;martin-bock.de
+                    </p>
+                </div>
+                <div>
+                    <img src="" alt="">
+                    <p>
+                        Tel: +49 30 81473698
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="input">
+            <form (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm">
+                <div>
+                    <div class="name">
+                        <label for="name">
+                            <span class="label-text">Name:</span>
+                            <span *ngIf="!name.valid && name.touched && !name.disabled" class="error-message">Please
+                                enter a valid name (at least 4 characters)</span>
+                        </label>
+                        <input #name="ngModel" minlength="4" [(ngModel)]="contactData.name" type="text" id="name"
+                            name="name" placeholder="Your name..." required
+                            [ngClass]="{'invalid': !name.valid && name.touched}">
+                        <!-- Display checkmark if the field is valid -->
+                        <!-- <img *ngIf="name.valid && name.touched" src="assets/img/icons/checkmark.svg" alt="Checkmark Icon"> -->
+                    </div>
+                    <div class="email">
+                        <label for="email">
+                            <span class="label-text">E-Mail:</span>
+                            <span *ngIf="!email.valid && email.touched && !email.disabled" class="error-message">Please
+                                enter a valid email</span>
+                        </label>
+                        <input #email="ngModel" minlength="4" [(ngModel)]="contactData.email" type="email" id="email"
+                            name="email" placeholder="Your mail..." required
+                            pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}"
+                            [ngClass]="{'invalid': !email.valid && email.touched}">
+                        <!-- Display checkmark if the field is valid -->
+                        <!-- <img *ngIf="email.valid && email.touched" src="assets/img/icons/checkmark.svg" alt="Checkmark Icon"> -->
+                    </div>
+                </div>
+
+                <div class="message" [ngClass]="{'invalid': !message.valid && message.touched}">
+                    <label for="message">
+                        <span class="label-text">Message:</span>
+                        <span *ngIf="!message.valid && message.touched && !message.disabled"
+                            class="error-message">Please enter a valid message (at least 4 characters)</span>
+                    </label>
+                    <div class="textarea">
+                        <textarea #message="ngModel" minlength="4" [(ngModel)]="contactData.message" type="message"
+                            id="message" name="message" placeholder="write something..." required
+                            [ngClass]="{'invalid': !message.valid && message.touched}">
+                        </textarea>
+                        <!-- Display checkmark if the field is valid -->
+                        <!-- <img *ngIf="message.valid && message.touched" src="assets/img/icons/checkmark.svg" alt="Checkmark Icon"> -->
+                        <!-- <img src="assets/img/icons/checkmark.svg" alt="Checkmark Icon"> -->
+                    </div>
+                </div>
+
+                <input type="submit" value="Submit">
+            </form>
+        </div>
+    </div>
+</section>
