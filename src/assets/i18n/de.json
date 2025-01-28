@@ -20,7 +20,8 @@
   },
 
   "reviews": {
-    "headline": "Brauchen Sie einen Teamplayer? Hören Sie, was meine Kollegen über mich sagen"
+    "headline_one": "Brauchen Sie einen Teamplayer? ",
+    "headline_two": "Hören Sie, was meine Kollegen über mich sagen"
   },
 
 
