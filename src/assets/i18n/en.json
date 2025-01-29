@@ -23,8 +23,12 @@
     "headline": "Need a teamplayer? Here what my colleagues said about me"
   },
 
-
-
+  "contact": {
+    "contact_headline": "Contact me",
+    "contact_content": "Still not sure if I am the right person for your project?<br>Please feel free to contact me so that we can discuss how I can be of benefit to your project.",
+    "contact_phone": "Tel: ",
+    "contact_mail": "E-mail: "
+  },
 
   "footer": {
     "legal_notice": "Legal Notice",

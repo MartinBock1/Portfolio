@@ -4,6 +4,8 @@
     @include dFlex($jc: flex-start, $g: 80px);
     flex-direction: column;
     width: 1000px;
+    position: relative;
+    top: -80px;
 
     h2 {
         font-family: 'Anta';
@@ -11,6 +13,7 @@
         font-size: 60px;
         font-weight: 400;
         text-align: center;
+        padding-top: 100px;
     }
 
     .content {

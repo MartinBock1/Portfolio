@@ -23,6 +23,8 @@
         width: 100%;
         font-weight: 700;
         margin-top: 30px;
+        // margin-bottom: 100px;
+        pointer-events:all;
 
         .locate {
             @include dFlex($jc: flex-start, $ai: flex-start, $g: 20px);
@@ -94,18 +96,19 @@
     }
 
     .text {
-        position: relative;
         @include dFlex($jc: flex-start);
         flex-direction: column;
+        position: relative;
         width: 50%;
         height: 176px;
         font-size: 18px;
         font-weight: 400;
 
-        img {
+        .lets_talk_icon {
             position: absolute;
             bottom: 0;
             right: 0;
+            cursor: pointer;
 
             &:hover {
                 background-image: url('./../../../assets/img/icons/btn_lets_talk_hover.svg');

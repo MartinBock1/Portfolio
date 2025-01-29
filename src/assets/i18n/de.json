@@ -24,11 +24,12 @@
     "headline_two": "Hören Sie, was meine Kollegen über mich sagen"
   },
 
-
-
-
-
-  
+  "contact": {
+    "contact_headline": "Kontakt",
+    "contact_content": "Sie sind sich noch nicht sicher, ob ich die Richtige für Ihr Projekt bin?<br>Nehmen Sie gerne mit mir Kontakt auf, damit wir gemeinsam besprechen können, wie ich Ihrem Projekt von Nutzen sein kann.",
+    "contact_phone": "Tel: ",
+    "contact_mail": "E-Mail: "
+  },
 
   "footer": {
     "legal_notice": "Impressum",
