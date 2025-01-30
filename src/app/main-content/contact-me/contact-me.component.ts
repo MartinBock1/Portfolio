@@ -1,5 +1,6 @@
-import { CommonModule, NgFor } from '@angular/common';
-import { Component } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { HttpClient } from '@angular/common/http';
+import { Component, inject } from '@angular/core';
 import { FormsModule, NgForm } from '@angular/forms';
 import { RouterLink } from '@angular/router';
 import { TranslatePipe, TranslateService } from '@ngx-translate/core';
@@ -14,6 +15,7 @@ import { TranslatePipe, TranslateService } from '@ngx-translate/core';
 export class ContactMeComponent {
   isChecked = false;
   isSubmitted = false;
+  mailTest = true;
 
   constructor(private translate: TranslateService) {}
 
@@ -21,18 +23,42 @@ export class ContactMeComponent {
     this.translate.use(language);
   }
 
+  http = inject(HttpClient);
   contactData = {
     name: '',
     email: '',
     message: '',
   };
 
-  onSubmit(NgForm: NgForm) {
+  post = {
+    endPoint: 'https://deineDomain.de/sendMail.php',
+    body: (payload: any) => JSON.stringify(payload),
+    options: {
+      headers: {
+        'Content-Type': 'text/plain',
+        responseType: 'text',
+      },
+    },
+  };
+
+  onSubmit(ngForm: NgForm) {
     this.isSubmitted = true;
 
-    if (NgForm.valid && NgForm.submitted) {
-      console.log(this.contactData);
-    }
+   if (ngForm.submitted && ngForm.form.valid && !this.mailTest) {
+     this.http
+       .post(this.post.endPoint, this.post.body(this.contactData))
+       .subscribe({
+         next: (response) => {
+           ngForm.resetForm();
+         },
+         error: (error) => {
+           console.error(error);
+         },
+         complete: () => console.info('send post complete'),
+       });
+   } else if (ngForm.submitted && ngForm.form.valid && this.mailTest) {
+     ngForm.resetForm();
+   }
   }
 
   toggleCheckbox() {

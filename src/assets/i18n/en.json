@@ -20,14 +20,26 @@
   },
 
   "reviews": {
-    "headline": "Need a teamplayer? Here what my colleagues said about me"
+    "headline_one": "Need a teamplayer? ",
+    "headline_two": "Here what my colleagues said about me"
   },
 
   "contact": {
     "contact_headline": "Contact me",
-    "contact_content": "Still not sure if I am the right person for your project?<br>Please feel free to contact me so that we can discuss how I can be of benefit to your project.",
+    "contact_headline_two": "Let us work together!",
+    "contact_content": "Still not sure if I am the right person for your project?<br>Whether your project involves developing a new application, upgrading existing systems, or implementing robust cybersecurity measures, I have the technical acumen and problem-solving skills to ensure successful outcomes.<br>Please feel free to contact me so that we can discuss everything together.",
     "contact_phone": "Tel: ",
-    "contact_mail": "E-mail: "
+    "contact_mail": "E-mail: ",
+    "contact_name": "Your name ",
+    "contact_name_error": "Your Name is required: ",
+    "contact_Email": "Your E-mail ",
+    "contact_mail_error": "Your Email is required: ",
+    "contact_message": "Your message ",
+    "contact_message_error": "Your Message is required: ",
+    "privacy_policy_message_one": "I've read the ",
+    "privacy_policy_message_two": " and agree to the processing of my data as outlined.",
+    "privacy_policy_message_error": "Please accept the privacy policy.",
+    "contact_btn_send": "Send"
   },
 
   "footer": {

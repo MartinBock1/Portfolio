@@ -26,9 +26,20 @@
 
   "contact": {
     "contact_headline": "Kontakt",
-    "contact_content": "Sie sind sich noch nicht sicher, ob ich die Richtige für Ihr Projekt bin?<br>Nehmen Sie gerne mit mir Kontakt auf, damit wir gemeinsam besprechen können, wie ich Ihrem Projekt von Nutzen sein kann.",
+    "contact_headline_two": "Lassen Sie uns zusammen arbeiten!",
+    "contact_content": "Sie sind sich noch nicht sicher, ob ich die Richtige für Ihr Projekt bin?<br>Egal, ob Ihr Projekt die Entwicklung einer neuen Anwendung, die Aktualisierung vorhandener Systeme oder die Implementierung robuster Cybersicherheitsmaßnahmen umfasst, ich verfüge über das technische Know-how und die Problemlösungskompetenz, um Ihnen erfolgreiche Ergebnisse zu präsentieren.<br>Nehmen Sie gerne mit mir Kontakt auf, damit wir gemeinsam alles besprechen können.",
     "contact_phone": "Tel: ",
-    "contact_mail": "E-Mail: "
+    "contact_mail": "E-Mail: ",
+    "contact_name": "Ihr Name ",
+    "contact_name_error": "Ihr Name ist erforderlich: ",
+    "contact_Email": "Ihre E-Mail ",
+    "contact_mail_error": "Ihre E-Mail ist erforderlich: ",
+    "contact_message": "Ihre Nachricht ",
+    "contact_message_error": "Ihre Nachricht ist erforderlich: ",
+    "privacy_policy_message_one": "Ich habe die ",
+    "privacy_policy_message_two": " gelesen und stimme der Verarbeitung meiner Daten wie beschrieben zu.",
+    "privacy_policy_message_error": "Bitte akzeptieren Sie die Datenschutzerklärung.",
+    "contact_btn_send": "Senden"
   },
 
   "footer": {

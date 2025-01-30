@@ -13,7 +13,7 @@
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-    background: $red;
+    background: $blue;
     border-radius: 10px;
 }
 
@@ -23,7 +23,7 @@ section {
     margin-top: 50px;
     height: 500px;
     margin-bottom: 80px;
-    overflow-y: auto; // Aktiviert den vertikalen Scrollbalken bei Bedarf
+    overflow-y: auto; // Aktiviert den vertikalen Scrollbalken bei Bedarf    
 
     .reviews {
         @include dFlex($jc: space-between);
@@ -46,7 +46,6 @@ section {
             @include dFlex($jc: space-between);
             width: 100%;
             overflow-y: auto; // sorgt dafür, dass hier auch der Scrollbalken kommt
-
 
             div {
                 @include dFlex();
