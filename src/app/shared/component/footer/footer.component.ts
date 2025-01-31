@@ -15,4 +15,11 @@ export class FooterComponent {
     changeLanguage(language: string) {
       this.translate.use(language);
     }
+
+    scrollToTop(): void {
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
+    }
 }

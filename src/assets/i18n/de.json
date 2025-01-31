@@ -39,7 +39,8 @@
     "privacy_policy_message_one": "Ich habe die ",
     "privacy_policy_message_two": " gelesen und stimme der Verarbeitung meiner Daten wie beschrieben zu.",
     "privacy_policy_message_error": "Bitte akzeptieren Sie die Datenschutzerklärung.",
-    "contact_btn_send": "Senden"
+    "contact_btn_send": "Senden",
+    "contact_success_message": "Ihre Nachricht wurde erfolgreich gesendet!"
   },
 
   "footer": {

@@ -39,7 +39,8 @@
     "privacy_policy_message_one": "I've read the ",
     "privacy_policy_message_two": " and agree to the processing of my data as outlined.",
     "privacy_policy_message_error": "Please accept the privacy policy.",
-    "contact_btn_send": "Send"
+    "contact_btn_send": "Send",
+    "contact_success_message": "Your message was sent successfully!"
   },
 
   "footer": {

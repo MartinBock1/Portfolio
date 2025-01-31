@@ -1,13 +1,13 @@
 <section>
     <div class="footer content_max">
         <div class="legal_notice">
-            <a routerLink="legal">{{ 'footer.legal_notice' | translate }}</a>
+            <a routerLink="legal" (click)="scrollToTop()">{{ 'footer.legal_notice' | translate }} </a>
             <!-- <a routerLink="privacy">{{ 'footer.privacy_policy' | translate }}</a> -->
             <p>&copy;2024 Martin Bock</p>
         </div>
         <div class="logo">
             <div class="logo_icon">
-                <a routerLink="/">
+                <a routerLink="/" (click)="scrollToTop()">
                     <img class="logo_img" src="assets/img/icons/nav_logo_icon.svg" alt="Logo Icon">
                 </a>
             </div>

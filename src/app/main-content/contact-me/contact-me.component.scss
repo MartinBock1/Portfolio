@@ -163,6 +163,18 @@ section {
                 display: inline;
             }
 
+            .success-message {
+                background-color: $green;
+                color: $dark_grey;
+                border: 1px solid $dark_grey;
+                padding: 10px;
+                margin-top: 20px;
+                margin-bottom: 20px;
+                border-radius: 5px;
+                font-size: 24px;
+                text-align: center;
+            }
+
             form {
                 @include dFlex($g: 20px);
                 flex-direction: column;
@@ -236,7 +248,6 @@ section {
                                 background-color: transparent;
                             }
                         }
-
                     }
                 }
 
@@ -381,6 +392,13 @@ section {
                                 border-radius: 30px;
                                 border-color: $creme-white;
                                 cursor: pointer;
+                            }
+
+                            button:disabled,
+                            button.disabled {
+                                cursor: not-allowed;
+                                border-color: #757575;
+                                color: #757575;
                             }
                         }
                     }
@@ -678,11 +696,8 @@ textarea::placeholder {
                     .privacy_policy {
                         width: 100%;
                     }
-
-
                 }
             }
-
         }
     }
 }

@@ -28,6 +28,10 @@
             </div>
         </div>
         <div class="input">
+            <div *ngIf="isSuccessMessageVisible" class="success-message">
+                {{ 'contact.contact_success_message' | translate }}
+            </div>
+            
             <form (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm">
                 <div class="input_fields">
                     <h3>{{ 'contact.contact_headline_two' | translate }}</h3>
@@ -43,7 +47,8 @@
                                 name="name"
                                 [placeholder]="!name.valid && name.touched ? ('contact.contact_name_error' | translate) : ('contact.contact_name' | translate)"
                                 required [ngClass]="{'invalid': !name.valid && name.touched}">
-                            <img *ngIf="name.valid" class="checkmark" src="assets/img/icons/checkmark.svg" alt="Checkmark Icon">
+                            <img *ngIf="name.valid" class="checkmark" src="assets/img/icons/checkmark.svg"
+                                alt="Checkmark Icon">
                         </div>
                     </div>
                     <div class="email">
@@ -54,8 +59,8 @@
                             </span>
                         </label>
                         <div>
-                            <input #email="ngModel" minlength="4" [(ngModel)]="contactData.email" type="email" id="email"
-                                name="email"
+                            <input #email="ngModel" minlength="4" [(ngModel)]="contactData.email" type="email"
+                                id="email" name="email"
                                 [placeholder]="!email.valid && email.touched ? ('contact.contact_mail_error' | translate) :  ('contact.contact_Email' | translate)"
                                 required pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}"
                                 [ngClass]="{'invalid': !email.valid && email.touched}">
@@ -65,7 +70,7 @@
                         </div>
                     </div>
                 </div>
-        
+
                 <div class="message" [ngClass]="{'invalid': !message.valid && message.touched}">
                     <label for="message">
                         <span class="label-text">{{ 'contact.contact_message' | translate }}</span>
@@ -87,18 +92,19 @@
                 <div class="privacy_policy">
                     <div>
                         <div class="checkbox_icon" (click)="toggleCheckbox()">
-                            <img *ngIf="!isChecked && !isSubmitted" class="default" src="assets/img/icons/checkbox_icon.svg"
-                                alt="Checkbox Icon">
-        
-                            <img *ngIf="isChecked" src="assets/img/icons/checkbox_icon_active.svg" alt="Checkbox Icon Active">
-        
-                            <img *ngIf="!isChecked && isSubmitted" class="error" src="assets/img/icons/checkbox_icon_error.svg"
-                                alt="Checkbox Icon Error">
-        
+                            <img *ngIf="!isChecked && !isSubmitted" class="default"
+                                src="assets/img/icons/checkbox_icon.svg" alt="Checkbox Icon">
+
+                            <img *ngIf="isChecked" src="assets/img/icons/checkbox_icon_active.svg"
+                                alt="Checkbox Icon Active">
+
+                            <img *ngIf="!isChecked && isSubmitted" class="error"
+                                src="assets/img/icons/checkbox_icon_error.svg" alt="Checkbox Icon Error">
+
                         </div>
                         <p>
                             {{ 'contact.privacy_policy_message_one' | translate }}
-                            <a routerLink="privacy">
+                            <a routerLink="privacy" (click)="scrollToTop()">
                                 {{ 'footer.privacy_policy' | translate }}
                             </a>
                             {{ 'contact.privacy_policy_message_two' | translate }}
@@ -108,9 +114,13 @@
                         <p *ngIf="!isChecked && isSubmitted" class="error_color">
                             {{'contact.privacy_policy_message_error' | translate }}
                         </p>
-        
+
                         <div class="btn_submit">
-                            <button type="submit">{{'contact.contact_btn_send' | translate }}</button>
+                            <button type="submit"
+                                [disabled]="!name.valid || !email.valid || !message.valid || !isChecked"
+                                [ngClass]="{ 'disabled': !name.valid || !email.valid || !message.valid || !isChecked }">
+                                {{'contact.contact_btn_send' | translate }}
+                            </button>
                         </div>
                     </div>
                 </div>
@@ -121,4 +131,3 @@
         </div>
     </div>
 </section>
-

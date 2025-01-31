@@ -15,7 +15,8 @@ import { TranslatePipe, TranslateService } from '@ngx-translate/core';
 export class ContactMeComponent {
   isChecked = false;
   isSubmitted = false;
-  mailTest = true;
+  mailTest = false;
+  isSuccessMessageVisible = false;
 
   constructor(private translate: TranslateService) {}
 
@@ -31,7 +32,7 @@ export class ContactMeComponent {
   };
 
   post = {
-    endPoint: 'https://deineDomain.de/sendMail.php',
+    endPoint: 'https://martin-bock.info/sendMail.php',
     body: (payload: any) => JSON.stringify(payload),
     options: {
       headers: {
@@ -44,25 +45,45 @@ export class ContactMeComponent {
   onSubmit(ngForm: NgForm) {
     this.isSubmitted = true;
 
-   if (ngForm.submitted && ngForm.form.valid && !this.mailTest) {
-     this.http
-       .post(this.post.endPoint, this.post.body(this.contactData))
-       .subscribe({
-         next: (response) => {
-           ngForm.resetForm();
-         },
-         error: (error) => {
-           console.error(error);
-         },
-         complete: () => console.info('send post complete'),
-       });
-   } else if (ngForm.submitted && ngForm.form.valid && this.mailTest) {
-     ngForm.resetForm();
-   }
+    if (ngForm.submitted && ngForm.form.valid) {
+      //&& !this.mailTest
+      this.http
+        .post(this.post.endPoint, this.post.body(this.contactData))
+        .subscribe({
+          next: (response) => {
+            // Formulardaten zurücksetzen
+            ngForm.resetForm();
+            this.isChecked = false;
+            this.isSubmitted = false;
+
+            // Erfolgsnachricht anzeigen
+            this.isSuccessMessageVisible = true;
+
+            // Erfolgsnachricht nach 5 Sekunden ausblenden
+            setTimeout(() => {
+              this.isSuccessMessageVisible = false;
+            }, 10000);
+
+          },
+          error: (error) => {
+            console.error(error);
+          },
+          complete: () => console.info('send post complete'),
+        });
+      //  } else if (ngForm.submitted && ngForm.form.valid && this.mailTest) {
+      //    ngForm.resetForm();
+    }
   }
 
   toggleCheckbox() {
     this.isChecked = !this.isChecked;
+  }
+
+  scrollToTop(): void {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth',
+    });
   }
 }
   
