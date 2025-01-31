@@ -43,6 +43,14 @@
     "contact_success_message": "Your message was sent successfully!"
   },
 
+  "project": {
+    "project_about_pokedex": "About the Pokedex Project",
+    "project_duration_pokedex": "Duration 1 week",
+    "project_about_text_pokedex": "The Pokedex Project is a collection and documentation of Pokémon, including information such as abilities, types, evolution, and origin of each Pokémon.",
+    "project_organised_pokedex": "1. What should my Pokedex contain? 2. Where do I get the data for my Pokedex? 3. What should the user interface look like. How should the information be displayed? How does the user navigate through the Pokedex? Search function and filters: implement a search function to find Pokémon by name.",
+    "project_experience_pokedex": "The task was to develop a Pokémon trainer registry, learning how to use APIs to retrieve Pokémon characteristics and making systems compatible."
+  },
+
   "footer": {
     "legal_notice": "Legal Notice",
     "privacy_policy": "Privacy Policy"

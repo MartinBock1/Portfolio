@@ -32,7 +32,7 @@ export class ContactMeComponent {
   };
 
   post = {
-    endPoint: 'https://martin-bock.info/sendMail.php',
+    endPoint: 'https://www.martin-bock.info/sendMail.php',
     body: (payload: any) => JSON.stringify(payload),
     options: {
       headers: {
@@ -43,9 +43,9 @@ export class ContactMeComponent {
   };
 
   onSubmit(ngForm: NgForm) {
-    this.isSubmitted = true;
+    this.isSubmitted = true;  
 
-    if (ngForm.submitted && ngForm.form.valid) {
+    if (ngForm.submitted && ngForm.form.valid && this.isChecked) {
       //&& !this.mailTest
       this.http
         .post(this.post.endPoint, this.post.body(this.contactData))
@@ -63,7 +63,6 @@ export class ContactMeComponent {
             setTimeout(() => {
               this.isSuccessMessageVisible = false;
             }, 10000);
-
           },
           error: (error) => {
             console.error(error);

@@ -164,15 +164,18 @@ section {
             }
 
             .success-message {
-                background-color: $green;
-                color: $dark_grey;
-                border: 1px solid $dark_grey;
-                padding: 10px;
-                margin-top: 20px;
-                margin-bottom: 20px;
-                border-radius: 5px;
-                font-size: 24px;
-                text-align: center;
+                p {
+                    background-color: $green;
+                    color: $dark_grey;
+                    border: 1px solid $dark_grey;
+                    padding: 10px;
+                    margin-top: 20px;
+                    margin-bottom: 20px;
+                    border-radius: 5px;
+                    font-size: 24px;
+                    text-align: center;
+
+                }
             }
 
             form {

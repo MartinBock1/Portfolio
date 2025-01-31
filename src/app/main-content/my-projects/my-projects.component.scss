@@ -1,0 +1,51 @@
+@import './../../../styles.scss';
+
+.my_projects {
+
+    .content {
+        @include dFlex($g: 50px);
+        flex-direction: column;
+        width: 100%;
+
+        h2 {
+            font-size: 60px;
+            font-weight: 400;
+            font-family: 'Anta';
+            color: $blue;
+        }
+
+        .nav {
+            @include dFlex($jc: flex-start, $g: 10px);
+            width: 100%;
+            padding-left: 80px;
+
+            border: 1px solid;
+
+            div {
+                @include dFlex();
+                width: auto;
+                height: 100px;
+                border-top-left-radius: 30px;
+                border-top-right-radius: 30px;
+                border-color: $light_grey;
+                background-color: $light_grey;
+
+                border: 1px solid;
+
+                p {
+                    background-color: transparent;
+                    font-size: 30px;
+                    font-weight: 500;
+                    color: $blue;
+                    padding-left: 50px;
+                    padding-right: 50px;
+
+                    &:focus {
+                        cursor: pointer;
+                        color: $creme_white
+                    }
+                }
+            }
+        }
+    }
+}

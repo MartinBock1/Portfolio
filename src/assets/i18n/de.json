@@ -43,6 +43,14 @@
     "contact_success_message": "Ihre Nachricht wurde erfolgreich gesendet!"
   },
 
+  "project": {
+    "project_about_pokedex": "Über das Pokedex-Projekt",
+    "project_duration_pokedex": "Dauer: 1 Woche",
+    "project_about_text_pokedex": "Das Pokedex-Projekt ist eine Sammlung und Dokumentation von Pokémon, die Informationen wie Fähigkeiten, Typen, Entwicklung und Herkunft jedes Pokémon umfasst.",
+    "project_organised_pokedex": "1. Was soll mein Pokedex beinhalten? 2. Woher bekomme ich die Daten für mein Pokedex? 3. Wie soll die Benutzeroberfläche aussehen. Wie sollen die Informationen angezeigt werden? Wie navigiert der Benutzer durch den Pokedex? Suchfunktion und Filter: eine Suchfunktion implementieren, um Pokémon nach Namen zu finden.",
+    "project_experience_pokedex": "Die Aufgabe war es, ein Pokémon-Trainer-Register zu entwickeln, dabei zu lernen, APIs zu nutzen, um Pokémon-Eigenschaften abzurufen und Systeme kompatibel zu gestalten."
+  },
+
   "footer": {
     "legal_notice": "Impressum",
     "privacy_policy": "Datenschutzerklärung"

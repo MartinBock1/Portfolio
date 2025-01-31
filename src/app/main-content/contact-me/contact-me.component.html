@@ -29,7 +29,7 @@
         </div>
         <div class="input">
             <div *ngIf="isSuccessMessageVisible" class="success-message">
-                {{ 'contact.contact_success_message' | translate }}
+               <p> {{ 'contact.contact_success_message' | translate }}</p>
             </div>
             
             <form (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm">
@@ -117,8 +117,8 @@
 
                         <div class="btn_submit">
                             <button type="submit"
-                                [disabled]="!name.valid || !email.valid || !message.valid || !isChecked"
-                                [ngClass]="{ 'disabled': !name.valid || !email.valid || !message.valid || !isChecked }">
+                                [disabled]="!name.valid || !email.valid || !message.valid "
+                                [ngClass]="{ 'disabled': !name.valid || !email.valid || !message.valid }">
                                 {{'contact.contact_btn_send' | translate }}
                             </button>
                         </div>

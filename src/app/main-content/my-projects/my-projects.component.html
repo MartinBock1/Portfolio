@@ -1,1 +1,38 @@
-<p>my-projects works!</p>
+<section class="my_projects content_max">
+    <div class="content">
+        <h2>My Projects</h2>
+        <div class="nav">
+            <div>
+                <p>
+                    1. Pokedex
+                </p>
+            </div>
+            <div>
+                <p>
+                    2. El Pollo Loco
+                </p>
+            </div>
+            <div>
+                <p>
+                    3. Join
+                </p>
+            </div>
+            <div>
+                <p>
+                    4. Ongoinig Project
+                </p>
+            </div>
+        </div>
+        <div class="project">
+
+        </div>
+
+    </div>
+</section>
+
+<!-- @for(project of projects; track $index;){
+
+<app-single-project [project]="projects[selectedProjectIndex]"></app-single-project>
+} -->
+
+<app-single-project [project]="projects[selectedProjectIndex]"></app-single-project>

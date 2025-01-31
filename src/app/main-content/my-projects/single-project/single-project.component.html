@@ -1,0 +1,52 @@
+<section class="single_project content_max">
+    <div class="content">
+        <div class="content_text">
+            <div class="about">
+                <div class="headline">
+                    <img src="assets/img/icons/bubble_project.svg">
+                    <h3>{{ project.project_about | translate }}</h3>
+                    <p>{{ project.project_duration | translate }}</p>
+
+                </div>
+                <div class="text">
+                    <p>
+                        {{project.project_about_text}}
+                        <!-- Das Pokedex-Projekt ist eine Sammlung und Dokumentation von Pokémon, die Informationen wie Fähigkeiten, Typen, Entwicklung und Herkunft jedes Pokémon umfasst. -->
+                    </p>
+                </div>
+            </div>
+            <div class="organised">
+                <div class="headline">
+                    <img src="assets/img/icons/bubble_project.svg">
+                    <h3>How I have organised my work process</h3>
+                    <!-- 1. Was soll mein Pokedex beinhalten?
+                    2. Woher bekomme ich die Daten für mein Pokedex.
+                    3. Wie soll die Benutzeroberfläche aussehen. Wie sollen die Informationen angezeigt werden? Wie navigiert der Benutzer durch den Pokedex?
+                    Suchfunktion und Filter: eine Suchfunktion implementieren, um Pokémon nach Namen zu finden. -->
+                    <p></p>
+
+                </div>
+                <div class="text">
+                    <p>{{project.project_organised}}</p>
+                </div>
+            </div>
+            <div class="learned">
+                <div class="headline">
+                    <img src="assets/img/icons/bubble_project.svg">
+                    <h3>What I have learnt</h3>
+                    <p></p>
+            
+                </div>
+                <div class="text">
+                    <p>{{project.project_experience}}
+                    <!-- Die Aufgabe war es, ein Pokémon-Trainer-Register zu entwickeln. Dabei zu lernen, APIs zu nutzen, um Pokémon-Eigenschaften abzurufen und Systeme kompatibel zu gestalten. --></p>
+                </div>
+            </div>
+        </div>        
+        <div class="content_img">
+            <div class="image">
+                <img src="assets/img/{{ project.img }}" alt="">
+            </div>
+        </div>
+    </div>
+</section>
