@@ -83,10 +83,12 @@
                 .icons {
                     @include dFlex($g: 20px);
                     width: 100%;
+                    background-color: transparent;
 
                     >img {
                         width: 36px;
                         height: 36px;
+                        background-color: transparent;
                     }
                 }
             }

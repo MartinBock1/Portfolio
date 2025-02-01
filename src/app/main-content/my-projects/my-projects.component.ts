@@ -25,6 +25,7 @@ export class MyProjectsComponent {
 
   projects: Project[] = [
     {
+      index: 0,
       img: 'screenshot_pokedex.png',
       project_about: 'project.project_about_pokedex',
       project_duration: 'project.project_duration_pokedex',
@@ -38,8 +39,13 @@ export class MyProjectsComponent {
       project_icon_html: 'assets/img/icons/skills/html.svg',
       project_icon_css: 'assets/img/icons/skills/css.svg',
       project_icon_js: 'assets/img/icons/skills/javascript.svg',
+      project_icon_angular: '',
+      project_icon_typescrip: '',
+      project_icon_vue_js: '',
+      project_icon_react: '',
     },
     {
+      index: 1,
       img: 'screenshot_game.png',
       project_about: 'project.project_about_game',
       project_duration: 'project.project_duration_game',
@@ -53,8 +59,13 @@ export class MyProjectsComponent {
       project_icon_html: 'assets/img/icons/skills/html.svg',
       project_icon_css: 'assets/img/icons/skills/css.svg',
       project_icon_js: 'assets/img/icons/skills/javascript.svg',
+      project_icon_angular: '',
+      project_icon_typescrip: '',
+      project_icon_vue_js: '',
+      project_icon_react: '',
     },
     {
+      index: 2,
       img: 'screenshot_join.png',
       project_about: 'project.project_about_join',
       project_duration: 'project.project_duration_join',
@@ -68,9 +79,14 @@ export class MyProjectsComponent {
       project_icon_html: 'assets/img/icons/skills/html.svg',
       project_icon_css: 'assets/img/icons/skills/css.svg',
       project_icon_js: 'assets/img/icons/skills/javascript.svg',
+      project_icon_angular: '',
+      project_icon_typescrip: '',
+      project_icon_vue_js: '',
+      project_icon_react: '',
     },
 
     {
+      index: 3,
       img: 'screenshot_comming_soon.png',
       project_about: 'project.project_about_ongoinig',
       project_duration: 'project.project_duration_ongoinig',
@@ -81,9 +97,13 @@ export class MyProjectsComponent {
       project_experience_text: 'project.project_experience_text_ongoinig',
       project_link_live: '',
       project_link_github: '',
-      project_icon_html: '',
-      project_icon_css: '',
+      project_icon_html: 'assets/img/icons/skills/html.svg',
+      project_icon_css: 'assets/img/icons/skills/css.svg',
       project_icon_js: '',
+      project_icon_angular: 'assets/img/icons/skills/angular.svg',
+      project_icon_typescrip: 'assets/img/icons/skills/typescript.svg',
+      project_icon_vue_js: 'assets/img/icons/vue_js.svg',
+      project_icon_react: 'assets/img/icons/react.svg',
     },
   ];
 

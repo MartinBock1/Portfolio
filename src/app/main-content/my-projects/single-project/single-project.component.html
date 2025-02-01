@@ -14,22 +14,24 @@
             </div>
             <div class="organised">
                 <div class="headline">
-                    <img src="assets/img/icons/bubble_project.svg">
+                    @if(project.index != 3) {
+                        <img src="assets/img/icons/bubble_project.svg">
+                    }
                     <h3>{{ project.project_organised | translate}}</h3>
                     <p></p>
 
                 </div>
-                <div class="text">
-                    <!-- <p>{{ project.project_organised_text | translate }}</p> -->
+                <div class="text">                    
                     <p [innerHTML]="project.project_organised_text | translate"></p>
                 </div>
             </div>
             <div class="learned">
                 <div class="headline">
-                    <img src="assets/img/icons/bubble_project.svg">
+                    @if(project.index != 3) {
+                        <img src="assets/img/icons/bubble_project.svg">
+                    }
                     <h3>{{ project.project_experience | translate }}</h3>
                     <p></p>
-
                 </div>
                 <div class="text">
                     <p>{{ project.project_experience_text | translate }}
@@ -41,17 +43,30 @@
             <div class="icons_container">
                 <p>{{ 'project.icons_container_headline' | translate }}</p>
                 <div class="icons">
+                    @if(project.index != 3) {
                     <img src="{{ project.project_icon_html }}">
                     <img src="{{ project.project_icon_js }}">
                     <img src="{{ project.project_icon_css }}">
+                    }
+                    @if(project.index == 3) {
+                    <img src="{{ project.project_icon_angular }}">
+                    <img src="{{ project.project_icon_typescrip }}">
+                    <img src="{{ project.project_icon_html }}">
+                    <img src="{{ project.project_icon_css }}">
+                    <img src="{{ project.project_icon_vue_js }}">
+                    <img src="{{ project.project_icon_react }}">
+                    }
+                    
                 </div>
             </div>
             <div class="image">
                 <img src="assets/img/{{ project.img }}" alt="">
             </div>
             <div class="button">
-                <a href="{{ project.project_link_live | translate }}" target="_blank"><button class="live">Live Test</button></a>
-                <a href="{{ project.project_link_github | translate }}" target="_blank"><button class="github">GitHub</button></a>
+                <a href="{{ project.project_link_live | translate }}" target="_blank"><button class="live">Live
+                        Test</button></a>
+                <a href="{{ project.project_link_github | translate }}" target="_blank"><button
+                        class="github">GitHub</button></a>
             </div>
         </div>
     </div>
