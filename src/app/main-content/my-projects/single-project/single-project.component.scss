@@ -5,15 +5,19 @@
     .content {
         @include dFlex($jc: space-between, $g: 30px);
         width: 100%;
-        padding-left: 80px;
-        padding-left: 80px;
-
-        border: 1px solid;
+        position: relative;
+        top: 100px;
+        padding-left: 50px;
+        padding-right: 50px;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        background-color: $light_grey;
 
         .content_text {
             @include dFlex($g: 30px);
             flex-direction: column;
-            width: 50%;
+            width: 60%;
+            background-color: transparent;
 
             .about,
             .organised,
@@ -23,6 +27,14 @@
                 width: 100%;
                 padding-top: 10px;
                 padding-bottom: 10px;
+                background-color: transparent;
+
+                h3,
+                p,
+                .headline,
+                .text {
+                    background-color: transparent;
+                }
 
                 h3 {
                     font-size: 28px;
@@ -34,27 +46,103 @@
                     font-size: 18px;
                     font-weight: 400;
                     color: $creme-white;
+
                 }
 
                 .headline {
                     @include dFlex($jc: flex-start, $g: 20px);
                     width: 100%;
                 }
+
+                .text p {
+                    padding-left: 50px;
+                    background-color: transparent;
+                }
             }
         }
 
         .content_img {
-            @include dFlex();
-            width: 50%;
+            @include dFlex($g: 30px);
+            flex-direction: column;
+            width: 40%;
+            background-color: transparent;
+
+            .icons_container {
+                @include dFlex($g: 10px);
+                flex-direction: column;
+                width: 100%;
+                background-color: transparent;
+
+                p,
+                .icons {
+                    background-color: transparent;
+                    font-size: 18px;
+                    font-weight: 400;
+                }
+
+                .icons {
+                    @include dFlex($g: 20px);
+                    width: 100%;
+
+                    >img {
+                        width: 36px;
+                        height: 36px;
+                    }
+                }
+            }
 
             .image {
                 width: 453px;
                 height: 312px;
+                background-color: transparent;
 
                 img {
                     width: 100%;
                     height: 100%;
                     border-radius: 30px;
+                }
+            }
+
+            .button {
+                @include dFlex($g: 20px);
+                width: 100%;
+                background-color: transparent;
+
+                a {
+                    background-color: transparent;
+
+                    .live,
+                    .github {
+                        // background-color: transparent;
+                        border: 1px solid;
+                        border-color: $blue;
+                        border-radius: 30px;
+                        font-size: 18px;
+                        font-weight: 400;
+                        cursor: pointer;
+                    }
+
+                    .live {
+                        width: 132px;
+                        height: 48px;
+                        background-color: $blue;
+                        color: $light_grey;
+
+                        &:hover {
+                            background-color: $creme-white;
+                        }
+                    }
+
+                    .github {
+                        width: 120px;
+                        height: 48px;
+                        background-color: transparent;
+                        color: $blue;
+
+                        &:hover {
+                            background-color: #3f454a;
+                        }
+                    }
                 }
             }
         }

@@ -20,16 +20,19 @@
 /* ---------------------------------------------------------------------------------------------------------------*/
 
 section {
-    margin-top: 50px;
-    height: 500px;
+    margin-top: 80px;
+    height: 600px;
     margin-bottom: 80px;
     overflow-y: auto; // Aktiviert den vertikalen Scrollbalken bei Bedarf    
 
     .reviews {
-        @include dFlex($jc: space-between);
+        @include dFlex($jc: space-between, $g: 50px);
         flex-direction: column;
-        height: 100%;
+        // margin-top: 50px;
+        // height: 100%;
         overflow-y: auto; // Verhindert, dass der Inhalt überläuft
+        position: relative;
+        top: 100px;
 
         h1 {
             font-size: 32px;

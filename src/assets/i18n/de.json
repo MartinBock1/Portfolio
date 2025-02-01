@@ -43,12 +43,52 @@
     "contact_success_message": "Ihre Nachricht wurde erfolgreich gesendet!"
   },
 
+  "title": {
+    "nav_title": "4. Laufendes Projekt"
+  },
+
   "project": {
-    "project_about_pokedex": "Über das Pokedex-Projekt",
+    "project_title": "Laufendes Projekt",
+    "project_about_pokedex": "Über das Projekt",
     "project_duration_pokedex": "Dauer: 1 Woche",
     "project_about_text_pokedex": "Das Pokedex-Projekt ist eine Sammlung und Dokumentation von Pokémon, die Informationen wie Fähigkeiten, Typen, Entwicklung und Herkunft jedes Pokémon umfasst.",
-    "project_organised_pokedex": "1. Was soll mein Pokedex beinhalten? 2. Woher bekomme ich die Daten für mein Pokedex? 3. Wie soll die Benutzeroberfläche aussehen. Wie sollen die Informationen angezeigt werden? Wie navigiert der Benutzer durch den Pokedex? Suchfunktion und Filter: eine Suchfunktion implementieren, um Pokémon nach Namen zu finden.",
-    "project_experience_pokedex": "Die Aufgabe war es, ein Pokémon-Trainer-Register zu entwickeln, dabei zu lernen, APIs zu nutzen, um Pokémon-Eigenschaften abzurufen und Systeme kompatibel zu gestalten."
+    "project_organised_pokedex": "So habe ich meinen Arbeitsablauf organisiert",
+    "project_organised_text_pokedex": "1. Was soll mein Pokedex beinhalten? <br>2. Woher bekomme ich die Daten für mein Pokedex? <br>3. Wie soll die Benutzeroberfläche aussehen. Wie sollen die Informationen angezeigt werden? Wie navigiert der Benutzer durch den Pokedex? <br>4. Suchfunktion und Filter: eine Suchfunktion implementieren, um Pokémon nach Namen zu finden.",
+    "project_experience_pokedex": "Was habe ich gelernt?",
+    "project_experience_text_pokedex": "Die Aufgabe war es, ein Pokémon-Trainer-Register zu entwickeln, dabei zu lernen, APIs zu nutzen, um Pokémon-Eigenschaften abzurufen und Systeme kompatibel zu gestalten.",
+    "icons_container_headline": "Technologien",
+    "link_live_pokedex": "https://www.pokedex.martin-bock.info",
+    "link_github_pokedex": "https://github.com/MartinBock1/Pokedex",
+
+    "project_about_game": "Über das Projekt",
+    "project_duration_game": "Dauer: 3 Wochen",
+    "project_about_text_game": "Spring-, Lauf- und Wurfspiel mit objektorientiertem Ansatz. Hilf Pepe, Münzen und Tabasco-Salsa zu finden, um gegen die verrückte Henne zu kämpfen.",
+    "project_organised_game": "So habe ich meinen Arbeitsablauf organisiert",
+    "project_organised_text_game": "...",
+    "project_experience_game": "Was habe ich gelernt?",
+    "project_experience_text_game": "Erlernen & Anwendung fortgeschrittener Konzepte wie Objektorientierung (OOP), Kennenlernen und Verwendung von BrowserEvents, Vertiefung von Java Script Kenntnissen",
+    "link_live_game": "https://www.elpolloloco.martin-bock.info",
+    "link_github_game": "https://github.com/MartinBock1/El-Pollo-Loco",
+
+    "project_about_join": "Über das Projekt",
+    "project_duration_join": "Dauer: 3 Wochen",
+    "project_about_text_join": "Bei dieser App handelt es sich um eine Slack-Clone-App. Sie revolutioniert die Kommunikation und Zusammenarbeit im Team mit ihrer intuitiven Benutzeroberfläche, Echtzeitnachrichten und robusten Kanalorganisation.",
+    "project_organised_join": "So habe ich meinen Arbeitsablauf organisiert",
+    "project_organised_text_join": "...",
+    "project_experience_join": "Meine Erfahrung in der Gruppenarbeit",
+    "project_experience_text_join": "Für mein Abschlussprojekt an der Developer Akademie verwendeten wir mit 3 Kollegen Angular und Firebase (Angular Fire). Meine Hauptaufgaben umfassten das Implementieren von Datei-Uploads, das Strukturieren der Firebase-Datenbank und die Nutzung von Firebase zur Authentifizierung und Datenspeicherung.",
+    "link_live_join": "",
+    "link_github_join": "",
+
+    "project_about_ongoinig": "Über das Projekt",
+    "project_duration_ongoinig": "",
+    "project_about_text_ongoinig": "Ich arbeite derzeit an der Entwicklung eines einfachen Customer Relationship Management-Systems mit CRUD-Funktionalität. Das ist für mich sowohl spannend als auch herausfordernd. Bei meiner Arbeit liegt der Schlüssel zum Erfolg in einer guten Planung und Ausführung. Aufgaben mit Drag & Drop-Funktionen ordnen, Benutzer und Kategorien zuweisen.",
+    "project_organised_ongoinig": "",
+    "project_organised_text_ongoinig": "",
+    "project_experience_ongoinig": "",
+    "project_experience_text_ongoinig": "",
+    "link_live_ongoinig": "",
+    "link_github_ongoinig": ""
   },
 
   "footer": {

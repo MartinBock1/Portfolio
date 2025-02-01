@@ -2,37 +2,14 @@
     <div class="content">
         <h2>My Projects</h2>
         <div class="nav">
-            <div>
-                <p>
-                    1. Pokedex
-                </p>
-            </div>
-            <div>
-                <p>
-                    2. El Pollo Loco
-                </p>
-            </div>
-            <div>
-                <p>
-                    3. Join
-                </p>
-            </div>
-            <div>
-                <p>
-                    4. Ongoinig Project
-                </p>
+            <div *ngIf="titles.length > 0">
+                <p (click)="selectedProject(0)" [class.active]="selectedProjectIndex === 0">{{ titles[0].pokedex }}</p>
+                <p (click)="selectedProject(1)" [class.active]="selectedProjectIndex === 1">{{ titles[0].game }}</p>
+                <p (click)="selectedProject(2)" [class.active]="selectedProjectIndex === 2">{{ titles[0].join }}</p>
+                <p (click)="selectedProject(3)" [class.active]="selectedProjectIndex === 3">{{ titles[0].ongoing | translate }}</p>
             </div>
         </div>
-        <div class="project">
-
-        </div>
-
     </div>
 </section>
-
-<!-- @for(project of projects; track $index;){
-
-<app-single-project [project]="projects[selectedProjectIndex]"></app-single-project>
-} -->
 
 <app-single-project [project]="projects[selectedProjectIndex]"></app-single-project>

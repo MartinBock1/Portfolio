@@ -9,43 +9,49 @@
 
                 </div>
                 <div class="text">
-                    <p>
-                        {{project.project_about_text}}
-                        <!-- Das Pokedex-Projekt ist eine Sammlung und Dokumentation von Pokémon, die Informationen wie Fähigkeiten, Typen, Entwicklung und Herkunft jedes Pokémon umfasst. -->
-                    </p>
+                    <p>{{ project.project_about_text | translate }}</p>
                 </div>
             </div>
             <div class="organised">
                 <div class="headline">
                     <img src="assets/img/icons/bubble_project.svg">
-                    <h3>How I have organised my work process</h3>
-                    <!-- 1. Was soll mein Pokedex beinhalten?
-                    2. Woher bekomme ich die Daten für mein Pokedex.
-                    3. Wie soll die Benutzeroberfläche aussehen. Wie sollen die Informationen angezeigt werden? Wie navigiert der Benutzer durch den Pokedex?
-                    Suchfunktion und Filter: eine Suchfunktion implementieren, um Pokémon nach Namen zu finden. -->
+                    <h3>{{ project.project_organised | translate}}</h3>
                     <p></p>
 
                 </div>
                 <div class="text">
-                    <p>{{project.project_organised}}</p>
+                    <!-- <p>{{ project.project_organised_text | translate }}</p> -->
+                    <p [innerHTML]="project.project_organised_text | translate"></p>
                 </div>
             </div>
             <div class="learned">
                 <div class="headline">
                     <img src="assets/img/icons/bubble_project.svg">
-                    <h3>What I have learnt</h3>
+                    <h3>{{ project.project_experience | translate }}</h3>
                     <p></p>
-            
+
                 </div>
                 <div class="text">
-                    <p>{{project.project_experience}}
-                    <!-- Die Aufgabe war es, ein Pokémon-Trainer-Register zu entwickeln. Dabei zu lernen, APIs zu nutzen, um Pokémon-Eigenschaften abzurufen und Systeme kompatibel zu gestalten. --></p>
+                    <p>{{ project.project_experience_text | translate }}
+                    </p>
                 </div>
             </div>
-        </div>        
+        </div>
         <div class="content_img">
+            <div class="icons_container">
+                <p>{{ 'project.icons_container_headline' | translate }}</p>
+                <div class="icons">
+                    <img src="{{ project.project_icon_html }}">
+                    <img src="{{ project.project_icon_js }}">
+                    <img src="{{ project.project_icon_css }}">
+                </div>
+            </div>
             <div class="image">
                 <img src="assets/img/{{ project.img }}" alt="">
+            </div>
+            <div class="button">
+                <a href="{{ project.project_link_live | translate }}" target="_blank"><button class="live">Live Test</button></a>
+                <a href="{{ project.project_link_github | translate }}" target="_blank"><button class="github">GitHub</button></a>
             </div>
         </div>
     </div>

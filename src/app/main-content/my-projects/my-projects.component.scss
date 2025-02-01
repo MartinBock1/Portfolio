@@ -3,9 +3,12 @@
 .my_projects {
 
     .content {
+        position: relative;
+        top: 100px;
         @include dFlex($g: 50px);
         flex-direction: column;
         width: 100%;
+        margin-bottom: 0px;
 
         h2 {
             font-size: 60px;
@@ -18,31 +21,34 @@
             @include dFlex($jc: flex-start, $g: 10px);
             width: 100%;
             padding-left: 80px;
-
-            border: 1px solid;
+            cursor: pointer;
 
             div {
-                @include dFlex();
+                @include dFlex($g: 10px);
                 width: auto;
-                height: 100px;
-                border-top-left-radius: 30px;
-                border-top-right-radius: 30px;
-                border-color: $light_grey;
-                background-color: $light_grey;
 
-                border: 1px solid;
 
                 p {
-                    background-color: transparent;
+                    @include dFlex();
                     font-size: 30px;
                     font-weight: 500;
                     color: $blue;
                     padding-left: 50px;
                     padding-right: 50px;
+                    height: 100px;
+                    cursor: pointer;
+                    transition: 0.3s;
 
-                    &:focus {
-                        cursor: pointer;
-                        color: $creme_white
+                    &:hover {
+                        color: $creme_white;
+                    }
+
+                    &.active {
+                        border-top-left-radius: 30px;
+                        border-top-right-radius: 30px;
+                        border-color: $light_grey;
+                        background-color: $light_grey;
+                        color: $creme_white;
                     }
                 }
             }
