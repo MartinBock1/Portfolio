@@ -1,119 +1,123 @@
 @import './../../../styles.scss';
 
 .why_me {
-    @include dFlex($jc: flex-start);
+    @include dFlex();
     flex-direction: column;
-    width: 1000px;
-    height: 410px;
     background-color: transparent;
     pointer-events: none;
-    // margin-top: 80px;
-    position: relative;
-    top: 60px;
 
-    h2 {
-        font-family: 'Anta';
-        color: $blue;
-        font-size: 60px;
-        font-weight: 400;
-        padding-top: 100px;
+    >div {
+        @include dFlex($g: 50px);
+        flex-direction: column;
+        width: 1000px;
+        height: 100%;
+        pointer-events: none;
         background-color: transparent;
-    }
+        position: relative;
+        top: 100px;
 
-    .content {
-        @include dFlex($jc: space-between, $ai: flex-start, $g: 30px);
-        width: 100%;
-        font-weight: 700;
-        // margin-top: 30px;
-        // margin-bottom: 100px;
-        pointer-events:all;
+        h2 {
+            font-family: 'Anta';
+            color: $blue;
+            font-size: 60px;
+            font-weight: 400;
+            background-color: transparent;
+        }
 
-        .locate {
-            @include dFlex($jc: flex-start, $ai: flex-start, $g: 20px);
-            flex-direction: column;
-            width: 50%;
-            font-size: 30px;
-            font-weight: 500;
+        .content {
+            @include dFlex($jc: space-between, $ai: flex-start, $g: 30px);
+            width: 100%;
+            font-weight: 700;
+            padding-bottom: 20px;
+            pointer-events: all;
 
-            img {
-                width: 73px;
-                height: 63px;
-            }
+            .locate {
+                @include dFlex($jc: flex-start, $ai: flex-start, $g: 20px);
+                flex-direction: column;
+                width: 50%;
+                font-size: 30px;
+                font-weight: 500;
 
-            >div {
-                @include dFlex($g: 10px);
-
-                .typewriter {
-                    overflow: hidden;
-                    border-right: .15em solid $blue;
-                    white-space: nowrap;
-                    margin: 0 auto;
-                    /* Gives that scrolling effect as the typing happens */
-                    // letter-spacing: .15em;
-                    /* Adjust as needed */
-                    animation:
-                        typing 3.5s steps(40, end) forwards,
-                        blink-caret .75s step-end infinite,
-                        deleting 3.5s steps(40, end) 3.5s forwards;
-                }
-            }
-
-            /* The typing effect */
-            @keyframes typing {
-                from {
-                    width: 0
+                img {
+                    width: 73px;
+                    height: 63px;
                 }
 
-                to {
-                    width: 100%
-                }
-            }
+                >div {
+                    @include dFlex($g: 10px);
 
-            /* The deleting effect (backward) */
-            @keyframes deleting {
-                from {
-                    width: 100%;
-                    border-color: $blue;
-                }
-
-                to {
-                    width: 0;
-                    border-color: transparent
-                }
-            }
-
-            /* The typewriter cursor effect */
-            @keyframes blink-caret {
-
-                from,
-                to {
-                    border-color: transparent
+                    .typewriter {
+                        overflow: hidden;
+                        border-right: .15em solid $blue;
+                        white-space: nowrap;
+                        margin: 0 auto;
+                        /* Gives that scrolling effect as the typing happens */
+                        // letter-spacing: .15em;
+                        /* Adjust as needed */
+                        animation:
+                            typing 3.5s steps(40, end) forwards,
+                            blink-caret .75s step-end infinite,
+                            deleting 3.5s steps(40, end) 3.5s forwards;
+                    }
                 }
 
-                50% {
-                    border-color: $blue;
+                /* The typing effect */
+                @keyframes typing {
+                    from {
+                        width: 0
+                    }
+
+                    to {
+                        width: 100%
+                    }
+                }
+
+                /* The deleting effect (backward) */
+                @keyframes deleting {
+                    from {
+                        width: 100%;
+                        border-color: $blue;
+                    }
+
+                    to {
+                        width: 0;
+                        border-color: transparent
+                    }
+                }
+
+                /* The typewriter cursor effect */
+                @keyframes blink-caret {
+
+                    from,
+                    to {
+                        border-color: transparent
+                    }
+
+                    50% {
+                        border-color: $blue;
+                    }
                 }
             }
         }
-    }
 
-    .text {
-        @include dFlex($jc: flex-start);
-        flex-direction: column;
-        position: relative;
-        width: 50%;
-        height: 176px;
-        font-size: 18px;
-        font-weight: 400;
+        .text {
+            @include dFlex($jc: flex-start);
+            flex-direction: column;
+            position: relative;
+            width: 50%;
+            height: 176px;
+            font-size: 18px;
+            font-weight: 400;
 
-        .lets_talk_icon {
-            position: absolute;
-            bottom: 0;
-            right: 0;
-            cursor: pointer;
+            .lets_talk_icon {
+                position: absolute;
+                bottom: 0;
+                right: 0;
+                cursor: pointer;
 
-            &:hover {
-                background-image: url('./../../../assets/img/icons/btn_lets_talk_hover.svg');
+                &:hover {
+                    background-image: url('./../../../assets/img/icons/btn_lets_talk_hover.svg');
+                }
             }
         }
     }
@@ -124,39 +128,45 @@
 @media (max-width: 1100px) {
     .why_me {
         @include dFlex($g: 30px);
-        margin-top: 0px;
-        margin-bottom: 0;
-        width: 100%;
+        // margin-top: 0px;
+        // margin-bottom: 0;
+        // width: 100%;
 
-        h2 {
-            font-size: 48px;
-        }
-
-        .content {
-            @include dFlex($ai: center, $g: 50px);
-            flex-direction: column;
-
-            .locate {
-                @include dFlex();
-                width: 100%;
-                font-size: 24px;
-
-                img {
-                    width: 60px;
-                    height: 50px;
-                }
+        div {
+            @include dFlex($g: 30px);
+                margin-top: 0px;
+                margin-bottom: 0;
+                width: 450px;
+            h2 {
+                font-size: 48px;
             }
-
-            .text {
-                height: auto;
-                text-align: center;
-
-                p {
-                    width: 450px;
+    
+            .content {
+                @include dFlex($ai: center, $g: 50px);
+                flex-direction: column;
+    
+                .locate {
+                    @include dFlex();
+                    width: 100%;
+                    font-size: 24px;
+    
+                    img {
+                        width: 60px;
+                        height: 50px;
+                    }
                 }
-
-                img {
-                    display: none;
+    
+                .text {
+                    height: auto;
+                    text-align: center;
+    
+                    p {
+                        width: 450px;
+                    }
+    
+                    img {
+                        display: none;
+                    }
                 }
             }
         }
@@ -169,35 +179,38 @@
         padding-left: 10px;
         padding-right: 10px;
 
-        h2 {
-            font-size: 32px;
-        }
-
-        .content {
+        div {
             width: 100%;
-
-            .locate {
-                font-size: 18px;
-                width: 100%;
-
-                img {
-                    width: 32.5px;
-                    height: 40px;
-                }
+            
+            h2 {
+                font-size: 32px;
             }
-
-            .text {
-                font-size: 16px;
+    
+            .content {
                 width: 100%;
-                padding: 10px;
-
-                p {
+    
+                .locate {
+                    font-size: 18px;
                     width: 100%;
+    
+                    img {
+                        width: 32.5px;
+                        height: 40px;
+                    }
+                }
+    
+                .text {
+                    font-size: 16px;
+                    width: 100%;
+                    padding: 10px;
+    
+                    p {
+                        width: 100%;
+                    }
                 }
             }
         }
     }
 }
 
-@media (max-width: 400px) {
-}
+@media (max-width: 400px) {}

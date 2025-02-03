@@ -24,182 +24,249 @@
 section {
     @include dFlex($g: 30px);
     flex-direction: column;
-    position: relative;
-    // padding-top: -80px;
+    // position: relative;
+    // top: 80px;
 
-    .contact_headline {
+    >div {
         @include dFlex($ai: flex-start);
-        width: 100%;
-        height: 90px;
-        position: relative;
-        top: -80px;
-        margin-top: 80px;
-
-        h2 {
-            font-family: 'Anta';
-            font-size: 54px;
-            font-weight: 400;
-            color: $blue;
-        }
-
-        .arrow_up {
-            position: absolute;
-            right: 10px;
-            top: 0px;
-
-            &:hover {
-                background-image: url('./../../../assets/img/icons/arrow_up_hover_icon.svg');
-            }
-        }
-    }
-
-    .contact_me {
-        position: relative;
-        @include dFlex($g: 30px);
         flex-direction: column;
-        width: 1000px;
-        height: 100%;
-        padding-left: 50px;
-        padding-right: 50px;
-        padding-bottom: 50px;
 
-        .content {
-            @include dFlex($ai: flex-start, $g: 50px);
+        .contact_headline {
+            position: relative;
+            @include dFlex($ai: flex-start);
             width: 100%;
-            margin-bottom: 50px;
+            height: 170px;
 
-            p {
-                @include dFlex($ai: flex-start);
-                width: 50%;
-                text-align: justify;
-                font-size: 18px;
+            h2 {
+                font-family: 'Anta';
+                font-size: 54px;
+                font-weight: 400;
+                color: $blue;
+                padding-top: 80px;
             }
 
-            .contact {
-                @include dFlex($ai: flex-start, $g: 10px);
-                flex-direction: column;
-                width: 50%;
+            .arrow_up {
+                position: absolute;
+                right: 10px;
+                top: 80px;
 
-                .mail {
-                    width: 100%;
-                    @include dFlex($jc: flex-start, $g: 10px);
+                &:hover {
+                    background-image: url('./../../../assets/img/icons/arrow_up_hover_icon.svg');
+                }
+            }
+        }
 
-                    .mail_icon {
-                        width: 26px;
-                        height: 30px;
-                        visibility: visible;
-                    }
+        .contact_me {
+            position: relative;
+            @include dFlex($g: 30px);
+            flex-direction: column;
+            width: 1000px;
+            height: 100%;
+            padding-bottom: 50px;
 
-                    &:hover {
-                        background-image: url('./../../../assets/img/icons/mail_icon_hover.svg');
-                        background-repeat: no-repeat;
+            .content {
+                @include dFlex($ai: flex-start, $g: 50px);
+                width: 100%;
+                margin-bottom: 50px;
+
+                p {
+                    @include dFlex($ai: flex-start);
+                    width: 50%;
+                    text-align: justify;
+                    font-size: 18px;
+                }
+
+                .contact {
+                    @include dFlex($ai: flex-start, $g: 10px);
+                    flex-direction: column;
+                    width: 50%;
+
+                    .mail {
+                        width: 100%;
+                        @include dFlex($jc: flex-start, $g: 10px);
 
                         .mail_icon {
-                            visibility: hidden;
+                            width: 26px;
+                            height: 30px;
+                            visibility: visible;
+                        }
+
+                        &:hover {
+                            background-image: url('./../../../assets/img/icons/mail_icon_hover.svg');
+                            background-repeat: no-repeat;
+
+                            .mail_icon {
+                                visibility: hidden;
+                            }
+                        }
+
+                        a {
+                            text-decoration: none;
+                            text-align: left;
+
+                            p {
+                                font-size: 20px;
+                                font-weight: 400;
+                                width: 100%;
+                            }
+                        }
+
+                        &:hover a>p {
+                            color: $blue;
                         }
                     }
 
-                    a {
-                        text-decoration: none;
-                        text-align: left;
-
-                        p {
-                            font-size: 20px;
-                            font-weight: 400;
-                            width: 100%;
-                        }
-                    }
-
-                    &:hover a>p {
-                        color: $blue;
-                    }
-                }
-
-                .phone {
-                    width: 100%;
-                    @include dFlex($jc: flex-start, $g: 10px);
-
-                    .phone_icon {
-                        width: 26px;
-                        height: 30px;
-                        visibility: visible;
-                    }
-
-                    &:hover {
-                        background-image: url('./../../../assets/img/icons/phone_icon_hover.svg');
-                        background-repeat: no-repeat;
+                    .phone {
+                        width: 100%;
+                        @include dFlex($jc: flex-start, $g: 10px);
 
                         .phone_icon {
-                            visibility: hidden;
+                            width: 26px;
+                            height: 30px;
+                            visibility: visible;
                         }
-                    }
 
-                    a {
-                        text-decoration: none;
-                        text-align: left;
+                        &:hover {
+                            background-image: url('./../../../assets/img/icons/phone_icon_hover.svg');
+                            background-repeat: no-repeat;
 
-                        p {
-                            font-size: 20px;
-                            font-weight: 400;
-                            width: 100%;
+                            .phone_icon {
+                                visibility: hidden;
+                            }
                         }
-                    }
 
-                    &:hover a>p {
-                        color: $blue;
+                        a {
+                            text-decoration: none;
+                            text-align: left;
+
+                            p {
+                                font-size: 20px;
+                                font-weight: 400;
+                                width: 100%;
+                            }
+                        }
+
+                        &:hover a>p {
+                            color: $blue;
+                        }
                     }
                 }
             }
-        }
 
-        .input {
-            width: 100%;
+            .input {
+                width: 100%;
 
-            h3 {
-                display: none;
-            }
-
-            .label-text {
-                display: inline;
-            }
-
-            .success-message {
-                p {
-                    background-color: $green;
-                    color: $dark_grey;
-                    border: 1px solid $dark_grey;
-                    padding: 10px;
-                    margin-top: 20px;
-                    margin-bottom: 20px;
-                    border-radius: 5px;
-                    font-size: 24px;
-                    text-align: center;
-
+                h3 {
+                    display: none;
                 }
-            }
 
-            form {
-                @include dFlex($g: 20px);
-                flex-direction: column;
+                .label-text {
+                    display: inline;
+                }
 
-                .input_fields {
-                    width: 100%;
-                    @include dFlex($jc: flex-end, $g: 30px);
+                .success-message {
+                    p {
+                        background-color: $green;
+                        color: $dark_grey;
+                        border: 1px solid $dark_grey;
+                        padding: 10px;
+                        margin-top: 20px;
+                        margin-bottom: 20px;
+                        border-radius: 5px;
+                        font-size: 24px;
+                        text-align: center;
 
-                    .name,
-                    .email {
+                    }
+                }
+
+                form {
+                    @include dFlex($g: 20px);
+                    flex-direction: column;
+
+                    .input_fields {
+                        width: 100%;
+                        @include dFlex($jc: flex-end, $g: 30px);
+
+                        .name,
+                        .email {
+                            @include dFlex($ai: flex-start);
+                            flex-direction: column;
+                            width: 50%;
+                            height: 60px;
+
+                            label {
+                                @include dFlex();
+                                flex-direction: column;
+                                padding-left: 26px;
+                                font-size: 14px;
+                                font-weight: 400;
+                                color: $blue;
+
+                                .label-text {
+                                    display: block;
+                                }
+
+                                .error-message {
+                                    display: none;
+                                }
+
+                                &:has(.error-message) .label-text {
+                                    display: none;
+                                }
+
+                                &:has(.error-message) .error-message {
+                                    display: block;
+                                }
+                            }
+
+                            div {
+                                @include dFlex();
+                                position: relative;
+                                width: 100%;
+
+                                #name,
+                                #email {
+                                    @include dFlex();
+                                    width: 100%;
+                                    height: 60px;
+                                    border: 1px solid;
+                                    border-color: $blue;
+                                    border-radius: 30px;
+                                    padding-left: 26px;
+                                    font-size: 16px;
+                                    font-weight: 400;
+
+                                    &:focus {
+                                        background: rgba(137, 188, 217, 0.12);
+                                        outline: none;
+                                    }
+
+                                    &.invalid {
+                                        border-color: red;
+                                    }
+                                }
+
+                                .checkmark {
+                                    position: absolute;
+                                    right: 20px;
+                                    background-color: transparent;
+                                }
+                            }
+                        }
+                    }
+
+                    .message {
                         @include dFlex($ai: flex-start);
                         flex-direction: column;
-                        width: 50%;
-                        height: 60px;
+                        width: 100%;
+                        height: 164px;
 
                         label {
-                            @include dFlex();
-                            flex-direction: column;
-                            padding-left: 26px;
+                            padding-left: 10px;
                             font-size: 14px;
                             font-weight: 400;
                             color: $blue;
+                            padding-left: 26px;
 
                             .label-text {
                                 display: block;
@@ -218,198 +285,133 @@ section {
                             }
                         }
 
-                        div {
-                            @include dFlex();
-                            position: relative;
+                        .textarea {
+                            height: 146px;
                             width: 100%;
 
-                            #name,
-                            #email {
+                            div {
                                 @include dFlex();
-                                width: 100%;
-                                height: 60px;
-                                border: 1px solid;
-                                border-color: $blue;
-                                border-radius: 30px;
-                                padding-left: 26px;
-                                font-size: 16px;
-                                font-weight: 400;
-
-                                &:focus {
-                                    background: rgba(137, 188, 217, 0.12);
-                                    outline: none;
-                                }
-
-                                &.invalid {
-                                    border-color: red;
-                                }
-                            }
-
-                            .checkmark {
-                                position: absolute;
-                                right: 20px;
-                                background-color: transparent;
-                            }
-                        }
-                    }
-                }
-
-                .message {
-                    @include dFlex($ai: flex-start);
-                    flex-direction: column;
-                    width: 100%;
-                    height: 164px;
-
-                    label {
-                        padding-left: 10px;
-                        font-size: 14px;
-                        font-weight: 400;
-                        color: $blue;
-                        padding-left: 26px;
-
-                        .label-text {
-                            display: block;
-                        }
-
-                        .error-message {
-                            display: none;
-                        }
-
-                        &:has(.error-message) .label-text {
-                            display: none;
-                        }
-
-                        &:has(.error-message) .error-message {
-                            display: block;
-                        }
-                    }
-
-                    .textarea {
-                        height: 146px;
-                        width: 100%;
-
-                        div {
-                            @include dFlex();
-                            position: relative;
-                            width: 100%;
-                            height: 100%;
-
-                            #message {
+                                position: relative;
                                 width: 100%;
                                 height: 100%;
-                                border: 1px solid;
-                                border-color: $blue;
-                                border-radius: 30px;
-                                padding-top: 20px;
-                                padding-left: 26px;
-                                padding-right: 26px;
-                                font-size: 16px;
-                                font-weight: 400;
 
-                                &:focus {
-                                    background: rgba(137, 188, 217, 0.12);
-                                    outline: none;
+                                #message {
+                                    width: 100%;
+                                    height: 100%;
+                                    border: 1px solid;
+                                    border-color: $blue;
+                                    border-radius: 30px;
+                                    padding-top: 20px;
+                                    padding-left: 26px;
+                                    padding-right: 26px;
+                                    font-size: 16px;
+                                    font-weight: 400;
+
+                                    &:focus {
+                                        background: rgba(137, 188, 217, 0.12);
+                                        outline: none;
+                                    }
+
+                                    &.invalid {
+                                        border-color: red;
+                                    }
                                 }
 
-                                &.invalid {
-                                    border-color: red;
-                                }
-                            }
-
-                            .checkmark {
-                                position: absolute;
-                                right: 20px;
-                                top: 20px;
-                                background-color: transparent;
-                            }
-                        }
-                    }
-                }
-
-                .privacy_policy {
-                    width: 100%;
-                    @include dFlex($g: 10px);
-                    flex-direction: column;
-
-                    div {
-                        @include dFlex($jc: flex-start, $ai: flex-end, $g: 8px);
-                        width: 100%;
-
-                        .checkbox_icon {
-                            width: 24px;
-                            height: 24px;
-                            cursor: pointer;
-
-                            .default {
-                                &:hover {
-                                    background-image: url('./../../../assets/img/icons/checkbox_icon_hover.svg');
-                                }
-                            }
-                        }
-
-                        p {
-                            font-size: 14px;
-                            font-weight: 400;
-
-                            a {
-                                font-size: 14px;
-                                font-weight: 400;
-                                text-decoration: none;
-                                color: $blue;
-                                cursor: pointer;
-
-                                &:active {
-                                    color: $creme-white;
+                                .checkmark {
+                                    position: absolute;
+                                    right: 20px;
+                                    top: 20px;
+                                    background-color: transparent;
                                 }
                             }
                         }
                     }
 
-                    .error_text {
+                    .privacy_policy {
                         width: 100%;
-                        height: 50px;
-                        @include dFlex($jc: flex-start, $ai: flex-start);
+                        @include dFlex($g: 10px);
                         flex-direction: column;
 
-                        p {
-                            font-size: 14px;
-                            font-weight: 400;
-
-                        }
-
-                        .error_color {
-                            color: red;
-                        }
-
-                        .btn_submit {
+                        div {
+                            @include dFlex($jc: flex-start, $ai: flex-end, $g: 8px);
                             width: 100%;
-                            height: 50px;
-                            @include dFlex($jc: flex-end);
 
-                            button {
-                                background-color: transparent;
-                                color: $creme-white;
-                                width: 101px;
-                                height: 48px;
-                                border: 1px solid;
-                                border-radius: 30px;
-                                border-color: $creme-white;
+                            .checkbox_icon {
+                                width: 24px;
+                                height: 24px;
                                 cursor: pointer;
+
+                                .default {
+                                    &:hover {
+                                        background-image: url('./../../../assets/img/icons/checkbox_icon_hover.svg');
+                                    }
+                                }
                             }
 
-                            button:disabled,
-                            button.disabled {
-                                cursor: not-allowed;
-                                border-color: #757575;
-                                color: #757575;
+                            p {
+                                font-size: 14px;
+                                font-weight: 400;
+
+                                a {
+                                    font-size: 14px;
+                                    font-weight: 400;
+                                    text-decoration: none;
+                                    color: $blue;
+                                    cursor: pointer;
+
+                                    &:active {
+                                        color: $creme-white;
+                                    }
+                                }
+                            }
+                        }
+
+                        .error_text {
+                            width: 100%;
+                            height: 50px;
+                            @include dFlex($jc: flex-start, $ai: flex-start);
+                            flex-direction: column;
+
+                            p {
+                                font-size: 14px;
+                                font-weight: 400;
+
+                            }
+
+                            .error_color {
+                                color: red;
+                            }
+
+                            .btn_submit {
+                                width: 100%;
+                                height: 50px;
+                                @include dFlex($jc: flex-end);
+
+                                button {
+                                    background-color: transparent;
+                                    color: $creme-white;
+                                    width: 101px;
+                                    height: 48px;
+                                    border: 1px solid;
+                                    border-radius: 30px;
+                                    border-color: $creme-white;
+                                    cursor: pointer;
+                                }
+
+                                button:disabled,
+                                button.disabled {
+                                    cursor: not-allowed;
+                                    border-color: #757575;
+                                    color: #757575;
+                                }
                             }
                         }
                     }
                 }
-            }
 
-            .arrow_up_icon_mobile {
-                display: none;
+                .arrow_up_icon_mobile {
+                    display: none;
+                }
             }
         }
     }
@@ -484,104 +486,108 @@ textarea::placeholder {
 @media (max-width: 1100px) {
     section {
 
-        .contact_headline {
-            height: 32px;
+        >div {
+            .contact_headline {
+                height: 170px;
 
-            h2 {
-                font-size: 32px;
+                h2 {
+                    font-size: 32px;
+                }
+
+                .arrow_up {
+                    display: none;
+                }
             }
 
-            .arrow_up {
-                display: none;
-            }
-        }
+            .contact_me {
+                width: 100%;
 
-        .contact_me {
-            width: 100%;
+                .content {
+                    @include dFlex($g: 20px);
+                    flex-direction: column-reverse;
+                    margin-bottom: 0;
 
-            .content {
-                @include dFlex($g: 20px);
-                flex-direction: column-reverse;
-                margin-bottom: 0;
+                    .contact {
+                        width: 450px;
 
-                .contact {
-                    width: 450px;
+                        .mail,
+                        .phone {
 
-                    .mail,
-                    .phone {
-
-                        a>p {
-                            font-size: 18px;
+                            a>p {
+                                font-size: 18px;
+                            }
                         }
+                    }
+
+                    p {
+                        width: 450px;
+                        font-size: 16px;
+                        padding-left: 10px;
+                        padding-right: 10px;
                     }
                 }
 
-                p {
-                    width: 450px;
-                    font-size: 16px;
-                }
-            }
+                .input {
+                    @include dFlex();
+                    flex-direction: column;
+                    width: 100%;
 
-            .input {
-                @include dFlex();
-                flex-direction: column;
-                width: 100%;
+                    form {
 
-                form {
+                        .input_fields {
+                            @include dFlex($g: 30px);
+                            flex-direction: column;
 
-                    .input_fields {
-                        @include dFlex($g: 30px);
-                        flex-direction: column;
+                            h3 {
+                                padding-top: 20px;
+                                display: block;
+                                color: $blue;
+                                font-size: 20px;
+                                font-weight: 400;
+                            }
 
-                        h3 {
-                            padding-top: 20px;
-                            display: block;
-                            color: $blue;
-                            font-size: 20px;
-                            font-weight: 400;
+                            .name,
+                            .email {
+                                width: 100%;
+
+                                label {
+                                    display: none;
+                                }
+                            }
+
                         }
 
-                        .name,
-                        .email {
-                            width: 100%;
+                        .message {
+                            @include dFlex();
 
                             label {
                                 display: none;
                             }
+
+                            .textarea {
+                                width: 450px;
+                            }
                         }
 
+                        .privacy_policy {
+                            @include dFlex($jc: flex-start, $g: 10px);
+                            width: 450px;
+                            height: 150px;
+                        }
                     }
 
-                    .message {
+                    .arrow_up_icon_mobile {
+                        width: 100%;
+                        height: 200px;
                         @include dFlex();
 
-                        label {
-                            display: none;
+                        >img {
+                            display: block;
                         }
-
-                        .textarea {
-                            width: 450px;
-                        }
-                    }
-
-                    .privacy_policy {
-                        @include dFlex($jc: flex-start, $g: 10px);
-                        width: 450px;
-                        height: 150px;
                     }
                 }
 
-                .arrow_up_icon_mobile {
-                    width: 100%;
-                    height: 200px;
-                    @include dFlex();
-
-                    >img {
-                        display: block;
-                    }
-                }
             }
-
         }
     }
 
@@ -644,63 +650,67 @@ textarea::placeholder {
     section {
         width: 100%;
 
-        .contact_me {
-            padding-left: 20px;
-            padding-right: 20px;
-            width: 100%;
-
-            .content {
+        >div {
+            .contact_me {
+                // padding-left: 10px;
+                // padding-right: 10px;
                 width: 100%;
 
-                p {
-                    width: 100%;
-                }
-
-                .contact {
+                .content {
                     width: 100%;
 
-                    .mail,
-                    .phone {
+                    p {
                         width: 100%;
 
-                        &:focus {
-                            color: $blue;
+                    }
+
+                    .contact {
+                        width: 100%;
+
+                        .mail,
+                        .phone {
+                            width: 100%;
+
+                            &:focus {
+                                color: $blue;
+                            }
                         }
                     }
                 }
-            }
 
-            .input {
-                form {
-                    .input_fields {
+                .input {
+                    form {
+                        .input_fields {
 
-                        .name,
-                        .email {
-                            width: 100%;
+                            .name,
+                            .email {
+                                width: 100%;
 
-                            >div {
+                                >div {
+                                    .checkmark {
+                                        display: none;
+                                    }
+                                }
+                            }
+                        }
+
+                        .message {
+                            .textarea {
+                                width: 100%;
+
                                 .checkmark {
                                     display: none;
                                 }
                             }
                         }
-                    }
 
-                    .message {
-                        .textarea {
+                        .privacy_policy {
                             width: 100%;
-
-                            .checkmark {
-                                display: none;
-                            }
                         }
-                    }
-
-                    .privacy_policy {
-                        width: 100%;
                     }
                 }
             }
+
         }
     }
 }

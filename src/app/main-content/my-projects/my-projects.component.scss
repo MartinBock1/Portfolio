@@ -124,22 +124,23 @@
     .my_projects {
 
         .content {
-           
+
             h2 {
                 font-size: 32px;
             }
 
             .nav {
-                @include dFlex($jc: flex-start, $g: 10px);
+                @include dFlex($g: 0);
                 padding-left: 0;
 
                 .nav_mobile {
+                    @include dFlex($g: 0);
 
                     p {
-                        font-size: 18px;                      
-                        width: 96px;   
+                        font-size: 18px;
+                        width: 96px;
                     }
-                }                
+                }
             }
         }
     }
@@ -156,12 +157,14 @@
             }
 
             .nav {
+                @include dFlex($jc: flex-start, $g: 0px);
 
                 .nav_mobile {
+                    @include dFlex($g: 0px);
 
                     p {
                         font-size: 18px;
-                        width: 90px;
+                        width: 85px;
                     }
                 }
             }
@@ -185,7 +188,7 @@
 
                     p {
                         font-size: 14px;
-                        width: 75px;
+                        width: 70px;
                     }
                 }
             }

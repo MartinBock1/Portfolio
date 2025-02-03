@@ -1,132 +1,134 @@
 <section class="content_max">
-    <div class="contact_headline">
-        <h2>{{ 'contact.contact_headline' | translate }}</h2>
-        <a href="#">
-            <img class="arrow_up" src="assets/img/icons/arrow_up_icon.svg" alt="Arrow Up Icon">
-        </a>
-    </div>
-    <div class="contact_me">
-        <div class="content">
-            <p [innerHTML]="'contact.contact_content' | translate"></p>
-            <div class="contact">
-                <div class="mail">
-                    <img class="mail_icon" src="assets/img/icons/mail_icon.svg" alt="">
-                    <a href="mailto:kontakt@martin-bock.info">
-                        <p>
-                            {{ 'contact.contact_mail' | translate }} kontakt&#64;martin-bock.info
-                        </p>
-                    </a>
-                </div>
-                <div class="phone active">
-                    <img class="phone_icon" src="assets/img/icons/phone_icon.svg" alt="">
-                    <a href="tel:+493081473698">
-                        <p>
-                            {{ 'contact.contact_phone' | translate }} +49 30 814 736 98
-                        </p>
-                    </a>
-                </div>
-            </div>
+    <div>
+        <div class="contact_headline">
+            <h2>{{ 'contact.contact_headline' | translate }}</h2>
+            <a href="#">
+                <img class="arrow_up" src="assets/img/icons/arrow_up_icon.svg" alt="Arrow Up Icon">
+            </a>
         </div>
-        <div class="input">
-            <div *ngIf="isSuccessMessageVisible" class="success-message">
-               <p> {{ 'contact.contact_success_message' | translate }}</p>
+        <div class="contact_me">
+            <div class="content">
+                <p [innerHTML]="'contact.contact_content' | translate"></p>
+                <div class="contact">
+                    <div class="mail">
+                        <img class="mail_icon" src="assets/img/icons/mail_icon.svg" alt="">
+                        <a href="mailto:kontakt@martin-bock.info">
+                            <p>
+                                {{ 'contact.contact_mail' | translate }} kontakt&#64;martin-bock.info
+                            </p>
+                        </a>
+                    </div>
+                    <div class="phone active">
+                        <img class="phone_icon" src="assets/img/icons/phone_icon.svg" alt="">
+                        <a href="tel:+493081473698">
+                            <p>
+                                {{ 'contact.contact_phone' | translate }} +49 30 814 736 98
+                            </p>
+                        </a>
+                    </div>
+                </div>
             </div>
-            
-            <form (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm">
-                <div class="input_fields">
-                    <h3>{{ 'contact.contact_headline_two' | translate }}</h3>
-                    <div class="name">
-                        <label for="name">
-                            <span class="label-text">{{ 'contact.contact_name' | translate }}</span>
-                            <span *ngIf="!name.valid && name.touched && !name.disabled" class="error-message">
-                                {{ 'contact.contact_name_error' | translate }}
-                            </span>
+            <div class="input">
+                <div *ngIf="isSuccessMessageVisible" class="success-message">
+                   <p> {{ 'contact.contact_success_message' | translate }}</p>
+                </div>
+                
+                <form (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm">
+                    <div class="input_fields">
+                        <h3>{{ 'contact.contact_headline_two' | translate }}</h3>
+                        <div class="name">
+                            <label for="name">
+                                <span class="label-text">{{ 'contact.contact_name' | translate }}</span>
+                                <span *ngIf="!name.valid && name.touched && !name.disabled" class="error-message">
+                                    {{ 'contact.contact_name_error' | translate }}
+                                </span>
+                            </label>
+                            <div>
+                                <input #name="ngModel" minlength="4" [(ngModel)]="contactData.name" type="text" id="name"
+                                    name="name"
+                                    [placeholder]="!name.valid && name.touched ? ('contact.contact_name_error' | translate) : ('contact.contact_name' | translate)"
+                                    required [ngClass]="{'invalid': !name.valid && name.touched}">
+                                <img *ngIf="name.valid" class="checkmark" src="assets/img/icons/checkmark.svg"
+                                    alt="Checkmark Icon">
+                            </div>
+                        </div>
+                        <div class="email">
+                            <label for="email">
+                                <span class="label-text">{{ 'contact.contact_mail' | translate }}</span>
+                                <span *ngIf="!email.valid && email.touched && !email.disabled" class="error-message">
+                                    {{ 'contact.contact_mail_error' | translate }}
+                                </span>
+                            </label>
+                            <div>
+                                <input #email="ngModel" minlength="4" [(ngModel)]="contactData.email" type="email"
+                                    id="email" name="email"
+                                    [placeholder]="!email.valid && email.touched ? ('contact.contact_mail_error' | translate) :  ('contact.contact_Email' | translate)"
+                                    required pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}"
+                                    [ngClass]="{'invalid': !email.valid && email.touched}">
+                                <!-- Display checkmark if the field is valid -->
+                                <img *ngIf="email.valid" class="checkmark" src="assets/img/icons/checkmark.svg"
+                                    alt="Checkmark Icon">
+                            </div>
+                        </div>
+                    </div>
+    
+                    <div class="message" [ngClass]="{'invalid': !message.valid && message.touched}">
+                        <label for="message">
+                            <span class="label-text">{{ 'contact.contact_message' | translate }}</span>
+                            <span *ngIf="!message.valid && message.touched && !message.disabled" class="error-message">
+                                {{ 'contact.contact_message_error' | translate }}</span>
                         </label>
+                        <div class="textarea">
+                            <div>
+                                <textarea #message="ngModel" minlength="4" [(ngModel)]="contactData.message" type="message"
+                                    id="message" name="message"
+                                    [placeholder]="!message.valid && message.touched && !message.disabled ? ('contact.contact_message_error' | translate) : ('contact.contact_message' | translate)"
+                                    required [ngClass]="{'invalid': !message.valid && message.touched}">
+                                                                </textarea>
+                                <img *ngIf="message.valid" class="checkmark" src="assets/img/icons/checkmark.svg"
+                                    alt="Checkmark Icon">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="privacy_policy">
                         <div>
-                            <input #name="ngModel" minlength="4" [(ngModel)]="contactData.name" type="text" id="name"
-                                name="name"
-                                [placeholder]="!name.valid && name.touched ? ('contact.contact_name_error' | translate) : ('contact.contact_name' | translate)"
-                                required [ngClass]="{'invalid': !name.valid && name.touched}">
-                            <img *ngIf="name.valid" class="checkmark" src="assets/img/icons/checkmark.svg"
-                                alt="Checkmark Icon">
+                            <div class="checkbox_icon" (click)="toggleCheckbox()">
+                                <img *ngIf="!isChecked && !isSubmitted" class="default"
+                                    src="assets/img/icons/checkbox_icon.svg" alt="Checkbox Icon">
+    
+                                <img *ngIf="isChecked" src="assets/img/icons/checkbox_icon_active.svg"
+                                    alt="Checkbox Icon Active">
+    
+                                <img *ngIf="!isChecked && isSubmitted" class="error"
+                                    src="assets/img/icons/checkbox_icon_error.svg" alt="Checkbox Icon Error">
+    
+                            </div>
+                            <p>
+                                {{ 'contact.privacy_policy_message_one' | translate }}
+                                <a routerLink="privacy" (click)="scrollToTop()">
+                                    {{ 'footer.privacy_policy' | translate }}
+                                </a>
+                                {{ 'contact.privacy_policy_message_two' | translate }}
+                            </p>
+                        </div>
+                        <div class="error_text">
+                            <p *ngIf="!isChecked && isSubmitted" class="error_color">
+                                {{'contact.privacy_policy_message_error' | translate }}
+                            </p>
+    
+                            <div class="btn_submit">
+                                <button type="submit"
+                                    [disabled]="!name.valid || !email.valid || !message.valid "
+                                    [ngClass]="{ 'disabled': !name.valid || !email.valid || !message.valid }">
+                                    {{'contact.contact_btn_send' | translate }}
+                                </button>
+                            </div>
                         </div>
                     </div>
-                    <div class="email">
-                        <label for="email">
-                            <span class="label-text">{{ 'contact.contact_mail' | translate }}</span>
-                            <span *ngIf="!email.valid && email.touched && !email.disabled" class="error-message">
-                                {{ 'contact.contact_mail_error' | translate }}
-                            </span>
-                        </label>
-                        <div>
-                            <input #email="ngModel" minlength="4" [(ngModel)]="contactData.email" type="email"
-                                id="email" name="email"
-                                [placeholder]="!email.valid && email.touched ? ('contact.contact_mail_error' | translate) :  ('contact.contact_Email' | translate)"
-                                required pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}"
-                                [ngClass]="{'invalid': !email.valid && email.touched}">
-                            <!-- Display checkmark if the field is valid -->
-                            <img *ngIf="email.valid" class="checkmark" src="assets/img/icons/checkmark.svg"
-                                alt="Checkmark Icon">
-                        </div>
-                    </div>
-                </div>
-
-                <div class="message" [ngClass]="{'invalid': !message.valid && message.touched}">
-                    <label for="message">
-                        <span class="label-text">{{ 'contact.contact_message' | translate }}</span>
-                        <span *ngIf="!message.valid && message.touched && !message.disabled" class="error-message">
-                            {{ 'contact.contact_message_error' | translate }}</span>
-                    </label>
-                    <div class="textarea">
-                        <div>
-                            <textarea #message="ngModel" minlength="4" [(ngModel)]="contactData.message" type="message"
-                                id="message" name="message"
-                                [placeholder]="!message.valid && message.touched && !message.disabled ? ('contact.contact_message_error' | translate) : ('contact.contact_message' | translate)"
-                                required [ngClass]="{'invalid': !message.valid && message.touched}">
-                                                            </textarea>
-                            <img *ngIf="message.valid" class="checkmark" src="assets/img/icons/checkmark.svg"
-                                alt="Checkmark Icon">
-                        </div>
-                    </div>
-                </div>
-                <div class="privacy_policy">
-                    <div>
-                        <div class="checkbox_icon" (click)="toggleCheckbox()">
-                            <img *ngIf="!isChecked && !isSubmitted" class="default"
-                                src="assets/img/icons/checkbox_icon.svg" alt="Checkbox Icon">
-
-                            <img *ngIf="isChecked" src="assets/img/icons/checkbox_icon_active.svg"
-                                alt="Checkbox Icon Active">
-
-                            <img *ngIf="!isChecked && isSubmitted" class="error"
-                                src="assets/img/icons/checkbox_icon_error.svg" alt="Checkbox Icon Error">
-
-                        </div>
-                        <p>
-                            {{ 'contact.privacy_policy_message_one' | translate }}
-                            <a routerLink="privacy" (click)="scrollToTop()">
-                                {{ 'footer.privacy_policy' | translate }}
-                            </a>
-                            {{ 'contact.privacy_policy_message_two' | translate }}
-                        </p>
-                    </div>
-                    <div class="error_text">
-                        <p *ngIf="!isChecked && isSubmitted" class="error_color">
-                            {{'contact.privacy_policy_message_error' | translate }}
-                        </p>
-
-                        <div class="btn_submit">
-                            <button type="submit"
-                                [disabled]="!name.valid || !email.valid || !message.valid "
-                                [ngClass]="{ 'disabled': !name.valid || !email.valid || !message.valid }">
-                                {{'contact.contact_btn_send' | translate }}
-                            </button>
-                        </div>
-                    </div>
-                </div>
-            </form>
-            <div class="arrow_up_icon_mobile">
-                <img src="assets/img/icons/arrow_up_icon_mobile.svg" alt="">
+                </form>
+                <a href="#" class="arrow_up_icon_mobile">
+                    <img src="assets/img/icons/arrow_up_icon_mobile.svg" alt="Arrow Up Icon">
+                </a>
             </div>
         </div>
     </div>

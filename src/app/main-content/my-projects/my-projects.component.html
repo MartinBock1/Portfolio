@@ -1,6 +1,6 @@
 <section class="my_projects content_max">
     <div class="content">
-        <h2>My Projects</h2>
+        <h2>{{ 'title.headline' | translate}}</h2>
         <div class="nav">
             <div class="nav_desktop" *ngIf="titles.length > 0">
                 <p (click)="selectedProject(0)" [class.active]="selectedProjectIndex === 0">{{ titles[0].pokedex }}</p>

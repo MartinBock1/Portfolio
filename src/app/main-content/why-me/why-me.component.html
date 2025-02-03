@@ -1,22 +1,24 @@
 <section class="why_me content_max">
-    <h2>{{ 'why_me.whyme' | translate }}</h2>
-    <div class="content">
-        <div class="locate">
-            <div *ngIf="showLocateIcon">
-                <img src="assets/img/icons/locate_icon.svg" alt="Locate Icon" />
-                <div class="typewriter" [innerHTML]="'why_me.location' | translate"></div>
+    <div>
+        <h2>{{ 'why_me.whyme' | translate }}</h2>
+        <div class="content">
+            <div class="locate">
+                <div *ngIf="showLocateIcon">
+                    <img src="assets/img/icons/locate_icon.svg" alt="Locate Icon" />
+                    <div class="typewriter" [innerHTML]="'why_me.location' | translate"></div>
+                </div>
+    
+                <div *ngIf="!showLocateIcon">
+                    <img src="assets/img/icons/remote_icon.svg" alt="Remote Icon" />
+                    <div class="typewriter" [innerHTML]="'why_me.remote' | translate"></div>
+                </div>
             </div>
-
-            <div *ngIf="!showLocateIcon">
-                <img src="assets/img/icons/remote_icon.svg" alt="Remote Icon" />
-                <div class="typewriter" [innerHTML]="'why_me.remote' | translate"></div>
+            <div class="text">
+                <p>{{ 'why_me.text' | translate }}</p>
+                <a href="#contact_me">
+                    <img class="lets_talk_icon" src="assets/img/icons/btn_lets_talk.svg" alt="Let's Talk Button">
+                </a>
             </div>
-        </div>
-        <div class="text">
-            <p>{{ 'why_me.text' | translate }}</p>
-            <a href="#contact_me">
-                <img class="lets_talk_icon" src="assets/img/icons/btn_lets_talk.svg" alt="Let's Talk Button">
-            </a>
         </div>
     </div>
 </section>
