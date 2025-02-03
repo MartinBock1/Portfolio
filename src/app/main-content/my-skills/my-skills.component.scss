@@ -6,6 +6,7 @@
     width: 1000px;
     position: relative;
     top: 100px;
+    // margin-bottom: 50px;
 
     h2 {
         font-family: 'Anta';
@@ -19,6 +20,7 @@
     .content {
         @include dFlex($jc: space-between, $g: 50px);
         width: 100%;
+        margin-bottom: 100px;
 
         .icon_container {
             @include dFlex($jc: flex-start, $g: 40px);

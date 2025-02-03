@@ -23,10 +23,9 @@
             padding-left: 80px;
             cursor: pointer;
 
-            div {
+            .nav_desktop {
                 @include dFlex($g: 10px);
                 width: auto;
-
 
                 p {
                     @include dFlex();
@@ -49,6 +48,144 @@
                         border-color: $light_grey;
                         background-color: $light_grey;
                         color: $creme_white;
+                    }
+                }
+            }
+
+            .nav_mobile {
+                display: none;
+            }
+        }
+    }
+}
+
+/* --------------------------------------------------   Mobil   --------------------------------------------------*/
+@media (max-width: 1100px) {
+    .my_projects {
+
+        .content {
+            position: relative;
+            top: 100px;
+            @include dFlex($g: 50px);
+            flex-direction: column;
+            width: 100%;
+            margin-bottom: 0px;
+
+            h2 {
+                font-size: 60px;
+                font-weight: 400;
+                font-family: 'Anta';
+                color: $blue;
+            }
+
+            .nav {
+                @include dFlex($jc: flex-start, $g: 10px);
+                width: 100%;
+                padding-left: 80px;
+                cursor: pointer;
+
+                .nav_mobile {
+                    @include dFlex($g: 10px);
+                    width: auto;
+
+                    p {
+                        @include dFlex();
+                        font-size: 24px;
+                        font-weight: 400;
+                        color: $creme-white;
+                        width: 150px;
+                        height: 48px;
+                        cursor: pointer;
+                        transition: 0.3s;
+
+                        &:hover {
+                            color: $blue;
+                        }
+
+                        &.active {
+                            border-top-left-radius: 20px;
+                            border-top-right-radius: 20px;
+                            border-color: $light_grey;
+                            background-color: $light_grey;
+                            color: $blue;
+                        }
+                    }
+                }
+
+                .nav_desktop {
+                    display: none;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 750px) {
+    .my_projects {
+
+        .content {
+           
+            h2 {
+                font-size: 32px;
+            }
+
+            .nav {
+                @include dFlex($jc: flex-start, $g: 10px);
+                padding-left: 0;
+
+                .nav_mobile {
+
+                    p {
+                        font-size: 18px;                      
+                        width: 96px;   
+                    }
+                }                
+            }
+        }
+    }
+}
+
+@media (max-width: 500px) {
+    .my_projects {
+
+        .content {
+
+            h2 {
+                font-size: 32px;
+                color: $blue;
+            }
+
+            .nav {
+
+                .nav_mobile {
+
+                    p {
+                        font-size: 18px;
+                        width: 90px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 370px) {
+    .my_projects {
+
+        .content {
+
+            h2 {
+                font-size: 32px;
+            }
+
+            .nav {
+
+                .nav_mobile {
+                    @include dFlex($g: 0px);
+
+                    p {
+                        font-size: 14px;
+                        width: 75px;
                     }
                 }
             }

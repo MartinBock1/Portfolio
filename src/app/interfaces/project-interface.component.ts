@@ -1,6 +1,7 @@
 export interface Project {
   index: number;
   img: string;
+  project_title: string;
   project_about: string;
   project_about_text: string;
   project_duration: string;
@@ -24,4 +25,8 @@ export interface Title {
   game: string;
   join: string;
   ongoing: string;
+  project1: string;
+  project2: string;
+  project3: string;
+  project4: string;
 }

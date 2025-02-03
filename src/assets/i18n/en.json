@@ -44,10 +44,15 @@
   },
 
   "title": {
-    "nav_title": "4. Ongoinig Project"
+    "nav_title": "4. Ongoinig Project",
+    "project1": "1. Projekt",
+    "project2": "2. Project",
+    "project3": "3. Project",
+    "project4": "4. Project"
   },
 
   "project": {
+    "project_title_pokedex": "Pokedex",
     "project_about_pokedex": "About the Project",
     "project_duration_pokedex": "Duration: 1 week",
     "project_about_text_pokedex": "The Pokedex Project is a collection and documentation of Pokémon, including information such as abilities, types, evolution, and origin of each Pokémon.",
@@ -59,6 +64,7 @@
     "link_live_pokedex": "https://www.pokedex.martin-bock.info",
     "link_github_pokedex": "https://github.com/MartinBock1/Pokedex",
 
+    "project_title_game": "El Pollo Loco",
     "project_about_game": "About the Project",
     "project_duration_game": "Duration: 3 weeks",
     "project_about_text_game": "Jump, run and throw game based on object-oriented approach. Help Pepe to find coins and tabasco salsa to fight against the crazy hen.",
@@ -69,16 +75,18 @@
     "link_live_game": "https://www.elpolloloco.martin-bock.info",
     "link_github_game": "https://github.com/MartinBock1/El-Pollo-Loco",
 
+    "project_title_join": "Join",
     "project_about_join": "About the Project",
-    "project_duration_join": "Duration: 3 weeks",
+    "project_duration_join": "Duration: 5 weeks",
     "project_about_text_join": "This App is a Slack Clone App. It revolutionizes team communication and collaboration with its intuitive interface, real-time messaging, and robust channel organization.",
     "project_organised_join": "How I have organised my work process",
-    "project_organised_text_join": "...",
+    "project_organised_text_join": "...Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis a sequi neque. Ducimus earum et nesciunt consequuntur rerum dolor fugit.",
     "project_experience_join": "My group work experience",
     "project_experience_text_join": "For my final project at the Developer Akademie, with 3 colleagues, we used Angular and Firebase (Angular Fire). My main tasks included implementing file uploads, structuring the Firebase database, while utilizing Firebase for authentication and data storage.",
     "link_live_join": "",
     "link_github_join": "",
 
+    "project_title_ongoinig": "Ongoinig Project",
     "project_about_ongoinig": "About the Project",
     "project_duration_ongoinig": "",
     "project_about_text_ongoinig": "I am currently working on developing a Simple Customer Relationship Management system working with CRUD functionality. This is for me both exciting and challenging. In my work the key to success lies in a good planning and execution.ize tasks using drag and drop functions, assign users and categories. ",

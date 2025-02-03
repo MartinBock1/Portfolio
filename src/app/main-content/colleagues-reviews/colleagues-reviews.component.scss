@@ -26,13 +26,15 @@ section {
     overflow-y: auto; // Aktiviert den vertikalen Scrollbalken bei Bedarf    
 
     .reviews {
-        @include dFlex($jc: space-between, $g: 50px);
+        @include dFlex($jc: space-between, $g: 20px);
         flex-direction: column;
         // margin-top: 50px;
         // height: 100%;
         overflow-y: auto; // Verhindert, dass der Inhalt überläuft
         position: relative;
         top: 100px;
+
+        // border: 1px solid;
 
         h1 {
             font-size: 32px;
@@ -49,6 +51,8 @@ section {
             @include dFlex($jc: space-between);
             width: 100%;
             overflow-y: auto; // sorgt dafür, dass hier auch der Scrollbalken kommt
+
+            // border: 1px solid;
 
             div {
                 @include dFlex();

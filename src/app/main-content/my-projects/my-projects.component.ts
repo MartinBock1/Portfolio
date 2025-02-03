@@ -20,6 +20,10 @@ export class MyProjectsComponent {
       game: '2. El Pollo Loco',
       join: '3. Join',
       ongoing: 'title.nav_title',
+      project1: 'title.project1',
+      project2: 'title.project2',
+      project3: 'title.project3',
+      project4: 'title.project4',
     },
   ];
 
@@ -27,6 +31,7 @@ export class MyProjectsComponent {
     {
       index: 0,
       img: 'screenshot_pokedex.png',
+      project_title: 'project.project_title_pokedex',
       project_about: 'project.project_about_pokedex',
       project_duration: 'project.project_duration_pokedex',
       project_about_text: 'project.project_about_text_pokedex',
@@ -47,6 +52,7 @@ export class MyProjectsComponent {
     {
       index: 1,
       img: 'screenshot_game.png',
+      project_title: 'project.project_title_game',
       project_about: 'project.project_about_game',
       project_duration: 'project.project_duration_game',
       project_about_text: 'project.project_about_text_game',
@@ -67,6 +73,7 @@ export class MyProjectsComponent {
     {
       index: 2,
       img: 'screenshot_join.png',
+      project_title: 'project.project_title_join',
       project_about: 'project.project_about_join',
       project_duration: 'project.project_duration_join',
       project_about_text: 'project.project_about_text_join',
@@ -88,6 +95,7 @@ export class MyProjectsComponent {
     {
       index: 3,
       img: 'screenshot_comming_soon.png',
+      project_title: 'project.project_title_ongoinig',
       project_about: 'project.project_about_ongoinig',
       project_duration: 'project.project_duration_ongoinig',
       project_about_text: 'project.project_about_text_ongoinig',

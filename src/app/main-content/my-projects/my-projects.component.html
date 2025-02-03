@@ -2,11 +2,17 @@
     <div class="content">
         <h2>My Projects</h2>
         <div class="nav">
-            <div *ngIf="titles.length > 0">
+            <div class="nav_desktop" *ngIf="titles.length > 0">
                 <p (click)="selectedProject(0)" [class.active]="selectedProjectIndex === 0">{{ titles[0].pokedex }}</p>
                 <p (click)="selectedProject(1)" [class.active]="selectedProjectIndex === 1">{{ titles[0].game }}</p>
                 <p (click)="selectedProject(2)" [class.active]="selectedProjectIndex === 2">{{ titles[0].join }}</p>
                 <p (click)="selectedProject(3)" [class.active]="selectedProjectIndex === 3">{{ titles[0].ongoing | translate }}</p>
+            </div>
+            <div class="nav_mobile" *ngIf="titles.length > 0">
+                <p (click)="selectedProject(0)" [class.active]="selectedProjectIndex === 0">{{ titles[0].project1 | translate }}</p>
+                <p (click)="selectedProject(1)" [class.active]="selectedProjectIndex === 1">{{ titles[0].project2 | translate}}</p>
+                <p (click)="selectedProject(2)" [class.active]="selectedProjectIndex === 2">{{ titles[0].project3 | translate }}</p>
+                <p (click)="selectedProject(3)" [class.active]="selectedProjectIndex === 3">{{ titles[0].project4 | translate }}</p>
             </div>
         </div>
     </div>
