@@ -44,9 +44,9 @@
                 }
 
                 >div {
-                    @include dFlex($g: 10px);
+                    @include dFlex($jc: flex-start, $g: 10px);
 
-                    .typewriter {
+                    .typewriter_location {
                         overflow: hidden;
                         border-right: .15em solid $blue;
                         white-space: nowrap;
@@ -55,48 +55,62 @@
                         // letter-spacing: .15em;
                         /* Adjust as needed */
                         animation:
-                            typing 3.5s steps(40, end) forwards,
+                            typing 5s steps(89, end) forwards,
                             blink-caret .75s step-end infinite,
-                            deleting 3.5s steps(40, end) 3.5s forwards;
+                            deleting 5s steps(89, end) 5s forwards;
+                    }
+
+                    .typewriter_remote {
+                        overflow: hidden;
+                        border-right: .15em solid $blue;
+                        white-space: nowrap;
+                        margin: 0 auto;
+                        /* Gives that scrolling effect as the typing happens */
+                        // letter-spacing: .15em;
+                        /* Adjust as needed */
+                        animation:
+                            typing 5s steps(84, end) forwards,
+                            blink-caret .75s step-end infinite,
+                            deleting 5s steps(84, end) 5s forwards;
                     }
                 }
 
                 /* The typing effect */
-                @keyframes typing {
-                    from {
-                        width: 0
-                    }
+                // @keyframes typing {
+                //     from {
+                //         width: 0
+                //     }
 
-                    to {
-                        width: 100%
-                    }
-                }
+                //     to {
+                //         width: 100%
+                //     }
+                // }
 
                 /* The deleting effect (backward) */
-                @keyframes deleting {
-                    from {
-                        width: 100%;
-                        border-color: $blue;
-                    }
+                // @keyframes deleting {
+                //     from {
+                //         width: 100%;
+                //         border-color: $blue;
+                //     }
 
-                    to {
-                        width: 0;
-                        border-color: transparent
-                    }
-                }
+                //     to {
+                //         width: 0;
+                //         border-color: transparent
+                //     }
+                // }
 
                 /* The typewriter cursor effect */
-                @keyframes blink-caret {
+                // @keyframes blink-caret {
 
-                    from,
-                    to {
-                        border-color: transparent
-                    }
+                //     from,
+                //     to {
+                //         border-color: transparent
+                //     }
 
-                    50% {
-                        border-color: $blue;
-                    }
-                }
+                //     50% {
+                //         border-color: $blue;
+                //     }
+                // }
             }
         }
 
@@ -128,42 +142,47 @@
 @media (max-width: 1100px) {
     .why_me {
         @include dFlex($g: 30px);
-        // margin-top: 0px;
-        // margin-bottom: 0;
-        // width: 100%;
 
         div {
             @include dFlex($g: 30px);
-                margin-top: 0px;
-                margin-bottom: 0;
-                width: 450px;
+            margin-top: 0px;
+            margin-bottom: 0;
+            width: 450px;
+
             h2 {
                 font-size: 48px;
             }
-    
+
             .content {
                 @include dFlex($ai: center, $g: 50px);
                 flex-direction: column;
-    
+
                 .locate {
-                    @include dFlex();
+                    // @include dFlex($ai: flex-start);
                     width: 100%;
                     font-size: 24px;
-    
+
                     img {
                         width: 60px;
                         height: 50px;
                     }
+
+                    .typewriter {
+                        width: 100%;
+                        @include dFlex($jc: flex-start);
+                        overflow: hidden;
+                        white-space: normal;
+                    }
                 }
-    
+
                 .text {
                     height: auto;
                     text-align: center;
-    
+
                     p {
                         width: 450px;
                     }
-    
+
                     img {
                         display: none;
                     }
@@ -180,30 +199,45 @@
         padding-right: 10px;
 
         div {
-            width: 100%;
-            
+            width: 300px;
+
             h2 {
                 font-size: 32px;
             }
-    
+
             .content {
                 width: 100%;
-    
+
                 .locate {
-                    font-size: 18px;
+                    @include dFlex();
+                    font-size: 16px;
                     width: 100%;
-    
+
                     img {
                         width: 32.5px;
                         height: 40px;
                     }
+
+                    >div {
+                        // width: 300px;
+                        text-align: left;
+
+                        border: 1px solid;
+                    }
+
+                    .typewriter {
+                        width: 100%;
+                        text-align: left;
+                        overflow: hidden;
+                        white-space: normal;
+                    }
                 }
-    
+
                 .text {
                     font-size: 16px;
                     width: 100%;
                     padding: 10px;
-    
+
                     p {
                         width: 100%;
                     }
@@ -212,5 +246,3 @@
         }
     }
 }
-
-@media (max-width: 400px) {}

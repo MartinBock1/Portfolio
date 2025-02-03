@@ -5,12 +5,12 @@
             <div class="locate">
                 <div *ngIf="showLocateIcon">
                     <img src="assets/img/icons/locate_icon.svg" alt="Locate Icon" />
-                    <div class="typewriter" [innerHTML]="'why_me.location' | translate"></div>
+                    <div class="typewriter_location" [innerHTML]="'why_me.location' | translate"></div>
                 </div>
     
                 <div *ngIf="!showLocateIcon">
                     <img src="assets/img/icons/remote_icon.svg" alt="Remote Icon" />
-                    <div class="typewriter" [innerHTML]="'why_me.remote' | translate"></div>
+                    <div class="typewriter_remote" [innerHTML]="'why_me.remote' | translate"></div>
                 </div>
             </div>
             <div class="text">
