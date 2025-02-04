@@ -26,7 +26,6 @@
 
         .content {
             @include dFlex($jc: space-between, $ai: flex-start, $g: 30px);
-            width: 100%;
             font-weight: 700;
             padding-bottom: 20px;
             pointer-events: all;
@@ -55,9 +54,9 @@
                         // letter-spacing: .15em;
                         /* Adjust as needed */
                         animation:
-                            typing 5s steps(89, end) forwards,
+                            typing 5s steps(30, end) forwards,
                             blink-caret .75s step-end infinite,
-                            deleting 5s steps(89, end) 5s forwards;
+                            deleting 5s steps(30, end) 5s forwards;
                     }
 
                     .typewriter_remote {
@@ -69,48 +68,11 @@
                         // letter-spacing: .15em;
                         /* Adjust as needed */
                         animation:
-                            typing 5s steps(84, end) forwards,
+                            typing 5s steps(30, end) forwards,
                             blink-caret .75s step-end infinite,
-                            deleting 5s steps(84, end) 5s forwards;
+                            deleting 5s steps(30, end) 5s forwards;
                     }
                 }
-
-                /* The typing effect */
-                // @keyframes typing {
-                //     from {
-                //         width: 0
-                //     }
-
-                //     to {
-                //         width: 100%
-                //     }
-                // }
-
-                /* The deleting effect (backward) */
-                // @keyframes deleting {
-                //     from {
-                //         width: 100%;
-                //         border-color: $blue;
-                //     }
-
-                //     to {
-                //         width: 0;
-                //         border-color: transparent
-                //     }
-                // }
-
-                /* The typewriter cursor effect */
-                // @keyframes blink-caret {
-
-                //     from,
-                //     to {
-                //         border-color: transparent
-                //     }
-
-                //     50% {
-                //         border-color: $blue;
-                //     }
-                // }
             }
         }
 
@@ -143,7 +105,7 @@
     .why_me {
         @include dFlex($g: 30px);
 
-        div {
+        >div {
             @include dFlex($g: 30px);
             margin-top: 0px;
             margin-bottom: 0;
@@ -156,9 +118,10 @@
             .content {
                 @include dFlex($ai: center, $g: 50px);
                 flex-direction: column;
+                width: 100%;
 
                 .locate {
-                    // @include dFlex($ai: flex-start);
+                    @include dFlex($ai: flex-start);
                     width: 100%;
                     font-size: 24px;
 
@@ -176,11 +139,12 @@
                 }
 
                 .text {
+                    width: 100%;
                     height: auto;
-                    text-align: center;
 
                     p {
-                        width: 450px;
+                        text-align: left;
+                        width: 100%;
                     }
 
                     img {
@@ -198,7 +162,7 @@
         padding-left: 10px;
         padding-right: 10px;
 
-        div {
+        >div {
             width: 300px;
 
             h2 {
@@ -219,13 +183,12 @@
                     }
 
                     >div {
-                        // width: 300px;
+                        padding-right: 10px;
+                        width: 85%;
                         text-align: left;
-
-                        border: 1px solid;
                     }
 
-                    .typewriter {
+                    .typewriter_location {
                         width: 100%;
                         text-align: left;
                         overflow: hidden;
@@ -235,12 +198,7 @@
 
                 .text {
                     font-size: 16px;
-                    width: 100%;
                     padding: 10px;
-
-                    p {
-                        width: 100%;
-                    }
                 }
             }
         }

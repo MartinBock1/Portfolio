@@ -62,7 +62,7 @@ export class ContactMeComponent {
             // Erfolgsnachricht nach 5 Sekunden ausblenden
             setTimeout(() => {
               this.isSuccessMessageVisible = false;
-            }, 10000);
+            }, 5000);
           },
           error: (error) => {
             console.error(error);
