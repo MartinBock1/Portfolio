@@ -21,14 +21,16 @@
 
 section {
     margin-top: 80px;
-    height: 600px;
-    overflow-y: auto; // Aktiviert den vertikalen Scrollbalken bei Bedarf    
+    height: 700px;
+    width: 100%;
+    overflow-y: auto; // Aktiviert den vertikalen Scrollbalken bei Bedarf   
 
     .reviews {
         @include dFlex($jc: space-between, $g: 20px);
         flex-direction: column;
         overflow-y: auto; // Verhindert, dass der Inhalt überläuft
         position: relative;
+        // height: 500px;
         top: 100px;
 
         h1 {
@@ -45,25 +47,30 @@ section {
         .content_container {
             @include dFlex($jc: space-between);
             width: 100%;
+
             overflow-y: auto; // sorgt dafür, dass hier auch der Scrollbalken kommt
 
-            div {
+            >div {
                 @include dFlex();
                 flex-direction: column;
                 position: relative;
-                padding-left: 50px;
+                // padding-left: 50px;
+                // padding-right: 50px;
 
                 .reviews_content {
                     @include dFlex($jc: space-around);
                     flex-direction: column;
-                    @include posi($b: 60%, $l: 33%);
-                    transform: translate(-40%, 67%);
+                    position: absolute;
+                    left: 20%;
                     background-color: transparent;
-                    width: 70%;
+                    width: 60%;
                     height: 80%;
+                    z-index: 2;
                     overflow-y: auto; // Scrollbalken im Reviews-Bereich
 
-                    div {
+                    border: 1px solid;
+
+                    >div {
                         background-color: transparent;
 
                         h2 {
@@ -89,17 +96,25 @@ section {
                     }
                 }
 
+                .bg_img {
+                    position: absolute;
+                    left: 5%;
+                    width: 100%;
+                    height: 100%;
+                    opacity: 1;
+                }
+
                 .bg_img_hover {
-                    display: none;
+                    opacity: 0;
                 }
 
                 &:hover {
                     .bg_img {
-                        display: none;
+                        opacity: 0;
                     }
 
                     .bg_img_hover {
-                        display: block;
+                        opacity: 1;
                     }
                 }
             }
@@ -116,7 +131,6 @@ section {
             h1 {
                 @include dFlex();
                 flex-direction: column;
-                // height: 150px;
 
                 span {
                     color: $creme_white;
@@ -130,32 +144,42 @@ section {
 
 @media only screen and (max-width: 500px) {
 
-    ::-webkit-scrollbar {
-        display: none;
-    }
+    // ::-webkit-scrollbar {
+    //     display: none;
+    // }
 
     section {
 
         .reviews {
             @include dFlex($jc: space-evenly);
+            padding-left: 10px;
+            padding-right: 10px;
+
+            h1 {
+                @include dFlex($g: 20px);
+            }
 
             .content_container {
                 height: 100%;
 
-                div {
-                    padding-left: 20px;
+                >div {
+                    position: relative;
+                    padding-left: 10px;
 
                     .reviews_content {
-                        @include dFlex($jc: space-evenly, $ai: flex-start);
-                        width: 70%;
-                        height: 85%;
+                        position: absolute;
+                        @include dFlex($jc: space-evenly, $ai: center);
+
+                        width: 60%;
+                        height: 65%;
                         bottom: 63%;
-                        left: 40%;
+                        left: 35%;
                         transform: translate(-37%, 60%);
                         z-index: 2;
 
-                        div {
+                        >div {
                             @include dFlex($ai: flex-start);
+                            flex-direction: column;
 
                             h2 {
                                 background-color: transparent;
@@ -176,16 +200,22 @@ section {
                         height: 300px;
                         transform: rotate(90deg);
                         z-index: 1;
-                        margin-left: -20px;
+                        opacity: 1;
+                    }                    
+
+                    .bg_img_hover {
+                        opacity: 0;
                     }
 
                     &:hover {
                         .bg_img {
-                            display: block;
+                            opacity: 1;
                         }
 
                         .bg_img_hover {
-                            display: none;
+                            opacity: 0;
+                            width: 320px;
+                            height: 300px;
                         }
                     }
                 }

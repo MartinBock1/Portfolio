@@ -52,6 +52,10 @@
                 .headline {
                     @include dFlex($jc: flex-start, $g: 20px);
                     width: 100%;
+
+                    >img {
+                        background-color: transparent;
+                    }
                 }
 
                 .text p {

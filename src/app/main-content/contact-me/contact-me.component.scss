@@ -582,8 +582,13 @@ textarea::placeholder {
                         @include dFlex();
 
                         >img {
-                            display: block;
+                            display: block;                            
+                            &:hover {
+                                background-image: url('./../../../assets/img/icons/arrow_up_icon_mobile_hover.svg');
+                                background-repeat: no-repeat;
+                            }
                         }
+
                     }
                 }
 

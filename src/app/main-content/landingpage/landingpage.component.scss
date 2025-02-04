@@ -172,13 +172,17 @@
         }
     }
 
-    .arrow_down {
+    .arrow_down_desktop {
         background-color: transparent;
 
         img:hover {
             background-image: url('./../../../assets/img/icons/arrow_down_hover_icon.svg');
             cursor: pointer;
         }
+    }
+
+    .arrow_down_mobile {
+        display: none;
     }
 }
 
@@ -385,7 +389,8 @@
             }
         }
 
-        .arrow_down {
+        .arrow_down_mobile {
+            display: block;
             position: absolute;
             top: 80%;
             left: 50%;
@@ -401,6 +406,10 @@
                     height: 60px;
                 }
             }
+        }
+
+        .arrow_down_desktop {
+            display: none;
         }
     }
 }
