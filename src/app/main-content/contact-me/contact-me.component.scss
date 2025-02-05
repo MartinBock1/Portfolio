@@ -288,6 +288,7 @@ section {
                         .textarea {
                             height: 146px;
                             width: 100%;
+                            
 
                             div {
                                 @include dFlex();
@@ -306,6 +307,7 @@ section {
                                     padding-right: 26px;
                                     font-size: 16px;
                                     font-weight: 400;
+                                    resize: none;
 
                                     &:focus {
                                         background: rgba(137, 188, 217, 0.12);
@@ -566,6 +568,7 @@ textarea::placeholder {
 
                             .textarea {
                                 width: 450px;
+                                
                             }
                         }
 
