@@ -82,25 +82,10 @@ section {
                     width: 50%;
 
                     .mail {
-                        width: 100%;
                         @include dFlex($jc: flex-start, $g: 10px);
 
-                        .mail_icon {
-                            width: 26px;
-                            height: 30px;
-                            visibility: visible;
-                        }
-
-                        &:hover {
-                            background-image: url('./../../../assets/img/icons/mail_icon_hover.svg');
-                            background-repeat: no-repeat;
-
-                            .mail_icon {
-                                visibility: hidden;
-                            }
-                        }
-
                         a {
+                            @include dFlex($jc: flex-start, $g: 10px);
                             text-decoration: none;
                             text-align: left;
 
@@ -108,6 +93,21 @@ section {
                                 font-size: 20px;
                                 font-weight: 400;
                                 width: 100%;
+                            }
+
+                            .mail_icon {
+                                width: 26px;
+                                height: 30px;
+                                visibility: visible;
+                            }
+
+                            &:hover {
+                                background-image: url('./../../../assets/img/icons/mail_icon_hover.svg');
+                                background-repeat: no-repeat;
+
+                                .mail_icon {
+                                    visibility: hidden;
+                                }
                             }
                         }
 
@@ -117,25 +117,10 @@ section {
                     }
 
                     .phone {
-                        width: 100%;
                         @include dFlex($jc: flex-start, $g: 10px);
 
-                        .phone_icon {
-                            width: 26px;
-                            height: 30px;
-                            visibility: visible;
-                        }
-
-                        &:hover {
-                            background-image: url('./../../../assets/img/icons/phone_icon_hover.svg');
-                            background-repeat: no-repeat;
-
-                            .phone_icon {
-                                visibility: hidden;
-                            }
-                        }
-
                         a {
+                            @include dFlex($jc: flex-start, $g: 10px);
                             text-decoration: none;
                             text-align: left;
 
@@ -143,6 +128,21 @@ section {
                                 font-size: 20px;
                                 font-weight: 400;
                                 width: 100%;
+                            }
+
+                            .phone_icon {
+                                width: 26px;
+                                height: 30px;
+                                visibility: visible;
+                            }
+
+                            &:hover {
+                                background-image: url('./../../../assets/img/icons/phone_icon_hover.svg');
+                                background-repeat: no-repeat;
+
+                                .phone_icon {
+                                    visibility: hidden;
+                                }
                             }
                         }
 
@@ -582,7 +582,8 @@ textarea::placeholder {
                         @include dFlex();
 
                         >img {
-                            display: block;                            
+                            display: block;
+
                             &:hover {
                                 background-image: url('./../../../assets/img/icons/arrow_up_icon_mobile_hover.svg');
                                 background-repeat: no-repeat;
@@ -657,29 +658,21 @@ textarea::placeholder {
 
         >div {
             .contact_me {
-                // padding-left: 10px;
-                // padding-right: 10px;
                 width: 100%;
 
                 .content {
+                    padding-left: 20px;
+                    padding-right: 20px;
                     width: 100%;
 
                     p {
                         width: 100%;
-
                     }
 
                     .contact {
+                        padding-left: 10px;
+                        padding-right: 10px;
                         width: 100%;
-
-                        .mail,
-                        .phone {
-                            width: 100%;
-
-                            &:focus {
-                                color: $blue;
-                            }
-                        }
                     }
                 }
 
@@ -724,15 +717,29 @@ textarea::placeholder {
     section {
         width: 100%;
 
-        .contact_me>.content {
-            p {
-                font-size: 14px;
+        .contact_me> {
+
+            .content {
+                p {
+                    font-size: 14px;
+                }
+
+                .contact>.mail,
+                .phone {
+                    a>p {
+                        font-size: 14px;
+                    }
+                }
             }
 
-            .contact>.mail,
-            .phone {
-                a>p {
-                    font-size: 14px;
+            .input {
+                form {
+                    .input_fields {
+
+                        h3 {
+                            text-align: center;
+                        }
+                    }
                 }
             }
         }

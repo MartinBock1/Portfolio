@@ -478,12 +478,91 @@
 @media (max-width: 375px) {
     .logo_section {
 
+        .arrow_down_mobile {
+            top: 85%;
+        }
+    }
+}
+
+/* ------------------------------------------------  For all Tablets   ------------------------------------------------ */
+@media only screen and (max-device-width: 1024px) and (max-device-height: 1366px) and (orientation: portrait) {
+    .profil_section {
+
+        .profil_image {
+
+            .profil_img_box {
+
+                .profil_img_bg {
+                    height: 85%;
+                }
+            }
+        }
+    }
+
+    .logo_section {
+
         .name_section {
-            top: 350px
+            top: 800px
+        }
+    }
+}
+
+@media only screen and (max-device-width: 912px) and (max-device-height: 1368px) and (orientation: portrait) {
+
+    .logo_section {
+
+        .name_section {
+            top: 800px
+        }
+    }
+}
+
+@media only screen and (max-device-width: 820px) and (max-device-height: 1180px) and (orientation: portrait) {
+    .logo_section {
+
+        .name_section {
+            top: 650px
+        }
+    }
+}
+
+@media only screen and (max-device-width: 768px) and (max-device-height: 1024px) and (orientation: portrait) {
+    .logo_section {
+
+        .name_section {
+            top: 550px
+        }
+    }
+}
+
+@media only screen and (max-device-width: 540px) and (max-device-height: 720px) and (orientation: portrait) {
+    .logo_section {
+
+        .name_section {
+            top: 400px
         }
 
-        .arrow_down {
+        .arrow_down_mobile {
             top: 85%;
+        }
+    }
+
+}
+
+@media only screen and (max-width: 412px) and (max-height: 914px) and (orientation: portrait) {
+    .logo_section {
+
+        .name_section {
+            top: 500px
+        }
+    }
+}
+
+@media only screen and (max-width: 375px) and (max-height: 667px) and (orientation: portrait) {
+    .logo_section {
+
+        .name_section {
+            top: 370px
         }
     }
 }
