@@ -3,14 +3,19 @@
         <h2>{{ 'why_me.whyme' | translate }}</h2>
         <div class="content">
             <div class="locate">
-                <div *ngIf="showLocateIcon">
+                <div *ngIf="currentState === 0">
                     <img src="assets/img/icons/locate_icon.svg" alt="Locate Icon" />
                     <div class="typewriter_location" [innerHTML]="'why_me.location' | translate"></div>
                 </div>
     
-                <div *ngIf="!showLocateIcon">
+                <div *ngIf="currentState === 1">
                     <img src="assets/img/icons/remote_icon.svg" alt="Remote Icon" />
                     <div class="typewriter_remote" [innerHTML]="'why_me.remote' | translate"></div>
+                </div>
+
+                <div *ngIf="currentState === 2">
+                    <img src="assets/img/icons/suitcase_icon.svg" alt="Suitcase Icon" />
+                    <div class="typewriter_relocate" [innerHTML]="'why_me.relocate' | translate"></div>
                 </div>
             </div>
             <div class="text">

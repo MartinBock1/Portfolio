@@ -72,6 +72,20 @@
                             blink-caret .75s step-end infinite,
                             deleting 5s steps(30, end) 5s forwards;
                     }
+
+                    .typewriter_relocate {
+                        overflow: hidden;
+                        border-right: .15em solid $blue;
+                        white-space: nowrap;
+                        margin: 0 auto;
+                        /* Gives that scrolling effect as the typing happens */
+                        // letter-spacing: .15em;
+                        /* Adjust as needed */
+                        animation:
+                            typing 5s steps(30, end) forwards,
+                            blink-caret .75s step-end infinite,
+                            deleting 5s steps(30, end) 5s forwards;
+                    }
                 }
             }
         }
