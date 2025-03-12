@@ -21,8 +21,17 @@
   },
 
   "reviews": {
-    "headline_one": "Need a teamplayer? ",
-    "headline_two": "Here what my colleagues said about me"
+    "headline_one": "Brauchen Sie einen Teamplayer? ",
+    "headline_two": " Hören Sie, was meine Kollegen über mich sagen",
+    "review_one_name": "Sahra Mueller",
+    "review_one_project": "DA Bubble",
+    "review_one_review": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis a sequi neque. Ducimus earum et nesciunt consequuntur rerum dolor fugit.",
+    "review_two_name": "James Rugman",
+    "review_two_project": "Join",
+    "review_two_review": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis a sequi neque. Ducimus earum et nesciunt consequuntur rerum dolor fugit.",
+    "review_three_name": "Evelyn Marx",
+    "review_three_project": "Sharkie",
+    "review_three_review": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis a sequi neque. Ducimus earum et nesciunt consequuntur rerum dolor fugit."
   },
 
   "contact": {

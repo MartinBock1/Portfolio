@@ -45,7 +45,7 @@ section {
         }
 
         .content_container {
-            @include dFlex($jc: space-between);
+            @include dFlex($jc: space-around, $g: 20px);
             width: 100%;
 
             overflow-y: auto; // sorgt dafür, dass hier auch der Scrollbalken kommt
