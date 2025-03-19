@@ -21,17 +21,23 @@
   },
 
   "reviews": {
-    "headline_one": "Brauchen Sie einen Teamplayer? ",
-    "headline_two": " Hören Sie, was meine Kollegen über mich sagen",
-    "review_one_name": "Sahra Mueller",
-    "review_one_project": "DA Bubble",
-    "review_one_review": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis a sequi neque. Ducimus earum et nesciunt consequuntur rerum dolor fugit.",
-    "review_two_name": "James Rugman",
-    "review_two_project": "Join",
-    "review_two_review": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis a sequi neque. Ducimus earum et nesciunt consequuntur rerum dolor fugit.",
-    "review_three_name": "Evelyn Marx",
-    "review_three_project": "Sharkie",
-    "review_three_review": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis a sequi neque. Ducimus earum et nesciunt consequuntur rerum dolor fugit."
+    "headline_one": "Do you need a team player?",
+    "headline_two": "Listen to what my colleagues say about me",
+    "review_one_name": "Dzmitry Stashkevich",
+    "review_one_project": "Kochwelt",
+    "review_one_review": "Martin impressed with his quick problem identification and clean code in the ‘Kochwelt’ project. His clear statements and communication skills supported the team. I would be happy to work with him again at any time.",
+    "review_two_name": "Michael Spari",
+    "review_two_project": "Kochwelt",
+    "review_two_review": "Martin was a top team colleague at DA. His positive commitment and willingness to take on responsibility contributed greatly to us achieving our goals.",
+    "review_three_name": "Philipp Franke",
+    "review_three_project": "Join",
+    "review_three_review": "Martin is a valuable team colleague who has significantly advanced the project with his conscientiousness and commitment. He always showed initiative and also took on tasks that were still open. His constructive and critical feedback helped the team to continuously improve. He remained open to suggestions for optimization and accepted them as an opportunity for further development. Even when errors were reported, he was not discouraged, but maintained his sense of humor and enjoyment of his work.",
+    "review_four_name": "Normann Blum",
+    "review_four_project": "Join",
+    "review_four_review": "Working with Martin was a great experience! He works very precisely and has a great flair for solving complex problems in a structured way. He is also a real team player - open, humorous and always willing to share his knowledge. His analytical way of thinking and his solution-oriented work have enriched our collaboration enormously.",
+    "review_five_name": "Dominik Marnet",
+    "review_five_project": "Join",
+    "review_five_review": "Working with Martin has been very good and efficient from day one. There is no doubt that he is a real workhorse, easily outperforming most of the younger team members. Martin has a very personable manner and has contributed greatly to the success of our project with his extensive coding knowledge and professional approach. You couldn't wish for a better team player!"
   },
 
   "contact": {

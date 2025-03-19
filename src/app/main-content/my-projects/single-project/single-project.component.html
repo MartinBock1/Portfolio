@@ -49,12 +49,17 @@
                 <div class="desktop">
                     <p>{{ 'project.icons_container_headline' | translate }}</p>
                     <div class="icons">
-                        @if(project.index != 3) {
+                        @if(project.index < 2) {
                         <img src="{{ project.project_icon_html }}">
                         <img src="{{ project.project_icon_js }}">
                         <img src="{{ project.project_icon_css }}">
                         }
-                        @else() {
+                        @if(project.index == 2) {
+                        <img src="{{ project.project_icon_html }}">
+                        <img src="{{ project.project_icon_angular }}">
+                        <img src="{{ project.project_icon_css }}">
+                        }
+                        @if(project.index > 2) {
                         <img src="{{ project.project_icon_angular }}">
                         <img src="{{ project.project_icon_typescrip }}">
                         <img src="{{ project.project_icon_html }}">

@@ -23,15 +23,21 @@
   "reviews": {
     "headline_one": "Brauchen Sie einen Teamplayer? ",
     "headline_two": " Hören Sie, was meine Kollegen über mich sagen",
-    "review_one_name": "Sahra Mueller",
-    "review_one_project": "DA Bubble",
-    "review_one_review": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis a sequi neque. Ducimus earum et nesciunt consequuntur rerum dolor fugit.",
-    "review_two_name": "James Rugman",
-    "review_two_project": "Join",
-    "review_two_review": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis a sequi neque. Ducimus earum et nesciunt consequuntur rerum dolor fugit.",
-    "review_three_name": "Evelyn Marx",
-    "review_three_project": "Sharkie",
-    "review_three_review": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis a sequi neque. Ducimus earum et nesciunt consequuntur rerum dolor fugit."
+    "review_one_name": "Dzmitry Stashkevich",
+    "review_one_project": "Kochwelt",
+    "review_one_review": "Martin beeindruckte mit seiner schnellen Problemerkennung und sauberem Code im Projekt „Kochwelt“. Er erstellte die Rezeptseite und machte sie voll funktionsfähig. Seine klaren Aussagen und seine Kommunikationsfähigkeit haben das Team unterstützt. Ich würde jederzeit wieder gerne mit ihm zusammenarbeiten.",
+    "review_two_name": "Michael Spari",
+    "review_two_project": "Kochwelt",
+    "review_two_review": "Martin war ein Top-Teamkollege bei DA. Sein positives Engagement und seine Bereitschaft, Verantwortung zu übernehmen, haben sehr dazu beigetragen, dass wir unsere Ziele erreicht haben.",
+    "review_three_name": "Philipp Franke",
+    "review_three_project": "Join",
+    "review_three_review": "Martin ist ein wertvoller Teamkollege, der mit seiner Gewissenhaftigkeit und seinem Engagement das Projekt maßgeblich vorangebracht hat. Er zeigte stets Eigeninitiative und übernahm auch Aufgaben, die noch offen waren. Sein konstruktives und kritisches Feedback half dem Team sich kontinuierlich zu verbessern. Dabei blieb er offen für Optimierungsvorschläge und nahm diese als Chance zur Weiterentwicklung an. Auch bei Fehlermeldungen ließ er sich nicht entmutigen, sondern bewahrte seinen Humor und die Freude an der Arbeit.",
+    "review_four_name": "Normann Blum",
+    "review_four_project": "Join",
+    "review_four_review": "Mit Martin zu arbeiten, war eine super Erfahrung! Er arbeitet sehr präzise und hat ein tolles Gespür dafür, komplexe Probleme strukturiert zu lösen. Hinzu kommt, dass er ein echter Teamplayer ist – offen, humorvoll und immer bereit, sein Wissen zu teilen. Seine analytische Denkweise und sein lösungsorientiertes Arbeiten haben unsere Zusammenarbeit extrem bereichert.",
+    "review_five_name": "Dominik Marnet",
+    "review_five_project": "Join",
+    "review_five_review": "Die Zusammenarbeit mit Martin war von Tag eins an sehr gut und effizient. Man kann ohne Zweifel sagen, dass er ein echtes Arbeitstier ist, wodurch er einen Großteil der jüngeren Teammitglieder mit Leichtigkeit übertrifft. Martin hat eine sehr sympathische Umgangsart und hat mit seinen umfassenden Coding-Kenntnissen und seiner professionellen Vorgehensweise wesentlich zum Erfolg unseres Projekts beigetragen. Einen besseren Teamplayer kann man sich nicht wünschen!"
   },
 
   "contact": {
@@ -94,7 +100,7 @@
     "project_organised_text_join": "Das Projekt wurde in 3 Sprints gesplittet. Die Aufgaben wurden dann in einem Kanban-Board aufgeteilt, sodass jeder Aufgaben alleine zu bewältigen hatte, es wurden aber auch einige Aufgaben in Gruppenarbeit erledigt.",
     "project_experience_join": "Meine Erfahrung in der Gruppenarbeit",
     "project_experience_text_join": "Für mein Abschlussprojekt an der Developer Akademie verwendeten wir mit 4 Kollegen Angular und Firebase (Angular Fire). Meine Hauptaufgaben umfassten die Eingabe und Verarbeitung und Speicherung von Kontaktdaten, sowie neuen Tasks.  Darüber hinaus die Nutzung von Firebase zur Authentifizierung und Datenspeicherung.",
-    "link_live_join": "https://www.join.martin-bock.info/",
+    "link_live_join": "https://www.join.martin-bock.info",
     "link_github_join": "https://github.com/MartinBock1/Join",
 
     "project_title_ongoinig": "Laufendes Projekt",

@@ -2,6 +2,37 @@
 @import './styles/colors.scss';
 @import './styles/mixins.scss';
 
+/* ------------------------------------------------   scrollbar   ------------------------------------------------*/
+/* Für Firefox */
+@-moz-document url-prefix() {
+    * {
+        scrollbar-width: thin;
+        scrollbar-color: $blue;
+    }
+}
+
+/* Für Chrome, Edge, Safari (alle WebKit/Chromium-Browser) */
+@supports (-webkit-appearance: none) {
+    ::-webkit-scrollbar {
+        height: 10px;
+        width: 5px;
+    }
+
+    /* Track */
+    ::-webkit-scrollbar-track {
+        box-shadow: inset 0 0 5px grey;
+        border-radius: 10px;
+    }
+
+    /* Handle */
+    ::-webkit-scrollbar-thumb {
+        background: $blue;
+        border-radius: 10px;
+    }
+}
+
+/* ---------------------------------------------------------------------------------------------------------------*/
+
 * {
     margin: 0;
     box-sizing: border-box;
