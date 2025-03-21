@@ -26,10 +26,10 @@
             width: 50%;
             height: 404px;
 
-            div {
+            >div {
                 @include dFlex($g: 10px);
                 flex-direction: column;
-                width: 66px;
+                width: 70px;
                 height: 100px;
 
                 p {
