@@ -27,9 +27,11 @@
                 </div>
             </div>
             <div class="input">
-                <div *ngIf="isSuccessMessageVisible" class="success-message">
-                   <p> {{ 'contact.contact_success_message' | translate }}</p>
-                </div>
+                @if(isSuccessMessageVisible) {
+                    <div class="success-message">
+                       <p> {{ 'contact.contact_success_message' | translate }}</p>
+                    </div>
+                }
                 
                 <form (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm">
                     <div class="input_fields">
@@ -91,14 +93,20 @@
                     <div class="privacy_policy">
                         <div>
                             <div class="checkbox_icon" (click)="toggleCheckbox()">
-                                <img *ngIf="!isChecked && !isSubmitted" class="default"
-                                    src="assets/img/icons/checkbox_icon.svg" alt="Checkbox Icon">
+                                @if(!isChecked && !isSubmitted) {
+                                    <img class="default"
+                                        src="assets/img/icons/checkbox_icon.svg" alt="Checkbox Icon">
+                                }
     
-                                <img *ngIf="isChecked" src="assets/img/icons/checkbox_icon_active.svg"
-                                    alt="Checkbox Icon Active">
+                                @if(isChecked) {
+                                    <img src="assets/img/icons/checkbox_icon_active.svg"
+                                        alt="Checkbox Icon Active">
+                                }
     
-                                <img *ngIf="!isChecked && isSubmitted" class="error"
-                                    src="assets/img/icons/checkbox_icon_error.svg" alt="Checkbox Icon Error">
+                                @if(!isChecked && isSubmitted) {
+                                    <img class="error"
+                                        src="assets/img/icons/checkbox_icon_error.svg" alt="Checkbox Icon Error">
+                                }
     
                             </div>
                             <p>
@@ -110,9 +118,11 @@
                             </p>
                         </div>
                         <div class="error_text">
-                            <p *ngIf="!isChecked && isSubmitted" class="error_color">
-                                {{'contact.privacy_policy_message_error' | translate }}
-                            </p>
+                            @if(!isChecked && isSubmitted) {
+                                <p class="error_color">
+                                    {{'contact.privacy_policy_message_error' | translate }}
+                                </p>
+                            }
     
                             <div class="btn_submit">
                                 <button type="submit"
