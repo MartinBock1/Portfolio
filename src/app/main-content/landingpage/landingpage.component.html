@@ -10,7 +10,7 @@
         </div>
         <div class="logo_section">
             <div class="social_media">
-                <a href="mailto:kontakt@martin-bock.info"><img class="mail" src="assets/img/icons/mail_icon.png" alt=""></a>
+                <a href="mailto:kontakt@martin-bock.info"><img class="mail" src="assets/img/icons/mail_icon.png" alt="Mail Icon"></a>
                 <a href="https://github.com/MartinBock1" target="_blank">
                     <img class="github" src="assets/img/icons/github_icon.png" alt="GitHub Icon">
                 </a>
@@ -27,8 +27,17 @@
                     <p class="fontAnta">M.Bock</p>
                     <p class="dev">developer</p>
                 </div>
-                <div class="burger_menu" (click)="toggleMenu()" [ngClass]="{'toggle': isMenuVisible}"></div>
-                <div id="resp_menu" class="resp_menu_box" [class.resp_menu_closed]="!isMenuVisible" [class.show]="isMenuVisible">
+                <!-- <div class="burger_menu" (click)="toggleMenu()" [ngClass]="{'toggle': isMenuVisible}"></div> -->
+                 <button 
+                    class="burger_menu"
+                    type="button"
+                    (click)="toggleMenu()"
+                    [ngClass]="{'toggle': isMenuVisible}"
+                    aria-controls="resp_menu"
+                    [attr.aria-expanded]="isMenuVisible"
+                    aria-label="Navigationsmenü umschalten">
+                </button>
+                <nav id="resp_menu" class="resp_menu_box" [class.resp_menu_closed]="!isMenuVisible" [class.show]="isMenuVisible">
                     <div>
                         <a href="#why_me">{{ 'landingpage.whyme' | translate }}</a>
                         <a href="#skills">{{ 'landingpage.skills' | translate }}</a>
@@ -43,7 +52,7 @@
                             </p>
                         </div>
                     </div>
-                </div>
+                </nav>
             </div>
             <div class="name_section">
                 <h1 class="fontAnta">Martin Bock</h1>
