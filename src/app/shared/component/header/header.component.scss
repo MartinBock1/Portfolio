@@ -59,13 +59,13 @@
                     color: $dark_grey;
                     font-size: 26px;
                     font-weight: 500;
-    
+
                     &:hover {
                         cursor: pointer;
                         color: $creme_white;
-    
+
                     }
-    
+
                     &:active,
                     &.active {
                         @include dFlex();
@@ -115,7 +115,8 @@
 
 /* --------------------------------------------------   Mobil   --------------------------------------------------*/
 @media (max-width: 1100px) {
-    section {
+    header {
         display: none;
     }
 }
+

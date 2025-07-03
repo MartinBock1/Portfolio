@@ -439,6 +439,10 @@
                 background-size: 300px;
             }
         }
+
+        .arrow_down_mobile {
+            top: 85%;
+        }
     }
 }
 
@@ -475,14 +479,18 @@
     }
 }
 
-@media (max-width: 375px) {
-    .logo_section {
+// @media (max-width: 375px) {
+//     .logo_section {
 
-        .arrow_down_mobile {
-            top: 85%;
-        }
-    }
-}
+//         .name_section {
+//             top: 400px
+//         }
+
+//         .arrow_down_mobile {
+//             top: 90%;
+//         }
+//     }
+// }
 
 /* ------------------------------------------------  For all Tablets   ------------------------------------------------ */
 @media only screen and (max-device-width: 1024px) and (max-device-height: 1366px) and (orientation: portrait) {
@@ -549,20 +557,26 @@
 
 }
 
+// Samsung Galaxy A51/71
 @media only screen and (max-width: 412px) and (max-height: 914px) and (orientation: portrait) {
     .logo_section {
 
         .name_section {
             top: 500px
         }
+        
     }
 }
 
-@media only screen and (max-width: 375px) and (max-height: 667px) and (orientation: portrait) {
+@media only screen and (max-width: 380px) and (max-height: 750px) and (orientation: portrait) {
     .logo_section {
 
         .name_section {
             top: 370px
+        }
+
+        .arrow_down_mobile {
+            top: 85%;
         }
     }
 }
