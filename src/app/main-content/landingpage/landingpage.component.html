@@ -27,16 +27,7 @@
                     <p class="fontAnta">M.Bock</p>
                     <p class="dev">developer</p>
                 </div>
-                <!-- <div class="burger_menu" (click)="toggleMenu()" [ngClass]="{'toggle': isMenuVisible}"></div> -->
-                 <button 
-                    class="burger_menu"
-                    type="button"
-                    (click)="toggleMenu()"
-                    [ngClass]="{'toggle': isMenuVisible}"
-                    aria-controls="resp_menu"
-                    [attr.aria-expanded]="isMenuVisible"
-                    aria-label="Navigationsmenü umschalten">
-                </button>
+                <div class="burger_menu" (click)="toggleMenu()" [ngClass]="{'toggle': isMenuVisible}"></div>
                 <nav id="resp_menu" class="resp_menu_box" [class.resp_menu_closed]="!isMenuVisible" [class.show]="isMenuVisible">
                     <div>
                         <a href="#why_me">{{ 'landingpage.whyme' | translate }}</a>
