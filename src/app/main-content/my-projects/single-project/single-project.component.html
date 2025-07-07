@@ -1,5 +1,5 @@
 <section class="single_project content_max">
-    <div class="content">
+    <main class="content">
         <div class="content_text">
             <div class="about">
                 <div class="headline">
@@ -12,22 +12,22 @@
                     <p>{{ project.project_about_text | translate }}</p>
                 </div>
             </div>
-            <div class="organised">
+            <div class="organized">
                 <div class="headline">
-                    @if(project.index != 3) {
+                    @if(project.index != 7) {
                     <img src="assets/img/icons/bubble_project.svg">
                     }
-                    <h3>{{ project.project_organised | translate}}</h3>
+                    <h3>{{ project.project_organized | translate}}</h3>
                     <p></p>
 
                 </div>
                 <div class="text">
-                    <p [innerHTML]="project.project_organised_text | translate"></p>
+                    <p [innerHTML]="project.project_organized_text | translate"></p>
                 </div>
             </div>
             <div class="learned">
                 <div class="headline">
-                    @if(project.index != 3) {
+                    @if(project.index != 7) {
                     <img src="assets/img/icons/bubble_project.svg">
                     }
                     <h3>{{ project.project_experience | translate }}</h3>
@@ -48,37 +48,53 @@
             <div class="icons_container">
                 <div class="desktop">
                     <p>{{ 'project.icons_container_headline' | translate }}</p>
-                    <div class="icons">
+                    <figure class="icons">
                         @if(project.index < 2) {
-                        <img src="{{ project.project_icon_html }}">
-                        <img src="{{ project.project_icon_js }}">
-                        <img src="{{ project.project_icon_css }}">
+                        <img src="{{ project.project_icon_html }}" alt="HTML Icon">
+                        <img src="{{ project.project_icon_js }}" alt="JavaScript Icon">
+                        <img src="{{ project.project_icon_css }}" alt="CSS Icon">
                         }
                         @if(project.index == 2) {
-                        <img src="{{ project.project_icon_html }}">
-                        <img src="{{ project.project_icon_angular }}">
-                        <img src="{{ project.project_icon_css }}">
+                        <img src="{{ project.project_icon_html }}" alt="HTML Icon">
+                        <img src="{{ project.project_icon_angular }}" alt="Angular Icon">
+                        <img src="{{ project.project_icon_css }}" alt="CSS Icon">
                         }
-                        @if(project.index > 2) {
-                        <img src="{{ project.project_icon_angular }}">
-                        <img src="{{ project.project_icon_typescrip }}">
-                        <img src="{{ project.project_icon_html }}">
-                        <img src="{{ project.project_icon_css }}">
-                        <img src="{{ project.project_icon_vue_js }}">
-                        <img src="{{ project.project_icon_react }}">
+                        @if(project.index == 3) {
+                        <img src="{{ project.project_icon_angular }}" alt="Angular Icon">
+                        <img src="{{ project.project_icon_typescript }}" alt="TypeScript Icon">
+                        <img src="{{ project.project_icon_html }}" alt="HTML Icon">
+                        <img src="{{ project.project_icon_css }}" alt="CSS Icon">
+                        <img src="{{ project.project_icon_vue_js }}" alt="Vue_JS Icon">
+                        <img src="{{ project.project_icon_react }}" alt="React Icon">
                         }
-                    </div>
+                        @if(project.index >= 4 || project.index >= 6) {
+                        <img src="{{ project.project_icon_python }}" alt="Python Icon">
+                        <img src="{{ project.project_icon_django }}" alt="Django Icon">
+                        }
+                    </figure>
                 </div>
                 <div class="mobile">
                     <h2>{{ project.project_title| translate }}</h2>
                     <div>
                         <p>{{ 'project.icons_container_headline' | translate }}:</p>
                         <div class="icons">
-                            @if(project.index != 3) {
-                            <p>Angular, CSS, JavaScript</p>
+                            @if(project.index < 2) {
+                            <p>HTML, CSS, JavaScript</p>
                             }
-                            @else() {
+                            @if(project.index == 2){
+                            <p>HTML, Angular, CSS</p>
+                            }
+                            @if(project.index == 3) {
                             <p>Angular, TypeScript, HTML, CSS, Vue Js, React</p>
+                            }
+                            @if(project.index == 4){
+                            <p>Python, Django</p>
+                            }
+                            @if(project.index == 5){
+                            <p>Python, Django</p>
+                            }
+                            @if(project.index == 6){
+                            <p>Python, Django</p>
                             }
                         </div>
                     </div>
@@ -86,10 +102,10 @@
                 </div>
             </div>
             <div class="image">
-                @if(project.index == 3) {
+                @if(project.index == 3 || project.index == 6) {
                 <p>Comming soon</p>
                 }
-                <img src="assets/img/{{ project.img }}" alt="">
+                <img src="assets/img/{{ project.img }}" alt="Project Image">
             </div>
             <div class="button_desktop">
                 <a href="{{ project.project_link_live | translate }}" target="_blank"><button class="live">Live
@@ -98,5 +114,5 @@
                         class="github">GitHub</button></a>
             </div>
         </div>
-    </div>
+    </main>
 </section>
