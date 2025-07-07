@@ -23,16 +23,20 @@
         .icon_container {
             @include dFlex($jc: flex-start, $g: 40px);
             flex-wrap: wrap;
-            width: 50%;
-            height: 404px;
+            width: 60%;
+            height: 600px;
 
-            >div {
+            >figure {
                 @include dFlex($g: 10px);
                 flex-direction: column;
                 width: 70px;
                 height: 100px;
 
-                p {
+                img{
+                    height: 60px;
+                }
+
+                figcaption {
                     font-size: 18px;
                     font-weight: 400;
                     color: $blue;
@@ -40,15 +44,15 @@
             }
         }
 
-        .learnimg_container {
+        .learning_container {
             position: relative;
             @include dFlex();
-            width: 50%;
+            width: 40%;
             height: 391px;
 
             .learning_bg {
                 position: absolute;
-                left: 10%;
+                left: 0%;
                 bottom: 0;
                 background-color: transparent;
                 opacity: 1;
@@ -56,7 +60,7 @@
 
             .learning_bg_hover {
                 position: absolute;
-                left: 10%;
+                left: 0%;
                 bottom: -5%;
                 background-color: transparent;
                 opacity: 0;
@@ -95,7 +99,7 @@
                     background-color: transparent;
                     @include dFlex($g: 24px);
 
-                    div {
+                    figure {
                         background-color: transparent;
 
                         img {
@@ -104,7 +108,7 @@
                             background-color: transparent;
                         }
 
-                        p {
+                        figcaption {
                             font-size: 14px;
                             font-weight: 400;
                             background-color: transparent;
@@ -115,7 +119,7 @@
         }
 
         .icon_container_mobile,
-        .learnimg_container_mobile {
+        .learning_container_mobile {
             display: none;
         }
     }
@@ -140,7 +144,7 @@
             width: 100%;
 
             .icon_container,
-            .learnimg_container {
+            .learning_container {
                 display: none;
             }
 
@@ -148,11 +152,11 @@
                 @include dFlex($jc: space-evenly, $g: 40px);
                 flex-wrap: wrap;
                 width: 450px;
-                height: 199px;
+                height: 350px;
                 background-color: transparent;
             }
 
-            .learnimg_container_mobile {
+            .learning_container_mobile {
                 @include dFlex($jc: space-between, $g: 50px);
                 position: relative;
                 background-color: transparent;
@@ -173,14 +177,14 @@
                         background-color: transparent;
                         z-index: 2;
 
-                        div {
+                        >figure {
                             @include dFlex($g: 10px);
                             flex-direction: column;
-                            width: 70px;
+                            width: 55px;
                             height: 100%;
                             background-color: transparent;
 
-                            p {
+                            figcaption {
                                 font-size: 14px;
                                 background-color: transparent;
                                 width: 100%;
@@ -188,6 +192,8 @@
                             }
 
                             img {
+                                width: 28.56px;
+                                height: 32px;
                                 background-color: transparent;
                             }
                         }
@@ -222,7 +228,7 @@
                 height: auto;
             }
 
-            .learnimg_container_mobile {
+            .learning_container_mobile {
                 width: 100%;
 
                 .text {
@@ -263,7 +269,7 @@
                 width: 100%;
             }
 
-            .learnimg_container_mobile {
+            .learning_container_mobile {
                 width: 100%;
 
                 .text {
