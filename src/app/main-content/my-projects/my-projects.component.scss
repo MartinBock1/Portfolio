@@ -17,8 +17,25 @@
             color: $blue;
         }
 
+        .project-container {
+            width: 100%;
+            margin-bottom: 80px;
+            @include dFlex();
+            flex-direction: column;
+
+            .project-group-title {
+                width: 100%;
+                font-size: 40px;
+                font-weight: 500;
+                font-family: 'Anta';
+                color: $blue;
+                margin-bottom: 30px;
+                text-align: center;
+            }
+        }
+
         .nav {
-            @include dFlex($jc: flex-start, $g: 10px);
+            @include dFlex($jc: start, $g: 10px);
             width: 100%;
             padding-left: 80px;
             cursor: pointer;
@@ -62,27 +79,18 @@
 /* --------------------------------------------------   Mobil   --------------------------------------------------*/
 @media (max-width: 1100px) {
     .my_projects {
-
         .content {
-            position: relative;
-            top: 100px;
-            @include dFlex($g: 50px);
-            flex-direction: column;
-            width: 100%;
-            margin-bottom: 0px;
 
-            h2 {
-                font-size: 60px;
-                font-weight: 400;
-                font-family: 'Anta';
-                color: $blue;
+            .project-container {
+                .project-group-title {
+                    font-size: 32px;
+                }
             }
 
             .nav {
-                @include dFlex($jc: flex-start, $g: 10px);
                 width: 100%;
-                padding-left: 80px;
-                cursor: pointer;
+                @include dFlex($g: 10px, $jc: left);
+                padding-left: 50px;
 
                 .nav_mobile {
                     @include dFlex($g: 10px);
@@ -94,7 +102,7 @@
                         font-weight: 400;
                         color: $creme-white;
                         width: 150px;
-                        height: 48px;
+                        height: 100px;
                         cursor: pointer;
                         transition: 0.3s;
 
@@ -122,23 +130,45 @@
 
 @media (max-width: 750px) {
     .my_projects {
-
         .content {
-
             h2 {
                 font-size: 32px;
             }
 
+            .project-container {
+                margin-bottom: 60px;
+
+                .project-group-title {
+                    font-size: 28px;
+                }
+            }
+
             .nav {
-                @include dFlex($g: 0);
-                padding-left: 0;
+                @include dFlex($g: 0, $jc: left);
+                padding-left: 25px;
 
                 .nav_mobile {
-                    @include dFlex($g: 0);
+                    @include dFlex($g: 0, );
 
                     p {
                         font-size: 18px;
-                        width: 96px;
+                        width: 120px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 600px) {
+    .my_projects {
+        .content {
+            .nav {
+                padding-left: 20px;
+
+                .nav_mobile {
+                    p {
+                        width: 100px;
                     }
                 }
             }
@@ -148,20 +178,16 @@
 
 @media (max-width: 500px) {
     .my_projects {
-
         .content {
-
             h2 {
                 font-size: 32px;
                 color: $blue;
             }
 
             .nav {
-                @include dFlex($jc: flex-start, $g: 0px);
+                padding-left: 10px;
 
                 .nav_mobile {
-                    @include dFlex($g: 0px);
-
                     p {
                         font-size: 18px;
                         width: 85px;
@@ -174,18 +200,11 @@
 
 @media (max-width: 370px) {
     .my_projects {
-
         .content {
-
-            h2 {
-                font-size: 32px;
-            }
-
             .nav {
+                padding-left: 10px;
 
                 .nav_mobile {
-                    @include dFlex($g: 0px);
-
                     p {
                         font-size: 14px;
                         width: 70px;

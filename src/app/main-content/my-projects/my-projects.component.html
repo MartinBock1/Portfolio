@@ -1,21 +1,67 @@
 <section class="my_projects content_max">
-    <div class="content">
-        <h2>{{ 'title.headline' | translate}}</h2>
-        <div class="nav">
-            <div class="nav_desktop" *ngIf="titles.length > 0">
-                <p (click)="selectedProject(0)" [class.active]="selectedProjectIndex === 0">{{ titles[0].pokedex }}</p>
-                <p (click)="selectedProject(1)" [class.active]="selectedProjectIndex === 1">{{ titles[0].game }}</p>
-                <p (click)="selectedProject(2)" [class.active]="selectedProjectIndex === 2">{{ titles[0].join }}</p>
-                <p (click)="selectedProject(3)" [class.active]="selectedProjectIndex === 3">{{ titles[0].ongoing | translate }}</p>
-            </div>
-            <div class="nav_mobile" *ngIf="titles.length > 0">
-                <p (click)="selectedProject(0)" [class.active]="selectedProjectIndex === 0">{{ titles[0].project1 | translate }}</p>
-                <p (click)="selectedProject(1)" [class.active]="selectedProjectIndex === 1">{{ titles[0].project2 | translate}}</p>
-                <p (click)="selectedProject(2)" [class.active]="selectedProjectIndex === 2">{{ titles[0].project3 | translate }}</p>
-                <p (click)="selectedProject(3)" [class.active]="selectedProjectIndex === 3">{{ titles[0].project4 | translate }}</p>
-            </div>
+  <div class="content">
+    <h2>{{ "title.headline" | translate }}</h2>
+    <div class="project-container">
+      <h3 class="project-group-title">
+        {{ "title.frontend_projects" | translate }}
+      </h3>
+      <div class="nav">
+        <div class="nav_desktop">
+          @for (project of frontendProjects; track project) {
+            <p
+              (click)="selectFrontendProject($index)"
+              [class.active]="selectedFrontendIndex === $index"
+            >
+              {{ "title.project" + ($index + 1) | translate }}
+            </p>
+          }
         </div>
+        <div class="nav_mobile">
+          @for (project of frontendProjects; track project) {
+          <p
+            (click)="selectFrontendProject($index)"
+            [class.active]="selectedFrontendIndex === $index"
+          >
+            {{ "title.project" + ($index + 1) | translate }}
+          </p>
+          }
+        </div>
+      </div>
+      <app-single-project
+        [project]="frontendProjects[selectedFrontendIndex]"
+      ></app-single-project>
     </div>
-</section>
+    <div class="project-container">
+      <h3 class="project-group-title">
+        {{ "title.backend_projects" | translate }}
+      </h3>
+      <div class="nav">
+        <div class="nav_desktop">
+          @for (project of backendProjects; track project) {
+          <p
+            (click)="selectBackendProject($index)"
+            [class.active]="selectedBackendIndex === $index"
+          >
+            {{ project.project_title | translate }}
+          </p>
+          }
+        </div>
 
-<app-single-project [project]="projects[selectedProjectIndex]"></app-single-project>
+        <!-- Mobile-Version -->
+        <div class="nav_mobile">
+          @for (project of backendProjects; track project) {
+          <p
+            (click)="selectBackendProject($index)"
+            [class.active]="selectedBackendIndex === $index"
+          >
+            {{ "title.project" + ($index + 5) | translate }}
+          </p>
+          }
+        </div>
+      </div>
+      <app-single-project
+        [project]="backendProjects[selectedBackendIndex]"
+      ></app-single-project>
+    </div>
+  </div>
+</section>
