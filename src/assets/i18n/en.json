@@ -115,7 +115,7 @@
     "project_organized_text_kanmind": "I structured the workflow logically according to the dependencies of the data models, starting with the fundamental user authentication for registration and login. Building on this, I developed the complete logic for the boards, as these form the central organizational unit. Finally, I implemented the dependent functions for tasks and comments to cover the entire workflow from registration to collaboration on a task.",
     "project_experience_kanmind": "What have I learned?",
     "project_experience_text_kanmind": "In developing this backend, I learned to design a complex and secure RESTful API from scratch and implement it according to best practices. A central focus was on implementing a robust authentication and authorization system that precisely controls access to resources according to user roles such as owner or member. I also honed my skills in modeling data structures with complex relationships and creating efficient database queries.",
-    "link_live_kanmind": "https://www.martin-bock.info",
+    "link_live_kanmind": "https://www.kanmind.martin-bock.info",
     "link_github_kanmind": "https://github.com/MartinBock1/KanMind-Backend",
 
     "project_title_coderr": "Coderr",
