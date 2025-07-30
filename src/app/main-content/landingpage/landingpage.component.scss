@@ -509,6 +509,16 @@
 
     .logo_section {
 
+        .logo {
+            .resp_menu_box {
+                &.show {
+                    visibility: visible;
+                    transform: translate(-50%, -50%) scale(1.7);
+                    transition: transform 0.3s ease-in-out;
+                }
+            }
+        }
+
         .name_section {
             top: 800px
         }
@@ -519,6 +529,15 @@
 
     .logo_section {
 
+        .logo {
+            .resp_menu_box {
+                &.show {
+                    transform: translate(-50%, -50%) scale(1.7);
+                    background-color: transparent;
+                }
+            }
+        }
+
         .name_section {
             top: 800px
         }
@@ -527,6 +546,16 @@
 
 @media only screen and (max-device-width: 820px) and (max-device-height: 1180px) and (orientation: portrait) {
     .logo_section {
+
+        .logo {
+            .resp_menu_box {
+                &.show {
+                    visibility: visible;
+                    transform: translate(-50%, -50%) scale(1.5);
+                    transition: transform 0.3s ease-in-out;
+                }
+            }
+        }
 
         .name_section {
             top: 650px
@@ -537,6 +566,16 @@
 @media only screen and (max-device-width: 768px) and (max-device-height: 1024px) and (orientation: portrait) {
     .logo_section {
 
+        .logo {
+            .resp_menu_box {
+                &.show {
+                    visibility: visible;
+                    transform: translate(-50%, -50%) scale(1.2);
+                    transition: transform 0.3s ease-in-out;
+                }
+            }
+        }
+
         .name_section {
             top: 550px
         }
@@ -545,6 +584,15 @@
 
 @media only screen and (max-device-width: 540px) and (max-device-height: 720px) and (orientation: portrait) {
     .logo_section {
+
+        .logo {
+            .resp_menu_box {
+                &.show {
+                    transform: translate(-50%, -50%) scale(1);
+                    background-color: transparent;
+                }
+            }
+        }
 
         .name_section {
             top: 400px
@@ -570,6 +618,15 @@
 
 @media only screen and (max-width: 380px) and (max-height: 750px) and (orientation: portrait) {
     .logo_section {
+
+        .logo {
+            .resp_menu_box {
+                &.show {
+                    transform: translate(-50%, -50%) scale(1);
+                    background-color: transparent;
+                }
+            }
+        }
 
         .name_section {
             top: 370px
