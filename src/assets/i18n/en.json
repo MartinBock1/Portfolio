@@ -61,13 +61,13 @@
 
   "title": {
     "headline": "My Projects",
-    "nav_title": "7. Ongoinig Project",
     "project1": "1. Projekt",
     "project2": "2. Project",
     "project3": "3. Project",
-    "project4": "4. Project",
+    "project4": "4. Ongoinig Project",
     "project5": "5. Project",
     "project6": "6. Project",
+    "project7": "7. Project",
     "frontend_projects": "Frontend",
     "backend_projects": "Backend"
   },

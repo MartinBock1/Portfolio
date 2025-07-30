@@ -4,7 +4,7 @@
 
     .content {
         position: relative;
-        top: 100px;
+        top: 140px;
         @include dFlex($g: 50px);
         flex-direction: column;
         width: 100%;
@@ -80,7 +80,8 @@
 @media (max-width: 1100px) {
     .my_projects {
         .content {
-
+            top: 0px;
+            
             .project-container {
                 .project-group-title {
                     font-size: 32px;

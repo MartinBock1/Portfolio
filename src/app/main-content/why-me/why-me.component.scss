@@ -1,20 +1,20 @@
 @import './../../../styles.scss';
 
 .why_me {
-    @include dFlex();
+    @include dFlex($jc: flex-start);
     flex-direction: column;
     background-color: transparent;
     pointer-events: none;
 
     >main {
-        @include dFlex($g: 50px);
+        @include dFlex($jc: flex-start, $g: 50px);
         flex-direction: column;
         width: 1000px;
         height: 100%;
         pointer-events: none;
         background-color: transparent;
         position: relative;
-        top: 100px;
+        top: 140px;
 
         h2 {
             font-family: 'Anta';
@@ -117,13 +117,14 @@
 /* --------------------------------------------------   Mobil   --------------------------------------------------*/
 @media (max-width: 1100px) {
     .why_me {
-        @include dFlex($g: 30px);
+        @include dFlex($jc: flex-start, $g: 30px);
 
         >main {
-            @include dFlex($g: 30px);
+            @include dFlex($jc: flex-start, $g: 30px);
             margin-top: 0px;
             margin-bottom: 0;
             width: 450px;
+            top: 0;
 
             h2 {
                 font-size: 48px;
