@@ -164,7 +164,8 @@
     "contact_mail_phone": "Telefon: +49 30 81473698<br>E-Mail-Adresse: kontakt&#64;martin-bock.info",
     "picture_headline": "Bildernachweis",
     "picture_text": "<strong>Die Bilderrechte liegen bei: </strong>",
-    "legal_source": "Quelle: Erstellt mit dem <a href='https://www.adsimple.de/impressum-generator/' title='Impressum Generator Deutschland von AdSimple'>Impressum Generator Deutschland</a> von AdSimple"
+    "legal_source": "Quelle: Erstellt mit dem <a href='https://www.adsimple.de/impressum-generator/' title='Impressum Generator Deutschland von AdSimple'>Impressum Generator Deutschland</a> von AdSimple",
+    "mainpage": "Startseite"
   },
 
   "privacypolicy": {
@@ -181,6 +182,7 @@
     "contact": "Sofern Sie per Kontaktformular oder E-Mail mit uns in Kontakt treten, werden die dabei von Ihnen angegebenen Daten zur Bearbeitung Ihrer Anfrage genutzt. Die Angabe der Daten ist zur Bearbeitung und Beantwortung Ihre Anfrage erforderlich – ohne deren Bereitstellung können wir Ihre Anfrage nicht oder allenfalls eingeschränkt beantworten.<br>Rechtsgrundlage für diese Verarbeitung ist Art. 6 Abs. 1 (lit. b) DSGVO.<br>Ihre Daten werden gelöscht, sofern Ihre Anfrage abschließend beantwortet worden ist und der Löschung keine gesetzlichen Aufbewahrungspflichten entgegenstehen, wie bspw. bei einer sich etwaig anschließenden Vertragsabwicklung.",
     "linkedin_headline": "LinkedIn",
     "linkedin": "LinkedIn Ireland Unlimited Company, Wilton Plaza, Wilton Place, Dublin 2, Irland, ein Tochterunternehmen der LinkedIn Corporation, 1000 W. Maude Avenue, Sunnyvale, CA 94085 USA.<br> Datenschutzerklärung: <a href='https://www.linkedin.com/legal/privacy-policy' target='_blank' rel='noopener nofollow'>https://www.linkedin.com/legal/privacy-policy</a>",
-    "lawer": "<a href='https://www.generator-datenschutzerklärung.de' target='_blank' rel='noopener'>Muster-Datenschutzerklärung</a> der <a href='https://www.bewertung-löschen24.de' rel='nofollow noopener' target='_blank'>Anwaltskanzlei Weiß &amp; Partner</a>"
+    "lawer": "<a href='https://www.generator-datenschutzerklärung.de' target='_blank' rel='noopener'>Muster-Datenschutzerklärung</a> der <a href='https://www.bewertung-löschen24.de' rel='nofollow noopener' target='_blank'>Anwaltskanzlei Weiß &amp; Partner</a>",
+    "mainpage": "Startseite"
   }
 }

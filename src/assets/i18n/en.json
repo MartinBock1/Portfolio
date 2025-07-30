@@ -164,7 +164,8 @@
     "contact_mail_phone": "phone: +49 30 81473698<br>email-Adress: kontakt&#64;martin-bock.info",
     "picture_headline": "Image credits",
     "picture_text": "<strong>The image rights are held by: </strong>",
-    "legal_source": "Source: Created with the <a href='https://www.adsimple.de/impressum-generator/' title='Impressum Generator Deutschland von AdSimple'>Legal Notice Generator Germany</a> from AdSimple"
+    "legal_source": "Source: Created with the <a href='https://www.adsimple.de/impressum-generator/' title='Impressum Generator Deutschland von AdSimple'>Legal Notice Generator Germany</a> from AdSimple",
+    "mainpage": "home"
   },
 
   "privacypolicy": {
@@ -181,6 +182,7 @@
     "contact": "If you contact us via email or the contact form, the data you provide will be used for the purpose of processing your request. We must have this data in order to process and answer your inquiry; otherwise we will not be able to answer it in full or at all.<br>The legal basis for this data processing is Art. 6 Para. 1 lit. b) GDPR.<br>Your data will be deleted once we have fully answered your inquiry and there is no further legal obligation to store your data, such as if an order or contract resulted therefrom.",
     "linkedin_headline": "LinkedIn",
     "linkedin": "LinkedIn Ireland Unlimited Company, Wilton Plaza, Wilton Place, Dublin 2, Irland, a subsidiary of LinkedIn Corporation, 1000 W. Maude Avenue, Sunnyvale, CA 94085 USA.<br> Privacy Policy: <a href='https://www.linkedin.com/legal/privacy-policy' target='_blank' rel='noopener nofollow'>https://www.linkedin.com/legal/privacy-policy</a>",
-    "lawer": "<a href='https://www.generator-datenschutzerklärung.de' target='_blank' rel='noopener'>Model Data Protection Statement</a> der <a href='https://www.bewertung-löschen24.de' rel='nofollow noopener' target='_blank'>Anwaltskanzlei Weiß &amp; Partner</a>"
+    "lawer": "<a href='https://www.generator-datenschutzerklärung.de' target='_blank' rel='noopener'>Model Data Protection Statement</a> der <a href='https://www.bewertung-löschen24.de' rel='nofollow noopener' target='_blank'>Anwaltskanzlei Weiß &amp; Partner</a>",
+    "mainpage": "home"
   }
 }

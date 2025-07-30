@@ -1,20 +1,28 @@
 <section>
-    <div class="legalnotices">
-        <div>
-            <h1>{{ 'legalnotices.headline' | translate }}</h1>
-            <p [innerHTML]="'legalnotices.name' | translate"></p>
-        </div>
-        <div>
-            <h3>{{ 'legalnotices.contact_headline' | translate }}</h3>
-            <p [innerHTML]="'legalnotices.contact_mail_phone' | translate"></p>
-        </div>
-        <div>
-            <h3>{{ 'legalnotices.picture_headline' | translate }}</h3>
-            <p [innerHTML]="'legalnotices.picture_text' | translate"></p>
-            <p>Developer Academie</p>
-        </div>
-        <div>
-            <p [innerHTML]="'legalnotices.legal_source' | translate"></p>            
-        </div>
+  <div class="legalnotices">
+    <div>
+      <h1>{{ "legalnotices.headline" | translate }}</h1>
+      <p [innerHTML]="'legalnotices.name' | translate"></p>
     </div>
+    <div>
+      <h3>{{ "legalnotices.contact_headline" | translate }}</h3>
+      <p [innerHTML]="'legalnotices.contact_mail_phone' | translate"></p>
+    </div>
+    <div>
+      <h3>{{ "legalnotices.picture_headline" | translate }}</h3>
+      <p [innerHTML]="'legalnotices.picture_text' | translate"></p>
+      <p>Developer Academie</p>
+    </div>
+    <div>
+      <p [innerHTML]="'legalnotices.legal_source' | translate"></p>
+    </div>
+    <div>
+      <a routerLink="/" (click)="scrollToTop()">
+        <button>
+          {{ "legalnotices.mainpage" | translate }}
+          <!-- Startseite -->
+        </button>
+      </a>
+    </div>
+  </div>
 </section>

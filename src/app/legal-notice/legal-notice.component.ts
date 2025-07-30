@@ -6,7 +6,7 @@ import { TranslatePipe, TranslateService } from '@ngx-translate/core';
 @Component({
   selector: 'app-legal-notice',
   standalone: true,
-  imports: [CommonModule, TranslatePipe],
+  imports: [CommonModule, TranslatePipe, RouterLink],
   templateUrl: './legal-notice.component.html',
   styleUrl: './legal-notice.component.scss',
 })
@@ -20,5 +20,12 @@ export class LegalnoticeComponent {
 
   setActive(lang: string): void {
     this.activeLang = lang;
+  }
+
+  scrollToTop(): void {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth',
+    });
   }
 }
