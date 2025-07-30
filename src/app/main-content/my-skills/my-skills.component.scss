@@ -32,7 +32,7 @@
                 width: 70px;
                 height: 100px;
 
-                img{
+                img {
                     height: 60px;
                 }
 
@@ -152,8 +152,14 @@
                 @include dFlex($jc: space-evenly, $g: 40px);
                 flex-wrap: wrap;
                 width: 450px;
-                height: 350px;
                 background-color: transparent;
+
+
+
+                img {
+                    width: 45px;
+                }
+
             }
 
             .learning_container_mobile {
