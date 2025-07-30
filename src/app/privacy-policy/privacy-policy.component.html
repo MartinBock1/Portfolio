@@ -18,5 +18,14 @@
         <p [innerHTML]="'privacypolicy.linkedin' | translate"></p>
 
         <p [innerHTML]="'privacypolicy.lawer' | translate"></p>
+
+        <div class="button">
+          <a routerLink="/" (click)="scrollToTop()">
+            <button>
+              {{ "legalnotices.mainpage" | translate }}
+              <!-- Startseite -->
+            </button>
+          </a>
+        </div>
     </div>
 </section>

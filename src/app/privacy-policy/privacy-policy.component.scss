@@ -1,7 +1,7 @@
 @import './../../styles.scss';
 
 
-section {    
+section {
 
     div {
         @include dFlex($jc: space-evenly, $ai: flex-start, $g: 20px);
@@ -33,6 +33,8 @@ section {
         a {
             font-size: 18px;
             text-decoration: none;
+            background-color: transparent;
+
 
             &:hover {
                 text-decoration: underline;
@@ -45,6 +47,19 @@ section {
                 font-size: 18px;
             }
         }
+    }
+
+    button {
+        font-size: 24px;
+        color: $dark_grey;
+        background-color: $green;
+        border-radius: 20px;
+        padding: 5px 10px;
+        cursor: pointer;
+    }
+
+    .button {
+        @include dFlex();
     }
 }
 
