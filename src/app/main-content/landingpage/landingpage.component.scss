@@ -81,7 +81,7 @@
     @include dFlex($jc: space-between);
     flex-direction: column;
     width: 50%;
-    height: 85%;
+    height: 700px;
     padding-top: 50px;
     padding-left: 20px;
     padding-right: 20px;
@@ -478,19 +478,6 @@
         }
     }
 }
-
-// @media (max-width: 375px) {
-//     .logo_section {
-
-//         .name_section {
-//             top: 400px
-//         }
-
-//         .arrow_down_mobile {
-//             top: 90%;
-//         }
-//     }
-// }
 
 /* ------------------------------------------------  For all Tablets   ------------------------------------------------ */
 @media only screen and (max-device-width: 1024px) and (max-device-height: 1366px) and (orientation: portrait) {

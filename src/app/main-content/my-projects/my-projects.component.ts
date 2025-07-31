@@ -211,7 +211,7 @@ export class MyProjectsComponent {
   }
 
   constructor(private translate: TranslateService) {
-    this.frontendProjects = this.allProjects.slice(0, 4); // Projects 0, 1, 2, 3
+    this.frontendProjects = this.allProjects.slice(0, 3); // Projects 0, 1, 2, 3
     this.backendProjects = this.allProjects.slice(4, 7);  // Projekte 4, 5, 6
   }
 
