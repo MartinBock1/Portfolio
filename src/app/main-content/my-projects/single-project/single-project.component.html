@@ -67,7 +67,15 @@
                         <img src="{{ project.project_icon_vue_js }}" alt="Vue_JS Icon">
                         <img src="{{ project.project_icon_react }}" alt="React Icon">
                         }
-                        @if(project.index >= 4 || project.index >= 6) {
+                        @if(project.index >= 4 || project.index >= 5) {
+                        <img src="{{ project.project_icon_python }}" alt="Python Icon">
+                        <img src="{{ project.project_icon_django }}" alt="Django Icon">
+                        }
+                        @if(project.index >= 6) {
+                        <img src="{{ project.project_icon_angular }}" alt="Angular Icon">
+                        <img src="{{ project.project_icon_typescript }}" alt="TypeScript Icon">
+                        <img src="{{ project.project_icon_html }}" alt="HTML Icon">
+                        <img src="{{ project.project_icon_css }}" alt="CSS Icon">
                         <img src="{{ project.project_icon_python }}" alt="Python Icon">
                         <img src="{{ project.project_icon_django }}" alt="Django Icon">
                         }
@@ -94,7 +102,7 @@
                             <p>Python, Django</p>
                             }
                             @if(project.index == 6){
-                            <p>Python, Django</p>
+                            <p>Python, Django, Angular, TypeScript, HTML, CSS</p>
                             }
                         </div>
                     </div>
@@ -103,7 +111,6 @@
             </div>
             <div class="image">
                 @if(project.index == 3 || project.index == 6) {
-                <p>Comming soon</p>
                 }
                 <img src="assets/img/{{ project.img }}" alt="Project Image">
             </div>
