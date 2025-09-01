@@ -143,13 +143,13 @@
     "project_title_videoflix": "Videoflix",
     "project_about_videoflix": "Über das Projekt",
     "project_duration_videoflix": "Dauer: 5 Wochen",
-    "project_about_text_videoflix": "",
+    "project_about_text_videoflix": "Videoflix ist eine Full-Stack-Videostreaming-Plattform, die ein Angular-Frontend mit einem robusten Django-REST-Framework-Backend kombiniert. Das Projekt verfügt über ein vollständiges Benutzerauthentifizierungssystem und verarbeitet hochgeladene Videos automatisch in verschiedene Auflösungen für adaptives HLS-Streaming.",
     "project_organized_videoflix": "So habe ich meinen Arbeitsablauf organisiert",
-    "project_organized_text_videoflix": "",
+    "project_organized_text_videoflix": "Ich habe meinen Arbeitsablauf so strukturiert, dass ich zuerst das gesamte Backend als stabile Grundlage entwickelt und getestet habe. Anschließend baute ich das Frontend darauf auf, wobei ich nur noch gezielte, kleinere Anpassungen am Backend vornahm, wenn die Anforderungen der Benutzeroberfläche dies erforderten.",
     "project_experience_videoflix": "Was habe ich gelernt?",
-    "project_experience_text_videoflix": "",
-    "link_live_videoflix": "https://www.martin-bock.info",
-    "link_github_videoflix": "https://github.com/MartinBock1/"
+    "project_experience_text_videoflix": "Bei diesem Projekt habe ich gelernt, eine komplette Full-Stack-Anwendung zu konzipieren und umzusetzen, wobei ich ein sicheres Django-Backend mit einem reaktiven Angular-Frontend verknüpft habe. Die Implementierung der Cookie-basierten Authentifizierung und die asynchrone Verarbeitung von Videos im Hintergrund haben mein Verständnis für das Zusammenspiel komplexer Web-Systeme entscheidend vertieft.",
+    "link_live_videoflix": "https://www.videoflix.martin-bock.info",
+    "link_github_videoflix": "https://github.com/MartinBock1/Videoflix.git"
   },
 
   "footer": {
