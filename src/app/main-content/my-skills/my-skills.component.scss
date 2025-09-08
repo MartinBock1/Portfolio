@@ -1,4 +1,5 @@
-@import './../../../styles.scss';
+@use './../../../styles/mixins.scss' as *;
+@use './../../../styles/colors.scss' as *;
 
 .my_skills {
     @include dFlex($jc: flex-start, $g: 80px);
