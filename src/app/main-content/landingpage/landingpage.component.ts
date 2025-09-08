@@ -7,11 +7,11 @@ import {
 } from '@ngx-translate/core';
 
 @Component({
-  selector: 'app-landingpage',
   standalone: true,
-  imports: [CommonModule, TranslatePipe],
-  templateUrl: './landingpage.component.html',
-  styleUrl: './landingpage.component.scss',
+    selector: 'app-landingpage',
+    imports: [CommonModule, TranslatePipe],
+    templateUrl: './landingpage.component.html',
+  styleUrls: ['./landingpage.component.scss']
 })
 export class LandingpageComponent {
   isMenuVisible = false;

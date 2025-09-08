@@ -5,11 +5,11 @@ import { CommonModule } from '@angular/common';
 import { TranslateModule, TranslateService } from '@ngx-translate/core';
 
 @Component({
-  selector: 'app-my-projects',
   standalone: true,
-  imports: [CommonModule, SingleProjectComponent, TranslateModule],
-  templateUrl: './my-projects.component.html',
-  styleUrl: './my-projects.component.scss',
+    selector: 'app-my-projects',
+    imports: [CommonModule, SingleProjectComponent, TranslateModule],
+    templateUrl: './my-projects.component.html',
+  styleUrls: ['./my-projects.component.scss']
 })
 export class MyProjectsComponent {
   selectedFrontendIndex = 0;

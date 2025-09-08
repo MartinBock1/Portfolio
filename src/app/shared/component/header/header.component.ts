@@ -3,11 +3,11 @@ import { RouterLink } from '@angular/router';
 import { TranslateDirective, TranslatePipe, TranslateService } from '@ngx-translate/core';
 
 @Component({
-  selector: 'app-header',
   standalone: true,
-  imports: [TranslatePipe, RouterLink],
-  templateUrl: './header.component.html',
-  styleUrl: './header.component.scss',
+    selector: 'app-header',
+    imports: [TranslatePipe, RouterLink],
+    templateUrl: './header.component.html',
+  styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent implements OnInit {
   activeLang: string = 'DE'; // Standardmäßig DE aktiv

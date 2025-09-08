@@ -4,11 +4,11 @@ import { RouterLink } from '@angular/router';
 import { TranslatePipe, TranslateService } from '@ngx-translate/core';
 
 @Component({
-  selector: 'app-legal-notice',
+    selector: 'app-legal-notice',
   standalone: true,
   imports: [CommonModule, TranslatePipe, RouterLink],
   templateUrl: './legal-notice.component.html',
-  styleUrl: './legal-notice.component.scss',
+  styleUrls: ['./legal-notice.component.scss']
 })
 export class LegalnoticeComponent {
   activeLang: string = 'DE'; // Standardmäßig DE aktiv

@@ -3,11 +3,11 @@ import { Component, OnInit } from '@angular/core';
 import { TranslatePipe, TranslateService } from '@ngx-translate/core';
 
 @Component({
-  selector: 'app-why-me',
   standalone: true,
-  imports: [CommonModule, TranslatePipe],
-  templateUrl: './why-me.component.html',
-  styleUrls: ['./why-me.component.scss'],
+    selector: 'app-why-me',
+    imports: [CommonModule, TranslatePipe],
+    templateUrl: './why-me.component.html',
+    styleUrls: ['./why-me.component.scss']
 })
 export class WhyMeComponent implements OnInit {
   // showLocateIcon = true;

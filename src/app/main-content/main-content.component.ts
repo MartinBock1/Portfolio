@@ -8,18 +8,18 @@ import { ContactMeComponent } from './contact-me/contact-me.component';
 import { ColleaguesReviewsComponent } from './colleagues-reviews/colleagues-reviews.component';
 
 @Component({
-  selector: 'app-main-content',
-  standalone: true,
-  imports: [
-    LandingpageComponent,
-    HeaderComponent,
-    WhyMeComponent,
-    MySkillsComponent,
-    MyProjectsComponent,
-    ColleaguesReviewsComponent,
-    ContactMeComponent,
-  ],
-  templateUrl: './main-content.component.html',
-  styleUrl: './main-content.component.scss',
+    standalone: true,
+    selector: 'app-main-content',
+    imports: [
+        LandingpageComponent,
+        HeaderComponent,
+        WhyMeComponent,
+        MySkillsComponent,
+        MyProjectsComponent,
+        ColleaguesReviewsComponent,
+        ContactMeComponent,
+    ],
+    templateUrl: './main-content.component.html',
+    styleUrls: ['./main-content.component.scss']
 })
 export class MainContentComponent {}

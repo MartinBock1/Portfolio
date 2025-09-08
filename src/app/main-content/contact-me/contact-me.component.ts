@@ -6,11 +6,11 @@ import { RouterLink } from '@angular/router';
 import { TranslatePipe, TranslateService } from '@ngx-translate/core';
 
 @Component({
-  selector: 'app-contact-me',
   standalone: true,
-  imports: [CommonModule, FormsModule, TranslatePipe, RouterLink],
-  templateUrl: './contact-me.component.html',
-  styleUrl: './contact-me.component.scss',
+    selector: 'app-contact-me',
+    imports: [CommonModule, FormsModule, TranslatePipe, RouterLink],
+    templateUrl: './contact-me.component.html',
+  styleUrls: ['./contact-me.component.scss']
 })
 export class ContactMeComponent {
   isChecked = false;

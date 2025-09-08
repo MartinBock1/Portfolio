@@ -4,11 +4,11 @@ import { RouterLink } from '@angular/router';
 import { TranslatePipe, TranslateService } from '@ngx-translate/core';
 
 @Component({
-  selector: 'app-privacy-policy',
   standalone: true,
-  imports: [CommonModule, TranslatePipe, RouterLink],
-  templateUrl: './privacy-policy.component.html',
-  styleUrl: './privacy-policy.component.scss',
+    selector: 'app-privacy-policy',
+    imports: [CommonModule, TranslatePipe, RouterLink],
+    templateUrl: './privacy-policy.component.html',
+  styleUrls: ['./privacy-policy.component.scss']
 })
 export class PrivacyPolicyComponent {
   activeLang: string = 'DE'; // Standardmäßig DE aktiv
