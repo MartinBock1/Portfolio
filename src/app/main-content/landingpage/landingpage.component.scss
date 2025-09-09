@@ -330,12 +330,13 @@
                         flex-direction: row;
                         background-color: transparent;
 
-                        p {
+                        button {
                             @include dFlex();
                             background-color: transparent;
                             color: $dark_grey;
                             font-size: 18px;
                             font-weight: 400;
+                            border: none;
 
                             &:hover {
                                 cursor: pointer;

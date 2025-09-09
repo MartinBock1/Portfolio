@@ -1,33 +1,33 @@
 <header [class.sticky]="isSticky" id="myHeader">
-    <nav class="nav_section content_max">
+    <nav class="nav_section content_max" role="navigation" aria-label="Hauptnavigation">
         <div class="nav_logo">
             <a routerLink="/">
-                <img class="logo_img" src="assets/img/icons/nav_logo_icon.svg" alt="">
+                <img class="logo_img" src="assets/img/icons/nav_logo_icon.svg" alt="Logo von M.Bock">
                 <p class="fontAnta">M.Bock</p>
                 <p class="dev">developer</p>
             </a>
         </div>
         <div class="nav_links">
             <a href="#why_me">
-                <p [class.active]="activeSection === 'Warum ich'" (click)="setActiveSection('Warum ich')">{{ 'landingpage.whyme' | translate }}</p>
+                <span [class.active]="activeSection === 'Warum ich'" (click)="setActiveSection('Warum ich')">{{ 'landingpage.whyme' | translate }}</span>
             </a>
             <a href="#skills">
-                <p [class.active]="activeSection === 'Fähigkeiten'" (click)="setActiveSection('Fähigkeiten')">{{ 'landingpage.skills' | translate }}</p>
+                <span [class.active]="activeSection === 'Fähigkeiten'" (click)="setActiveSection('Fähigkeiten')">{{ 'landingpage.skills' | translate }}</span>
             </a>
             <a href="#my_projects">
-                <p [class.active]="activeSection === 'Projekte'" (click)="setActiveSection('Projekte')">{{ 'landingpage.projects' | translate }}</p>
+                <span [class.active]="activeSection === 'Projekte'" (click)="setActiveSection('Projekte')">{{ 'landingpage.projects' | translate }}</span>
             </a>
             <a href="#contact_me">
-                <p [class.active]="activeSection === 'Kontakt'" (click)="setActiveSection('Kontakt')">{{ 'landingpage.contact' | translate }}</p>
+                <span [class.active]="activeSection === 'Kontakt'" (click)="setActiveSection('Kontakt')">{{ 'landingpage.contact' | translate }}</span>
             </a>
         </div>
         <div class="nav_lang">
-            <p [class.active]="activeLang === 'DE'" (click)="setActive('DE'); changeLanguage('de')">
+            <span tabindex="0" [class.active]="activeLang === 'DE'" (click)="setActive('DE'); changeLanguage('de')">
                 DE
-            </p>
-            <p [class.active]="activeLang === 'EN'" (click)="setActive('EN'); changeLanguage('en')">
+            </span>
+            <span tabindex="0" [class.active]="activeLang === 'EN'" (click)="setActive('EN'); changeLanguage('en')">
                 EN
-            </p>
+            </span>
         </div>
     </nav>
 </header>

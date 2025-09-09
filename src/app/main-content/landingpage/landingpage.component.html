@@ -27,20 +27,20 @@
                     <p class="fontAnta">M.Bock</p>
                     <p class="dev">developer</p>
                 </div>
-                <div class="burger_menu" (click)="toggleMenu()" [ngClass]="{'toggle': isMenuVisible}"></div>
-                <nav id="resp_menu" class="resp_menu_box" [class.resp_menu_closed]="!isMenuVisible" [class.show]="isMenuVisible">
+                <button type="button" class="burger_menu" (click)="toggleMenu()" [attr.aria-expanded]="isMenuVisible" aria-controls="resp_menu" [ngClass]="{'toggle': isMenuVisible}" [attr.aria-label]="isMenuVisible ? ('menue.close' | translate) : ('menue.open' | translate)"></button>
+                <nav id="resp_menu" aria-label="Hauptnavigation" class="resp_menu_box" [class.resp_menu_closed]="!isMenuVisible" [class.show]="isMenuVisible">
                     <div>
                         <a href="#why_me" (click)="toggleMenu()">{{ 'landingpage.whyme' | translate }}</a>
                         <a href="#skills" (click)="toggleMenu()">{{ 'landingpage.skills' | translate }}</a>
                         <a href="#my_projects" (click)="toggleMenu()">{{ 'landingpage.projects' | translate }}</a>
                         <a href="#contact_me" (click)="toggleMenu()">{{ 'landingpage.contact' | translate }}</a>
-                        <div class="nav_lang">
-                            <p [class.active]="activeLang === 'DE'" (click)="setActive('DE'); changeLanguage('de')">
+                        <div class="nav_lang" role="group" aria-label="Sprachauswahl">
+                            <button type="button" [attr.aria-pressed]="activeLang === 'DE'" (click)="setActive('DE'); changeLanguage('de')">
                                 DE
-                            </p>
-                            <p [class.active]="activeLang === 'EN'" (click)="setActive('EN'); changeLanguage('en')">
+                            </button>
+                            <button type="button" [attr.aria-pressed]="activeLang === 'EN'" (click)="setActive('EN'); changeLanguage('en')">
                                 EN
-                            </p>
+                            </button>
                         </div>
                     </div>
                 </nav>

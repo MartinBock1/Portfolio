@@ -55,7 +55,7 @@
                 background-color: transparent;
                 text-decoration: none;
 
-                p {
+                span {
                     background-color: transparent;
                     color: $dark_grey;
                     font-size: 26px;
@@ -87,7 +87,7 @@
             @include dFlex($g: 16px);
             background-color: transparent;
 
-            p {
+            span {
                 @include dFlex();
                 background-color: transparent;
                 color: $dark_grey;
