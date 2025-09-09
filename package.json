@@ -6,7 +6,8 @@
     "start": "ng serve",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
-    "test": "ng test"
+  "test": "ng test"
+    
   },
   "private": true,
   "dependencies": {
@@ -25,6 +26,7 @@
     "zone.js": "~0.15.1"
   },
   "devDependencies": {
+    "@angular-devkit/core": "^20.2.2",
     "@angular/build": "^20.2.2",
     "@angular/cli": "^20.2.2",
     "@angular/compiler-cli": "^20.2.4",
