@@ -1,27 +1,71 @@
+
 # Portfolio
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.0.3.
+**Angular Version:** This project was upgraded to version 20.2.4
 
-## Development server
+Welcome to my portfolio project! This Angular application showcases my skills as a fullstack developer with a modern, responsive UI and multilingual support.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+## 🚀 Features
+- **Responsive Design**: Optimized for desktop and mobile
+- **Multilingual**: German & English via ngx-translate
+- **Component-based Architecture**: Clean structure with Angular standalone components
+- **Contact Form**: Send messages directly
+- **Project Overview**: Personal projects with screenshots and links
+- **Legal Pages**: Imprint & Privacy Policy
+- **Social Media Integration**: GitHub, LinkedIn, Email
+- **Unit Tests**: High coverage for quality and reliability
 
-## Code scaffolding
+## �️ Getting Started
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+### Start Dev Server
+```bash
+ng serve
+```
+Open [http://localhost:4200](http://localhost:4200) in your browser.
 
-## Build
+### Generate Components
+```bash
+ng generate component <name>
+```
+Other options: `directive`, `pipe`, `service`, `class`, `guard`, `interface`, `enum`, `module`.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+### Build
+```bash
+ng build
+```
+The build output is stored in the `dist/` directory.
 
-## Running unit tests
+## 🧪 Unit Testing
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+Run all unit tests:
+```bash
+ng test
+```
+- Uses [Karma](https://karma-runner.github.io) & Jasmine
+- Example test:
+	```typescript
+	it('should create the main content', () => {
+		const fixture = TestBed.createComponent(MainContentComponent);
+		const mainContent = fixture.componentInstance;
+		expect(mainContent).toBeTruthy();
+	});
+	```
 
-## Running end-to-end tests
+## 📦 Dependencies
+- Angular 20+
+- ngx-translate
+- SCSS for styles
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+## 📄 Further Help
+- [Angular CLI Documentation](https://angular.io/cli)
+- `ng help` for all commands
 
-## Further help
+---
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+**Enjoy exploring and developing!**
+
+![Portfolio Screenshot](src/assets/img/screenshot_portfolio.png)
+
+---
+
+> _Created by Martin Bock_
